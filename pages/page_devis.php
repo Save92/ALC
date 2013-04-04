@@ -13,7 +13,7 @@
 		if(isset($_POST['file2'])) {$file2 = $_POST['file2'];} else{ }
 		if(isset($_POST['file3'])) {$file3 = $_POST['file3'];} else{ }
 
-
+/*
 		try
 		{
 			$bdd = new PDO('mysql:host=localhost;dbname=alc', 'root', '');
@@ -21,7 +21,7 @@
 		catch(Exception $e)
 		{
 			die('Erreur : '.$e->getMessage());
-		}
+		}*/
 
 		$req2 = $bdd->prepare('INSERT INTO devis_requete (nom, prenom, adresse_mail, marque, modele, annee, budget_min, budget_max, description, file1, file2, file3, etat) VALUES (:var1, :var2, :var3, :var4, :var5, :var6, :var7, :var8, :var9, :var10, :var11, :var12, :var13);');
 		$req2->execute(array(

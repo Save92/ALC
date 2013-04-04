@@ -73,6 +73,89 @@ padding:30px;
 border:4px gray solid;
 border-radius:15px;
 }
+
+#page_galerie_choix #page_galerie_global{
+display:block;
+margin: 10px 2% 0;
+width : 95%;
+height: 400px;
+background:yellow;
+}
+
+#page_galerie_choix #liste_projets{
+float:left;
+height:250px;
+width:40%;
+margin: 5% 5% 0 2%;
+background:purple;
+padding:10px;
+border:4px gray solid;
+border-radius:15px;
+}
+
+#page_galerie_choix #liste_projets #icones_projets{
+float:left;
+margin-left:7%;
+margin-right:7%;
+background:blue;
+height: 213px;
+width: 366px;
+overflow-x: scroll;
+overflow-y: hidden;
+}
+
+#page_galerie_choix #liste_projets #icones_projets>a{
+float:left;
+display:inline-block;
+height:80px;
+width:25%;
+text-align: center;
+margin: 2% 1% 2% 1%;
+background:grey;
+padding:2px;
+border:4px gray solid;
+border-radius:15px;
+}
+
+#page_galerie_choix  #image_projet{
+float:left;
+height:250px;
+width:40%;
+margin: 5% 2% 0 5%;
+background:red;
+padding:10px;
+border:4px gray solid;
+border-radius:15px;
+}
+
+#page_galerie #page_galerie_global{
+margin: 10px 2% 0;
+width : 95%;
+height: 400px;
+position:relative;
+background:yellow;
+}
+
+#page_galerie #page_galerie_global #presentation_projets{
+float:left;
+position:relative;
+height:250px;
+width:40%;
+margin: 5% 5% 0 2%;
+background:purple;
+padding:10px;
+border:4px gray solid;
+border-radius:15px;
+}
+#page_galerie #page_galerie_global #presentation_projets>a{
+position:absolute;
+}
+
+#page_galerie #page_galerie_global #presentation_projets #p_footer{
+position:absolute;
+bottom:0px;
+text-align: center;
+}
 #page_devis #form_devis{
 display:block;
 margin: 10px auto 0;
@@ -123,11 +206,28 @@ footer{
 	width: 100%;
 	height:80px;
 	bottom:0px;
+	color: white;
 	}
-footer nav  span{
+footer nav>span{
 	border: 1px solid gray;
 	margin: 0 4px 0 4px;
 }
 footer nav a {
 	color:white;
+	text-decoration: none;
+
+}
+footer nav #theme_date {
+	position:absolute;
+	display:block;
+	z-index: 2;
+	top: 20px;
+	left:70px;
+}
+footer nav #date, footer nav #theme {
+	position:absolute;
+	display:block;
+	z-index: 2;
+	top: 40px;
+	left:70px;
 }
