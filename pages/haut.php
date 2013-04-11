@@ -9,10 +9,12 @@
 </head>
 <body>
 	<header>
-		<a href="?page=accueil"><img src="images/titre.jpg"/></a>
+	
+		<a href="?page=accueil"><img src="images/logo_psd.gif"/></a>
 		<form>
 			<input type="text" name="recherche" placeHolder="Recherche...">
 			<input type="button" name="recherche_ok" value="">
 		</form>
+		
 	</header>
 

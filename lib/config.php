@@ -4,6 +4,4 @@ $bdd_login = "root";
 $bdd_pw = "";
 $bdd_nom = "alc";
 
-$email = "test@test.fr";
-
 ?>

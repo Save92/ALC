@@ -7,15 +7,16 @@ background: #000;
 }
 header{
 	width: 100%;
-	min-width: 900px;
 	height: 144px;
-	background: url("http://www.tibusch.com/background/cuir.jpg");
+	background: #FF0000;
 	top:0px;
+	min-width:900px;
+	background:url("../images/image_fond.jpg") no-repeat;
 }
 header>a {
 display:block;
 float:left;
-width: 637px;
+width: 550px;
 height: 144px;
 }
 header>a>img {
@@ -29,7 +30,7 @@ header>form {
 	float:right;
 	margin-top:100px;
 	margin-right: 20px;
-	border: 2px gray solid;
+	border: 3px gray solid;
 	border-radius: 15px ;
 }
 header input
@@ -59,8 +60,39 @@ header input[type="button"]:hover
 }
 section{
 width:100%;
-height: 2000px;
+height: 500px;
 color: white;
+}
+
+#error404 {
+background:url("../images/error404.jpg") no-repeat center;
+
+}
+
+#page_accueil #presentation_alc{
+float:left;
+height:200px;
+width:25%;
+min-width: 40px;
+margin: 60px 2% 0 5%;
+background:purple;
+padding:30px;
+border:4px gray solid;
+border-radius:15px;
+
+}
+
+#page_accueil #slider{
+float:left;
+height:250px;
+width:45%;
+min-width: 40px;
+margin: 35px 0 0 5%;
+background:blue;
+padding:30px;
+border:4px gray solid;
+border-radius:15px;
+
 }
 
 #page_presentation #presentation{
@@ -200,24 +232,38 @@ border-radius:15px;
 
 }
 
+#page_recherche #block_recherche{
+float:left;
+height:200px;
+width:25%;
+min-width: 40px;
+margin: 60px 2% 0 5%;
+background:purple;
+padding:30px;
+border:4px gray solid;
+border-radius:15px;
+
+}
+
 footer{
 	position: fixed;
 	z-index: 100;
-	background: url("http://www.tibusch.com/background/cuir.jpg") center left;
+	background:#0000FF; 
 	width: 100%;
-	min-width: 900px;
 	height:80px;
 	bottom:0px;
 	color: white;
+	min-width:900px;
 	}
 footer nav>span{
 	border: 1px solid gray;
 	margin: 0 4px 0 4px;
 }
 footer nav a {
+	
 	color:white;
 	text-decoration: none;
-
+	min-width:900px;
 }
 footer nav #theme_date {
 	position:absolute;

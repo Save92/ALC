@@ -1,5 +1,5 @@
 	<footer>
-		<?php if(true){ ?>
+		<?php if(false){ ?>
 		<nav>
 			<a href="?page=presentation">Présentation</a>
 			<span></span>
@@ -30,6 +30,8 @@
 			<a href="?page=inscription">Par ici pour s'inscrire !</a>
 			<span></span>
 			<a href="?page=connexion"> ou se connecter.</a>
+			<span></span>
+			<a href="?page=recherche">Recherche</a>
 		</nav>
 		<?php }?>
 	</footer>
