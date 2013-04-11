@@ -189,6 +189,74 @@ position:absolute;
 bottom:0px;
 text-align: center;
 }
+
+#page_contact #contact-us{
+float:left;
+height:200px;
+width:25%;
+min-width: 40px;
+margin: 50px 10% 0 10%;
+background:purple;
+padding:30px;
+border:4px gray solid;
+border-radius:15px;
+}
+#page_contact #contact-us #titre{
+	font-size: 20px;
+
+	text-shadow:0 0 3px gray, 0 0 10px white, 0 0 15px white,0 0 20px white;
+	text-decoration: underline;
+	font-family: impact;
+
+}
+
+#page_contact label{
+	width: 100px;
+	display: inline-block;
+}
+#page_contact input{
+	width: 150px;
+	display: inline-block;
+}
+#page_contact form p{
+	
+	margin-bottom: 10px;
+}
+#page_contact form #message{
+	
+	width:180px;
+	height: 100px;
+}
+#page_contact form p{
+	display: block;
+	
+}
+
+#page_contact #valider input{
+
+		width: 80px;
+	margin: 0 auto;
+	
+}
+#page_contact #question #titre{
+	font-size: 20px;
+	text-shadow:0 0 3px gray, 0 0 10px white, 0 0 15px white,0 0 20px white;
+	text-decoration: underline;
+		font-family: impact;
+}
+
+#page_contact #question{
+float:left;
+height:200px;
+width:25%;
+min-width: 40px;
+margin: 50px 20px 0 5%;
+background:purple;
+padding:30px;
+border:4px gray solid;
+border-radius:15px;
+}
+
 #page_devis #form_devis{
 display:block;
 margin: 10px auto 0;
