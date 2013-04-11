@@ -7,8 +7,9 @@ background: #000;
 }
 header{
 	width: 100%;
+	min-width: 900px;
 	height: 144px;
-	background: #FF0000;
+	background: url("http://www.tibusch.com/background/cuir.jpg");
 	top:0px;
 }
 header>a {
@@ -202,8 +203,9 @@ border-radius:15px;
 footer{
 	position: fixed;
 	z-index: 100;
-	background:#0000FF; 
+	background: url("http://www.tibusch.com/background/cuir.jpg") center left;
 	width: 100%;
+	min-width: 900px;
 	height:80px;
 	bottom:0px;
 	color: white;
