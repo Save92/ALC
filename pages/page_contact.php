@@ -1,4 +1,5 @@
-	<section id="page_contact">
+<?php include('pages/haut.php'); ?>
+<section id="page_contact">
 <?php
 
 function envoi_mail($nom, $adresseMail, $message){
@@ -37,11 +38,12 @@ function envoi_mail($nom, $adresseMail, $message){
 	<form method="post" >
 		<p><label for="nom">Nom : </label><input id="nom" name="nom" type="text" required></p>
 		<p><label for="mail">Adresse Mail : </label><input id="mail" name="mail" type="email" required></p>
-		<p><label for="message">Votre question : </label><input id="message" name="message" type="text" required></p>
+		<p><label for="message">Votre question : </label><textarea id="message" name="message" type="text" required></textarea></p>
 		<p id="valider"><input type="submit" value="Envoyer" ></p>
 	</form>
 </fieldset>
 <?php
 	}
 ?>
-	</section>
+</section>
+<?php include('pages/bas.php'); ?>

@@ -1,10 +1,6 @@
 <?php
 session_start();
 include('lib/config.php');
-
-include('pages/haut.php');
-
-
 if(isset($_GET['page'])){
 	switch($_GET['page']){
 		case 'accueil':
@@ -31,7 +27,10 @@ if(isset($_GET['page'])){
 		case 'recherche':
 			include('pages/page_recherche.php');
 		break;		
-		case 'membres':
+		case 'membre':
+			include('pages/page_membres.php');
+		break;		
+		case 'deconnexion':
 			include('pages/page_membres.php');
 		break;
 
@@ -39,15 +38,11 @@ if(isset($_GET['page'])){
 
 
 		default:
-			include('pages/error/404.php');
+			header('Location: error/404.php');
 		break;
 }}
 else {
 	include('pages/page_accueil.php');
 }
-
-
-include('pages/bas.php');
-
 
 ?>

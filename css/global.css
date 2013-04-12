@@ -1,9 +1,13 @@
 *{
-margin:0;
-padding:0;
+    margin:0;
+    padding:0;
+}
+@font-face{
+    font-family: 'Font-Titre';
+    src: url('Pacifico.ttf');
 }
 body{
-background: #000;
+    background: #000;
 }
 header{
 	width: 100%;
@@ -14,14 +18,19 @@ header{
 	background:url("../images/image_fond.jpg") no-repeat;
 }
 header>a {
-display:block;
-float:left;
-width: 550px;
-height: 144px;
-}
-header>a>img {
-	width: 100%;
-	height: 100%;
+    display:block;
+    float:left;
+    width: 550px;
+    height: 144px;
+    text-align: center;
+    line-height:144px;
+    text-decoration:none;
+    color: white;
+    font-size: 70px;
+    vertical-align:middle;
+    font-family:"Font-Titre";
+    /*text-shadow: 5px 0 5px gray, 0 5px 5px gray,2px 2px 8px #EEE;*/
+    text-shadow:0 0 5px #FFF, 0 0 200px #FFF, 0 0 15px #FFF,0 0 40px #FFF, 0 0 70px #FFF; 
 }
 header>form {
 	display:block;
@@ -47,147 +56,224 @@ header input[type="text"]
 	padding-left: 8px;
 	outline: none;
 }
-header input[type="button"]
+header input[type="submit"]
 {
 	background:url("../images/loupe-desactif.png") #252525 no-repeat 5px 2px;
 	border-radius: 0 13px 13px 0 ;
 	height: 30px;
 	width: 40px;
+    text-indent:8000px;
 }
-header input[type="button"]:hover
+header input[type="submit"]:hover
 {
 	background:url("../images/loupe-desactif.png") #404040 no-repeat 3px 2px;
 }
 section{
-width:100%;
-height: 500px;
-color: white;
+    width:100%;
+    height: 500px;
+    color: white;
 }
 
 #error404 {
-background:url("../images/error404.jpg") no-repeat center;
+    background:url("../images/error404.jpg") no-repeat center;
 
 }
 
 #page_accueil #presentation_alc{
-float:left;
-height:200px;
-width:25%;
-min-width: 40px;
-margin: 60px 2% 0 5%;
-background:purple;
-padding:30px;
-border:4px gray solid;
-border-radius:15px;
+    float:left;
+    height:200px;
+    width:25%;
+    min-width: 40px;
+    margin: 60px 2% 0 5%;
+    background:purple;
+    padding:30px;
+    border:4px gray solid;
+    border-radius:15px;
 
 }
 
 #page_accueil #slider{
-float:left;
-height:250px;
-width:45%;
-min-width: 40px;
-margin: 35px 0 0 5%;
-background:blue;
-padding:30px;
-border:4px gray solid;
-border-radius:15px;
+    float:left;
+    height:250px;
+    width:45%;
+    min-width: 40px;
+    margin: 35px 0 0 5%;
+    background:blue;
+    padding:30px;
+    border:4px gray solid;
+    border-radius:15px;
 
 }
 
 #page_presentation #presentation{
-float:left;
-height:200px;
-width:25%;
-min-width: 40px;
-margin: 60px 20% 0 5%;
-background:purple;
-padding:30px;
-border:4px gray solid;
-border-radius:15px;
+    float:left;
+    height:200px;
+    width:25%;
+    min-width: 40px;
+    margin: 60px 20% 0 5%;
+    background:purple;
+    padding:30px;
+    border:4px gray solid;
+    border-radius:15px;
 }
 
 #page_galerie_choix #page_galerie_global{
-display:block;
-margin: 10px 2% 0;
-width : 95%;
-height: 400px;
-background:yellow;
+    display:block;
+    margin: 10px 2% 0;
+    width : 95%;
+    height: 400px;
+    background:yellow;
 }
 
 #page_galerie_choix #liste_projets{
-float:left;
-height:250px;
-width:40%;
-margin: 5% 5% 0 2%;
-background:purple;
-padding:10px;
-border:4px gray solid;
-border-radius:15px;
+    float:left;
+    height:250px;
+    width:40%;
+    margin: 5% 5% 0 2%;
+    background:purple;
+    padding:10px;
+    border:4px gray solid;
+    border-radius:15px;
 }
 
 #page_galerie_choix #liste_projets #icones_projets{
-float:left;
-margin-left:7%;
-margin-right:7%;
-background:blue;
-height: 213px;
-width: 366px;
-overflow-x: scroll;
-overflow-y: hidden;
+    float:left;
+    margin-left:7%;
+    margin-right:7%;
+    background:blue;
+    height: 213px;
+    width: 366px;
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
 
 #page_galerie_choix #liste_projets #icones_projets>a{
-float:left;
-display:inline-block;
-height:80px;
-width:25%;
-text-align: center;
-margin: 2% 1% 2% 1%;
-background:grey;
-padding:2px;
-border:4px gray solid;
-border-radius:15px;
+    float:left;
+    display:inline-block;
+    height:80px;
+    width:25%;
+    text-align: center;
+    margin: 2% 1% 2% 1%;
+    background:grey;
+    padding:2px;
+    border:4px gray solid;
+    border-radius:15px;
 }
 
 #page_galerie_choix  #image_projet{
-float:left;
-height:250px;
-width:40%;
-margin: 5% 2% 0 5%;
-background:red;
-padding:10px;
-border:4px gray solid;
-border-radius:15px;
+    float:left;
+    height:250px;
+    width:40%;
+    margin: 5% 2% 0 5%;
+    background:red;
+    padding:10px;
+    border:4px gray solid;
+    border-radius:15px;
 }
 
 #page_galerie #page_galerie_global{
-margin: 10px 2% 0;
-width : 95%;
-height: 400px;
-position:relative;
-background:yellow;
+    margin: 10px 2% 0;
+    width : 95%;
+    height: 400px;
+    position:relative;
+    background:yellow;
 }
 
 #page_galerie #page_galerie_global #presentation_projets{
-float:left;
-position:relative;
-height:250px;
-width:40%;
-margin: 5% 5% 0 2%;
-background:purple;
-padding:10px;
-border:4px gray solid;
-border-radius:15px;
+    float:left;
+    position:relative;
+    height:250px;
+    width:40%;
+    margin: 5% 5% 0 2%;
+    background:purple;
+    padding:10px;
+    border:4px gray solid;
+    border-radius:15px;
 }
 #page_galerie #page_galerie_global #presentation_projets>a{
-position:absolute;
+    position:absolute;
 }
 
 #page_galerie #page_galerie_global #presentation_projets #p_footer{
-position:absolute;
-bottom:0px;
-text-align: center;
+    position:absolute;
+    bottom:0px;
+    text-align: center;
+}
+
+
+#page_contact #contact-us{
+    float:left;
+    height:200px;
+    width:25%;
+    min-width: 40px;
+    margin: 50px 10% 0 10%;
+    background:purple;
+    padding:30px;
+    border:4px gray solid;
+    border-radius:15px;
+}
+#page_contact #contact-us #titre{
+	font-size: 20px;
+	text-shadow:0 0 3px gray, 0 0 10px white, 0 0 15px white,0 0 20px white;
+	text-decoration: underline;
+	font-family: impact;
+
+}
+#page_contact form p{
+	
+	margin-bottom: 10px;
+}
+
+#page_contact form p{
+	display: block;
+	
+}
+
+#page_contact #valider input{
+	width: 80px;
+    min-width:80px;
+    float:right;
+    margin: 10px auto 10px 20px;
+}
+#page_contact #question #titre{
+	font-size: 20px;
+	text-shadow:0 0 3px gray, 0 0 10px white, 0 0 15px white,0 0 20px white;
+	text-decoration: underline;
+	font-family: impact;
+}
+
+#page_contact #question{
+    float:left;
+    height:200px;
+    width:25%;
+    min-width: 40px;
+    margin: 50px 20px 0 5%;
+    background:url('../images/metal-texture-151340.jpg') no-repeat center center;
+    padding:30px;
+    border:4px gray solid;
+    border-radius:15px;
+}
+#page_contact input, #page_contact textarea{
+    box-shadow:0 0 4px 2px gray;
+    border: 0px;
+    border-radius: 5px;
+	min-width: 150px;
+	display: inline-block;
+}
+#page_contact textarea{
+    width: 100%;
+    max-width: 330px;
+	height: 100px;
+    max-height: 100px;
+
+}
+#page_contact label{
+    font-weight:800;
+    text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
+	width: 120px;
+	display: inline-block;
+    vertical-align:top;
+    
 }
 
 #page_contact #contact-us{
@@ -210,109 +296,112 @@ border-radius:15px;
 
 }
 
-#page_contact label{
-	width: 100px;
-	display: inline-block;
-}
-#page_contact input{
-	width: 150px;
-	display: inline-block;
-}
-#page_contact form p{
-	
-	margin-bottom: 10px;
-}
-#page_contact form #message{
-	
-	width:180px;
-	height: 100px;
-}
-#page_contact form p{
-	display: block;
-	
-}
-
-#page_contact #valider input{
-
-		width: 80px;
-	margin: 0 auto;
-	
-}
-#page_contact #question #titre{
-	font-size: 20px;
-	text-shadow:0 0 3px gray, 0 0 10px white, 0 0 15px white,0 0 20px white;
-	text-decoration: underline;
-		font-family: impact;
-}
-
-#page_contact #question{
-float:left;
-height:200px;
-width:25%;
-min-width: 40px;
-margin: 50px 20px 0 5%;
-background:purple;
-padding:30px;
-border:4px gray solid;
-border-radius:15px;
-}
 
 #page_devis #form_devis{
-display:block;
-margin: 10px auto 0;
-width: 80%;
-height: 320px;
+    display:block;
+    margin: 10px auto 0;
+    width: 80%;
+    height: 320px;
 }
 
 #page_devis #premiere_etape{
-float:left;
-height:200px;
-width:25%;
-min-width: 40px;
-margin: 60px 10% 0 0;
-background:purple;
-padding:30px;
-border:4px gray solid;
-border-radius:15px;
+    float:left;
+    height:200px;
+    width:25%;
+    min-width: 40px;
+    margin: 60px 10% 0 0;
+    background:purple;
+    padding:30px;
+    border:4px gray solid;
+    border-radius:15px;
 }
 
 #page_devis #deuxieme_etape{
-float:left;
-height:300px;
-width:50%;
-min-width:00px;
-background:brown;
-padding:30px;
-border:4px gray solid;
-border-radius:15px;
+    float:left;
+    height:300px;
+    width:50%;
+    min-width:00px;
+    background:brown;
+    padding:30px;
+    border:4px gray solid;
+    border-radius:15px;
 }
 
 #page_inscription #form_inscription{
-float:left;
-height:200px;
-width:30%;
-min-width: 40px;
-margin: 60px 10% 0 5%;
-background:purple;
-padding:30px;
-border:4px gray solid;
-border-radius:15px;
+    float:left;
+    height:200px;
+    width:30%;
+    min-width: 40px;
+    margin: 60px 10% 0 5%;
+    background:purple;
+    padding:30px;
+    border:4px gray solid;
+    border-radius:15px;
 
 }
 
 #page_recherche #block_recherche{
-float:left;
-height:200px;
-width:25%;
-min-width: 40px;
-margin: 60px 2% 0 5%;
-background:purple;
-padding:30px;
-border:4px gray solid;
-border-radius:15px;
-
+    float:left;
+    height:200px;
+    width:25%;
+    min-width: 40px;
+    margin: 60px 2% 0 5%;
+    background:purple;
+    padding:30px;
+    border:4px gray solid;
+    border-radius:15px;
 }
-
+#page_connexion,#page_deconnexion {
+    height:100%;
+    width: 100%;
+}
+#page_connexion>div, #page_deconnexion>div {
+    background: url("../images/rmap.jpg") top left;
+    height: 168px;
+    width: 358px;
+    margin:15% auto;
+}
+#page_connexion>div>div,#page_deconnexion>div>div{
+    background: url("../images/bloc.png") top left no-repeat;
+    height: 168px;
+    width: 358px;
+    border: 0;
+    
+}
+#page_deconnexion h1{
+    text-align: center;
+    color: white;
+    width: 100%;
+    line-height:168px;
+    
+    
+}
+#page_connexion h1{
+    text-align: center;
+    color: white;
+}
+#page_connexion label{
+    padding-left: 20px;
+    color: #8C8C8C;
+    display: block;
+    font-size: 11px;
+    position: relative;
+}
+#page_connexion input{
+    margin-top: 10px;
+    background: transparent url(input.gif) no-repeat left top;
+    border: 0 none;
+    color: #B3B3B3;
+    display: block;
+    font-size: 11px;
+    height: 15px;
+    margin-bottom: 15px;
+    outline-color: -moz-use-text-color;
+    outline-style: none;
+    outline-width: medium;
+    padding: 5px;
+    width: 285px;
+}
 footer{
 	position: fixed;
 	z-index: 100;

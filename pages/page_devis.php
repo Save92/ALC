@@ -1,4 +1,5 @@
-	<section id="page_devis">
+<?php include('pages/haut.php'); ?>
+<section id="page_devis">
 <?php
 	if(isset($_POST['description']) && isset($_POST['etape'])) {
 
@@ -91,3 +92,4 @@
 	}
 ?>
 	</section>
+<?php include('pages/bas.php'); ?>

@@ -1,3 +1,4 @@
+<?php include('pages/haut.php'); ?>
 <section id="page_galerie">
 
 <div id="page_galerie_global">
@@ -14,3 +15,4 @@
 	</div>
 </div>
 </section>
+<?php include('pages/bas.php'); ?>

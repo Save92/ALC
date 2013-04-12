@@ -1,3 +1,4 @@
+<?php include('pages/haut.php'); ?>
 <section id="page_presentation">
 
 <h1>Présentation d'Art Line Concept</h1>
@@ -10,3 +11,4 @@ et voila!
 ALC
 </a></div>
 </section>
+<?php include('pages/bas.php'); ?>

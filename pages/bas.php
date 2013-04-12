@@ -1,5 +1,5 @@
 	<footer>
-		<?php if(false){ ?>
+		<?php if(!empty($_SESSION['id'])){ ?>
 		<nav>
 			<a href="?page=presentation">Présentation</a>
 			<span></span>
@@ -29,9 +29,7 @@
 			<span></span>
 			<a href="?page=inscription">Par ici pour s'inscrire !</a>
 			<span></span>
-			<a href="?page=connexion"> ou se connecter.</a>
-			<span></span>
-			<a href="?page=recherche">Recherche</a>
+			<a href="?page=membre"> ou se connecter.</a>
 		</nav>
 		<?php }?>
 	</footer>

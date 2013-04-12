@@ -1,3 +1,4 @@
+<?php include('pages/haut.php'); ?>
 <section id="page_galerie_choix">
 
 <h1>Choix du projet :</h1>
@@ -25,3 +26,4 @@
 	</div>
 </div>
 </section>
+<?php include('pages/bas.php'); ?>

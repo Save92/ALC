@@ -1,3 +1,4 @@
+<?php include('pages/haut.php'); ?>
 <section id="page_accueil">
 	<h1>Bienvenue sur le site d'Art Line Concept</h1>
 	<div id="presentation_alc">
@@ -9,3 +10,4 @@
 	</div>
 
 </section>
+<?php include('pages/bas.php'); ?>

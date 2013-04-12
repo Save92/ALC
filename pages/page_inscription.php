@@ -1,4 +1,5 @@
-	<section id="page_inscription">
+<?php include('pages/haut.php'); ?>
+<section id="page_inscription">
 <?php
 
 /*function envoi_mail($nom, $adresseMail, $message){
@@ -113,4 +114,5 @@ if ($defaut) {
 	</form>
 </div>
 <?php } ?>
-	</section>
+</section>
+<?php include('pages/bas.php'); ?>
