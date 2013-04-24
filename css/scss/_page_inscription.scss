@@ -1,0 +1,35 @@
+#page_inscription fieldset{
+    float:left;
+    height:200px;
+    width:40%;
+    min-width: 40px;
+    margin: 50px 10% 0 5%;
+    background:url('../images/metal-texture-151340.jpg') no-repeat center center;
+    padding:30px;
+    border:4px gray solid;
+    border-radius:15px;
+
+}
+
+#page_inscription fieldset form p label{
+    font-weight:800;
+    text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
+    display: inline-block;
+    width:200px;
+    vertical-align:top;
+        font-family: 'Advent Pro', sans-serif ;
+} 
+#page_inscription fieldset form p input{
+    box-shadow:0 0 4px 2px gray;
+    border: 0px;
+    border-radius: 5px;
+    margin:5px 0px 0px 30px;
+    width: 190px;
+    max-height: 85px;
+} 
+#page_inscription #envoyer{
+        width: 80px;
+    min-width:80px;
+    float:right;
+    margin: 20px 8% 10px 50%;
+}

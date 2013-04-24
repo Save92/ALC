@@ -1,0 +1,60 @@
+#page_connexion,#page_deconnexion {
+    height:100%;
+    width: 100%;
+}
+#page_connexion>div, #page_deconnexion>div {
+    background: url("../images/rmap.jpg") top left;
+    height: 168px;
+    width: 358px;
+    margin:15% auto;
+}
+#page_connexion>div>div,#page_deconnexion>div>div{
+    background: url("../images/bloc.png") top left no-repeat;
+    height: 168px;
+    width: 358px;
+    border: 0;
+    
+}
+#page_deconnexion h1{
+    text-align: center;
+    color: white;
+    width: 100%;
+    line-height:168px;
+    
+    
+}
+#page_connexion h1{
+    text-align: center;
+    color: white;
+}
+#page_connexion label{
+    padding-left: 20px;
+    color: #8C8C8C;
+    display: block;
+    font-size: 11px;
+    position: relative;
+}
+#page_connexion input{
+    margin-top: 10px;
+    background: transparent url(input.gif) no-repeat left top;
+    border: 0 none;
+    color: #B3B3B3;
+    display: block;
+    font-size: 11px;
+    height: 15px;
+    margin-bottom: 15px;
+    outline-color: -moz-use-text-color;
+    outline-style: none;
+    outline-width: medium;
+    padding: 5px;
+    width: 285px;
+}
+#page_connexion fieldset{
+        float:left;
+    height:200px;
+    width:25%;
+    min-width: 40px;
+    margin: 60px 2% 0 5%;
+    padding:30px;
+}
+

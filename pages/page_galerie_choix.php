@@ -1,9 +1,8 @@
 <?php include('pages/haut.php'); ?>
 <section id="page_galerie_choix">
-
-<h1>Choix du projet :</h1>
-<div id="page_galerie_global">
-	<div id="liste_projets">
+<div id="page_galerie_global">	
+	<fieldset id="liste_projets">
+		<legend>Choix du projet :</legend>
 	<h3>Themes/Date (A mettre selon le choix dans le menu)</h3>
 		<div id="icones_projets">
 			<a>Projet 1</a>
@@ -18,12 +17,12 @@
 			<a>Projet 10</a>
 		</div>
 	<!-- Nombre de projet variable -->
-	</div>
+	</fieldset>
 
 	<div id="image_projet">
 	IMAGE HERE!!!!
 	<!-- Photo du projet aggrandie ici lorsque l'on passe dessus -->
 	</div>
-</div>
+</dib>
 </section>
 <?php include('pages/bas.php'); ?>

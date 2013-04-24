@@ -1,0 +1,96 @@
+
+#page_galerie_choix #page_galerie_global{
+    display:block;
+    margin: 10px 2% 0;
+    width : 95%;
+    height: 400px;
+    background:yellow;
+}
+
+#page_galerie_choix #liste_projets{
+    float:left;
+    height:250px;
+    width:40%;
+    margin: 5% 5% 0 2%;
+    background:purple;
+    padding:10px;
+    border:4px gray solid;
+    border-radius:15px;
+}
+
+#page_galerie_choix #liste_projets #icones_projets{
+    float:left;
+    margin-left:7%;
+    margin-right:7%;
+    background:blue;
+    height: 213px;
+    width: 366px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+#page_galerie_choix #liste_projets #icones_projets>a{
+    float:left;
+    display:inline-block;
+    height:80px;
+    width:25%;
+    text-align: center;
+    margin: 2% 1% 2% 1%;
+    background:grey;
+    padding:2px;
+    border:4px gray solid;
+    border-radius:15px;
+}
+
+#page_galerie_choix  #image_projet{
+    float:left;
+    height:250px;
+    width:40%;
+    margin: 5% 2% 0 5%;
+    background:red;
+    padding:10px;
+    border:4px gray solid;
+    border-radius:15px;
+}
+
+#page_galerie #page_galerie_global{
+    margin: 10px 2% 0;
+    width : 95%;
+    height: 400px;
+    position:relative;
+}
+
+#page_galerie #page_galerie_global #presentation_projets{
+    float:left;
+    position:relative;
+    height:250px;
+    width:40%;
+    margin: 5% 5% 0 2%;
+    background:url('../images/metal-texture-151340.jpg') no-repeat center center;
+    padding:10px;
+    border:4px gray solid;
+    border-radius:15px;
+
+}
+#page_galerie #page_galerie_global #presentation_projets>a{
+    position:absolute;
+        font-weight:800;
+    text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
+    display: inline-block;
+    vertical-align:top;
+        font-family: 'Advent Pro', sans-serif ;
+    font-weight: 700;
+}
+
+#page_galerie #page_galerie_global #presentation_projets #p_footer{
+    position:absolute;
+    bottom:0px;
+    text-align: center; 
+        text-shadow: 0 0 2px white,0 0 3px grey,0 0 4px white,0 0 4px gray,0 0 4px gray;
+    display: inline-block;
+    vertical-align:top;   
+        font-family: 'Advent Pro', sans-serif ;
+    font-weight: 700;
+
+}
+

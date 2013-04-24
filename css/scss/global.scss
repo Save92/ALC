@@ -1,0 +1,48 @@
+@import "compass";
+
+*{
+		margin:0;
+		padding:0;
+}
+@font-face{
+		font-family: 'Font-Titre';
+		src: url('Pacifico.ttf');
+}
+html, body{
+	width: 100%;
+	height: 100%;
+}
+body{
+	min-width:1024px;
+	background: #000;
+	background:url('../images/fond_metal.jpg') repeat;
+	//box-shadow: inset 0px 0px 1000px 5px rgba(255,255,255,0.8);
+}
+
+@import "haut";
+@import "bas";
+
+section{
+		position: absolute;
+		top: 144px;
+		bottom:80px;
+		left:0;
+		right:0;
+		color: white;
+}
+
+section form fieldset legend{
+		font-size: 16px;
+		text-shadow:0 0 3px grey, 0 0 1px black, 0 0 10px white, 0 0 15px white,0 0 20px white;
+		font-style: bold;
+		font-family: impact;
+		
+}
+
+@import "page_accueil";
+@import "page_presentation";
+@import "page_galerie";
+@import "page_contact";
+@import "page_devis";
+@import "page_inscription";
+@import "page_membres";

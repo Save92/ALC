@@ -1,0 +1,41 @@
+#page_accueil{
+    >div{
+        position: relative;
+        margin: 5% auto;
+        width: 1024px;
+    }
+    #presentation_alc{
+        position:absolute;
+
+        top:20px;
+        left:10px;
+        height:200px;
+        width:350px;
+       // min-width: ;
+        padding:30px;
+        background:url('../images/metal-texture-151340.jpg') no-repeat center center;
+        
+        border:4px gray solid;
+        border-radius:15px;
+        font-weight:800;
+        text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
+        display: inline-block;
+        vertical-align:top;
+    }
+    #slider{
+        position:absolute;
+        top: 20px;
+        right: 10px;
+        overflow: hidden;
+        
+        height: 250px;
+        width:522px;
+
+        border:4px gray solid;
+        border-radius:15px;
+        font-size: 30px;
+        text-shadow:0 0 3px gray, 0 0 10px white, 0 0 15px white,0 0 20px white;
+        font-family: impact;
+
+    }
+}

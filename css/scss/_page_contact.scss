@@ -1,0 +1,96 @@
+
+#page_contact form p{
+	
+	margin-bottom: 10px;
+}
+
+#page_contact form p{
+	display: block;
+            font-weight:800;
+    text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
+    display: inline-block;
+    vertical-align:top;
+        font-family: 'Advent Pro', sans-serif ;
+    font-weight: 700;
+	
+}
+
+#page_contact #valider input{
+    width: 80px;
+    min-width:80px;
+    float:right;
+    margin: 5px auto 10px 80%;
+}
+#page_contact #question #titre{
+    font-size: 16px;
+    text-shadow:0 0 3px grey, 0 0 1px black, 0 0 10px white, 0 0 15px white,0 0 20px white;
+    font-style: bold;
+    font-family: impact;
+}
+
+#page_contact #question{
+    float:left;
+    height:200px;
+    width:25%;
+    min-width: 40px;
+    margin: 50px 20px 0 5%;
+    background:url('../images/metal-texture-151340.jpg') no-repeat center center;
+    padding:30px;
+    border:4px gray solid;
+    border-radius:15px;
+        font-family: 'Advent Pro', sans-serif ;
+    font-weight: 700;
+}
+#page_bas {
+background:url('../images/bottom.jpg');
+}
+
+#page_contact input, #page_contact textarea{
+    box-shadow:0 0 4px 2px gray;
+    border: 0px;
+    border-radius: 5px;
+	min-width: 150px;
+    max-height: 85px;
+}
+#page_contact textarea{
+    width: 100%;
+    min-width: 200px;
+    max-width: 400px;
+	height: 85px;
+    min-height: 85px;
+    max-height: 85px;
+
+}
+#page_contact label{
+    font-weight:800;
+    text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
+	width: 120px;
+	display: inline-block;
+    vertical-align:top;
+        font-family: 'Advent Pro', sans-serif ;
+}
+
+#page_contact #contact-us{
+float:left;
+height:200px;
+width:25%;
+min-width: 40px;
+margin: 50px 10% 0 10%;
+background:url('../images/metal-texture-151340.jpg') no-repeat center center;
+padding:30px;
+border:4px gray solid;
+border-radius:15px;
+font-weight:800;
+text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
+display: inline-block;
+vertical-align:top;
+display: inline-block;
+    font-family: 'Advent Pro', sans-serif ;
+}
+
+#page_contact #contact-us #titre{
+	font-size: 16px;
+	text-shadow:0 0 3px gray, 0 0 10px white, 0 0 15px white,0 0 20px white;
+	text-decoration: bold;
+	font-family: impact;
+}

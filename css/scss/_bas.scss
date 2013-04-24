@@ -1,0 +1,44 @@
+footer{
+	position: fixed;
+	left:0;
+	right:0;
+	bottom:0;
+	height:80px;
+	z-index: 10000;
+	background:#0000FF; 
+	color: white;
+	}
+footer nav span{
+    border: 1px solid gray;
+    margin: 0 4px 0 4px;
+}
+footer nav span:last-child{
+    border:none;
+    margin: 0;
+}
+footer nav a {
+	font-family: 'Advent Pro', sans-serif ;
+    font-weight: 700;
+	color:white;
+	text-decoration: none;
+	min-width:900px;
+}
+footer nav .galerie_choix {
+	position:absolute;
+	display:block;
+	z-index: 2;
+	top: 20px;
+	left:70px;
+}
+footer nav .galerie_choix span {
+
+}
+footer nav .categorie {
+    font-family: 'Advent Pro', sans-serif ;
+    font-weight: 700;
+	position:absolute;
+	display:block;
+	z-index: 2;
+	top: 40px;
+	left:70px;
+}

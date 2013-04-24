@@ -1,0 +1,65 @@
+header{
+	position:absolute;
+	top:0;
+	left: 0;
+	right: 0;
+	height: 144px;
+	min-width:900px;
+
+	background: #FF0000;
+	background: url("../images/bottom.jpg");
+	border-radius: 0 0 50px 50px;
+
+	>a {
+		display:block;
+		float:left;
+		width: 550px;
+		height: 144px;
+		text-align: center;
+		line-height:144px;
+		text-decoration:none;
+		color: white;
+		font-size: 70px;
+		vertical-align:middle;
+		font-family:"Font-Titre";
+		/*text-shadow: 5px 0 5px gray, 0 5px 5px gray,2px 2px 8px #EEE;*/
+		text-shadow:0 0 5px #FFF, 0 0 200px #FFF, 0 0 15px #FFF,0 0 40px #FFF, 0 0 70px #FFF; 
+	}
+	>form {
+		display:block;
+		width: 200px;
+		height: 30px;
+		float:right;
+		margin-top:100px;
+		margin-right: 20px;
+		border: 3px gray solid;
+		border-radius: 15px ;
+	}
+	input
+	{
+		display:block;
+		float:left;
+		border: none;
+	}
+	input[type="text"]
+	{
+		height: 30px;
+		width: 152px;
+		border-radius: 13px 0 0 13px ;
+		padding-left: 8px;
+		outline: none;
+	}
+	input[type="submit"]
+	{
+		background:url("../images/loupe-desactif.png") #252525 no-repeat 5px 2px;
+		border-radius: 0 13px 13px 0 ;
+		height: 30px;
+		width: 40px;
+		text-indent:-8000px;
+	}
+	input[type="submit"]:hover
+	{
+		background:url("../images/loupe-desactif.png") #404040 no-repeat 3px 2px;
+	}
+
+}

@@ -54,38 +54,44 @@
 	$_SESSION['devis_temp_mail'] = $_POST['mail'];
 ?>
 <h1>Une idée ? Une envie ? Soumettez nous votre projet !</h1>
+
 <form id="form_devis" method="post">
-	<div id="premiere_etape">
-	
-		<h2>Premiere etape : Vos coordonnées
+		<fieldset id="premiere_etape">
+		
+		<legend>Premiere etape : Vos coordonnées</legend>
+		<a>
 		<p><label for="prenom">Prenom : </label><input id="prenom" name="prenom" type="text" value="<?php echo $_POST['prenom']; ?>" disabled></p>
 		<p><label for="nom">Nom : </label><input id="nom" name="nom" type="text" value="<?php echo $_POST['nom']; ?>" disabled></p>
 		<p><label for="mail">Votre email : </label><input id="mail" name="mail" type="email" value="<?php echo $_POST['mail']; ?>" disabled></p>
-	</div>
-	<div id="deuxieme_etape">
+	</a></fieldset>
+	<fieldset id="deuxieme_etape">
+		<legend>Deuxieme etape : Votre véhicule</legend>
+		<a>
 		<p><label for="marque">Marque : </label><input id="marque" name="marque" type="text"></p>
 		<p><label for="modele">Modéle : </label><input id="modele" name="modele" type="text"></p>
 		<p><label for="annee">Année : </label><input id="annee" name="annee" type="text"></p>
 		<p><label for="min">Budget minimum : </label><input id="min" name="min" type="text"></p>
 		<p><label for="max">Budget maximum : </label><input id="max" name="max" type="text"></p>
-		<p><label for="description">Description de votre projet : </label><textarea id="description" name="description" type="text" required></textarea></p>
-		<p>Ajouter une photo (3 maximum) : <input type="file" ><input type="hidden" name="etape" value="valid"><input type="submit"></p>
-	</div>
+		<p><label for="description">Description de votre projet : </label><br><textarea id="description" name="description" type="text" required></textarea></p>
+		<p><label id="pj">Ajouter une photo (3 maximum) : </label><input type="file" ><input type="hidden" name="etape" value="valid"><br><input id="valider" type="submit"></p>
+	</a>
+	</fieldset>
 </form>
-
 <?php
 	}
 	else {
 ?> 
 <h1>Une idée ? Une envie ? Soumettez nous votre projet !</h1>
 <form id="form_devis" method="post">
-	<div id="premiere_etape">
-		<h2>Premiere etape : Vos coordonnées
+	<fieldset id="premiere_etape">
+		<legend>Premiere etape : Vos coordonnées</legend>
+		<a>
 		<p><label for="prenom">Prenom : </label><input id="prenom" name="prenom" type="text" required></p>
 		<p><label for="nom">Nom : </label><input id="nom" name="nom" type="text" required></p>
 		<p><label for="mail">Votre email : </label><input id="mail" name="mail" type="email" required></p>
-		<p><input type="submit"></p>
-	</div>
+		<p><input id="valider" type="submit"></p>
+	</a>
+	</fieldset>
 </form>
 
 <?php

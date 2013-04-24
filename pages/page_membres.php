@@ -21,16 +21,16 @@ if(empty($_SESSION['id'])){
 	include('pages/haut.php'); 
 	?>
 <section id="page_connexion">
-	<div id="se_connecter">
+	<fieldset id="se_connecter">
 	<div>
 		<form method="post">
-			<h1>Connexion :</h1>
+			<legend>Connexion :</legend>
 			<label>Votre Login : <br><input type="text" id="login" name="login"></label><br>
 			<label>Mot de passe : <br><input type="password" id="password" name="password"></label><br>
 			<input type="submit" id="button_connexion" value="Connexion">
 		</form>
 	<!-- Nombre de résultats variable -->
-	</div></div>
+	</div></fieldset>
 </section>
 <?php
 include('pages/bas.php');

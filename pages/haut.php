@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
-	<link rel="stylesheet" type="text/css" href="css/global.css">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
 	<!-- <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">-->
-	
+	<link href='http://fonts.googleapis.com/css?family=Advent+Pro:700,400' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/orbit-1.2.3.css">
+	<link rel="stylesheet" type="text/css" href="css/global.css">
 	<title>ALC</title>
 
 </head>
