@@ -4,38 +4,53 @@
         margin: 5% auto;
         width: 1004px;
     }
-    #presentation_alc{
-        position:absolute;
+    >div>div{
 
-        top:20px;
-        left:10px;
+    }
+    h1{
+        display: inline-block;
+        float:left;
+        padding: 80px 0 0 10px;
+        font-family: "Advent Pro";
+        font-size: 45px;
+        text-shadow: 0 -1px 1px white, 0 -2px 4px white, 0 -3px 10px white, 0 -4px 20px white, 0 -6px 40px white;
+    
+    }
+    #slider{
+        float:right;
+        overflow: hidden;
+        margin-right: 10px;
+        height: 300px;
+        width:672px;
+        border:4px gray solid;
+        border-radius:15px;
+        //font-size: 30px;
+        //text-shadow:0 0 3px gray, 0 0 10px white, 0 0 15px white,0 0 20px white;
+        //font-family: impact;
+    }
+    #presentation_alc{
+        margin: 40px 40px 0;
         height:200px;
-        width:350px;
-       // min-width: ;
+        width:850px;
+        // min-width: ;
         padding:30px;
         background:url('../images/metal-texture-151340.jpg') no-repeat center center;
         
         border:4px gray solid;
         border-radius:15px;
         font-weight:800;
-        text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
+        text-shadow:0 0 1px black, 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
         display: inline-block;
         vertical-align:top;
     }
-    #slider{
-        position:absolute;
-        top: 20px;
-        right: 10px;
-        overflow: hidden;
-        
-        height: 250px;
-        width:522px;
-
-        border:4px gray solid;
-        border-radius:15px;
-        font-size: 30px;
-        text-shadow:0 0 3px gray, 0 0 10px white, 0 0 15px white,0 0 20px white;
-        font-family: impact;
-
+}
+.orbit-wrapper{
+    border-radius: 10px;
+}
+#featured{
+    border-radius: 10px;
+    
+    img{
+        border-radius: 10px;
     }
 }

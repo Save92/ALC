@@ -1,5 +1,5 @@
 <?php
-$file = fopen("cached/menu.json", "r");
+$file = fopen("cache/menu.json", "r");
 $liste = fread($file, 8192);
 $liste_tableau = json_decode($liste, true); 
 ?>

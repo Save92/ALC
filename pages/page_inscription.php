@@ -1,6 +1,5 @@
 <?php include('pages/haut.php'); ?>
 <section id="page_inscription">
-	<div>
 <?php
 
 /*function envoi_mail($nom, $adresseMail, $message){
@@ -116,10 +115,7 @@ if ($defaut) {
 		<input id="envoyer" type="submit" value="Envoyer"></a>
 
 </form>
-
 </fieldset>
-
 <?php } ?>
-</div>
 </section>
 <?php include('pages/bas.php'); ?>

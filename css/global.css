@@ -9,17 +9,22 @@
   src: url("Pacifico.ttf");
 }
 
-/* line 11, scss/global.scss */
+@font-face {
+  font-family: 'Font-Titre';
+  src: url("Pacifico.ttf");
+}
+
+/* line 15, scss/global.scss */
 html, body {
   width: 100%;
   height: 100%;
 }
 
-/* line 15, scss/global.scss */
+/* line 19, scss/global.scss */
 body {
-  min-width: 1024px;
+  min-width: 1004px;
   background: #000;
-  background: url("../images/fond_metal.jpg") repeat;
+  background: url("../images/fond_metal.jpg") top center repeat;
 }
 
 /* line 1, scss/_haut.scss */
@@ -48,7 +53,7 @@ header > a {
   vertical-align: middle;
   font-family: "Font-Titre";
   /*text-shadow: 5px 0 5px gray, 0 5px 5px gray,2px 2px 8px #EEE;*/
-  text-shadow: 0 0 5px white, 0 0 200px white, 0 0 15px white, 0 0 40px white, 0 0 70px white;
+  text-shadow: 0 0 5px #FFF, 0 0 200px #FFF, 0 0 15px #FFF,0 0 40px #FFF, 0 0 70px #FFF;
 }
 /* line 28, scss/_haut.scss */
 header > form {
@@ -115,7 +120,7 @@ footer nav span:last-child {
 
 /* line 20, scss/_bas.scss */
 footer nav a {
-  font-family: 'Advent Pro', sans-serif;
+  font-family: "Advent Pro", sans-serif;
   font-weight: 700;
   color: white;
   text-decoration: none;
@@ -133,7 +138,7 @@ footer nav .galerie_choix {
 
 /* line 37, scss/_bas.scss */
 footer nav .categorie {
-  font-family: 'Advent Pro', sans-serif;
+  font-family: "Advent Pro", sans-serif;
   font-weight: 700;
   position: absolute;
   display: block;
@@ -142,7 +147,7 @@ footer nav .categorie {
   left: 70px;
 }
 
-/* line 25, scss/global.scss */
+/* line 29, scss/global.scss */
 section {
   position: absolute;
   top: 144px;
@@ -152,12 +157,17 @@ section {
   color: white;
 }
 
-/* line 34, scss/global.scss */
+/* line 38, scss/global.scss */
 section fieldset legend {
   font-size: 16px;
-  text-shadow: 0 0 3px grey, 0 0 1px black, 0 0 10px white, 0 0 15px white, 0 0 20px white;
+  text-shadow: 0 0 3px grey, 0 0 1px black, 0 0 10px white, 0 0 15px white,0 0 20px white;
   font-style: bold;
   font-family: impact;
+}
+
+/* line 45, scss/global.scss */
+section fieldset {
+  box-shadow: 0 0 25px 1px rgba(255, 255, 255, 0.5);
 }
 
 /* line 2, scss/_page_accueil.scss */
@@ -166,35 +176,52 @@ section fieldset legend {
   margin: 5% auto;
   width: 1004px;
 }
-/* line 7, scss/_page_accueil.scss */
+/* line 10, scss/_page_accueil.scss */
+#page_accueil h1 {
+  display: inline-block;
+  float: left;
+  padding: 80px 0 0 10px;
+  font-family: "Advent Pro";
+  font-size: 45px;
+  text-shadow: 0 -1px 1px white, 0 -2px 4px white, 0 -3px 10px white, 0 -4px 20px white, 0 -6px 40px white;
+}
+/* line 19, scss/_page_accueil.scss */
+#page_accueil #slider {
+  float: right;
+  overflow: hidden;
+  margin-right: 10px;
+  height: 300px;
+  width: 672px;
+  border: 4px gray solid;
+  border-radius: 15px;
+}
+/* line 31, scss/_page_accueil.scss */
 #page_accueil #presentation_alc {
-  position: absolute;
-  top: 20px;
-  left: 10px;
+  margin: 40px 40px 0;
   height: 200px;
-  width: 350px;
+  width: 850px;
   padding: 30px;
   background: url("../images/metal-texture-151340.jpg") no-repeat center center;
   border: 4px gray solid;
   border-radius: 15px;
   font-weight: 800;
-  text-shadow: 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray;
+  text-shadow: 0 0 1px black, 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
   display: inline-block;
   vertical-align: top;
 }
-/* line 25, scss/_page_accueil.scss */
-#page_accueil #slider {
-  position: absolute;
-  top: 20px;
-  right: 10px;
-  overflow: hidden;
-  height: 250px;
-  width: 522px;
-  border: 4px gray solid;
-  border-radius: 15px;
-  font-size: 30px;
-  text-shadow: 0 0 3px gray, 0 0 10px white, 0 0 15px white, 0 0 20px white;
-  font-family: impact;
+
+/* line 47, scss/_page_accueil.scss */
+.orbit-wrapper {
+  border-radius: 10px;
+}
+
+/* line 50, scss/_page_accueil.scss */
+#featured {
+  border-radius: 10px;
+}
+/* line 53, scss/_page_accueil.scss */
+#featured img {
+  border-radius: 10px;
 }
 
 /* line 1, scss/_page_presentation.scss */
@@ -208,79 +235,19 @@ section fieldset legend {
   border-radius: 15px;
   background: url("../images/metal-texture-151340.jpg") no-repeat center center;
   font-weight: 800;
-  text-shadow: 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray;
+  text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
   vertical-align: top;
-  font-family: 'Advent Pro', sans-serif;
+  font-family: "Advent Pro", sans-serif;
 }
 
-/* line 2, scss/_page_galerie.scss */
-#page_galerie_choix #page_galerie_global {
-  display: block;
-  margin: 10px 2% 0;
-  width: 95%;
-  height: 400px;
-  background: yellow;
-}
-
-/* line 10, scss/_page_galerie.scss */
-#page_galerie_choix #liste_projets {
-  float: left;
-  height: 250px;
-  width: 40%;
-  margin: 5% 5% 0 2%;
-  background: purple;
-  padding: 10px;
-  border: 4px gray solid;
-  border-radius: 15px;
-}
-
-/* line 21, scss/_page_galerie.scss */
-#page_galerie_choix #liste_projets #icones_projets {
-  float: left;
-  margin-left: 7%;
-  margin-right: 7%;
-  background: blue;
-  height: 213px;
-  width: 366px;
-  overflow-x: scroll;
-  overflow-y: hidden;
-}
-
-/* line 32, scss/_page_galerie.scss */
-#page_galerie_choix #liste_projets #icones_projets > a {
-  float: left;
-  display: inline-block;
-  height: 80px;
-  width: 25%;
-  text-align: center;
-  margin: 2% 1% 2% 1%;
-  background: grey;
-  padding: 2px;
-  border: 4px gray solid;
-  border-radius: 15px;
-}
-
-/* line 45, scss/_page_galerie.scss */
-#page_galerie_choix #image_projet {
-  float: left;
-  height: 250px;
-  width: 40%;
-  margin: 5% 2% 0 5%;
-  background: red;
-  padding: 10px;
-  border: 4px gray solid;
-  border-radius: 15px;
-}
-
-/* line 56, scss/_page_galerie.scss */
+/* line 3, scss/_page_galerie.scss */
 #page_galerie #page_galerie_global {
   margin: 10px 2% 0;
   width: 95%;
   height: 400px;
   position: relative;
 }
-
-/* line 63, scss/_page_galerie.scss */
+/* line 10, scss/_page_galerie.scss */
 #page_galerie #page_galerie_global #presentation_projets {
   float: left;
   position: relative;
@@ -292,56 +259,112 @@ section fieldset legend {
   border: 4px gray solid;
   border-radius: 15px;
 }
-
-/* line 75, scss/_page_galerie.scss */
+/* line 22, scss/_page_galerie.scss */
 #page_galerie #page_galerie_global #presentation_projets > a {
   position: absolute;
   font-weight: 800;
-  text-shadow: 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray;
+  text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
   display: inline-block;
   vertical-align: top;
-  font-family: 'Advent Pro', sans-serif;
+  font-family: "Advent Pro", sans-serif;
   font-weight: 700;
 }
-
-/* line 85, scss/_page_galerie.scss */
+/* line 32, scss/_page_galerie.scss */
 #page_galerie #page_galerie_global #presentation_projets #p_footer {
   position: absolute;
   bottom: 0px;
   text-align: center;
-  text-shadow: 0 0 2px white, 0 0 3px grey, 0 0 4px white, 0 0 4px gray, 0 0 4px gray;
+  text-shadow: 0 0 2px white,0 0 3px grey,0 0 4px white,0 0 4px gray,0 0 4px gray;
   display: inline-block;
   vertical-align: top;
-  font-family: 'Advent Pro', sans-serif;
+  font-family: "Advent Pro", sans-serif;
   font-weight: 700;
 }
 
-/* line 4, scss/_page_contact.scss */
+/* line 49, scss/_page_galerie.scss */
+#page_galerie_choix > div {
+  position: relative;
+  margin: 80px auto 0 auto;
+  width: 1024px;
+}
+/* line 54, scss/_page_galerie.scss */
+#page_galerie_choix #liste_projets {
+  float: left;
+  min-height: 250px;
+  width: 40%;
+  margin: 5px 5px 0 2px;
+  background: url("../images/metal-texture-151340.jpg") no-repeat center center;
+  padding: 10px;
+  border: 4px gray solid;
+  border-radius: 15px;
+}
+/* line 65, scss/_page_galerie.scss */
+#page_galerie_choix #liste_projets #icones_projets {
+  display: table;
+}
+/* line 67, scss/_page_galerie.scss */
+#page_galerie_choix #liste_projets #icones_projets > li {
+  list-style: none;
+  display: table-cell;
+  float: left;
+  margin: 2% 1% 2% 1%;
+}
+/* line 73, scss/_page_galerie.scss */
+#page_galerie_choix #liste_projets #icones_projets > li a {
+  display: block;
+  min-height: 120px;
+  width: 90px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 2px;
+  border: 4px gray solid;
+  border-radius: 15px;
+  text-decoration: none;
+  color: white;
+}
+/* line 84, scss/_page_galerie.scss */
+#page_galerie_choix #liste_projets #icones_projets > li a img {
+  border-radius: 9px;
+}
+/* line 93, scss/_page_galerie.scss */
+#page_galerie_choix #image_projet {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 250px;
+  width: 40%;
+  background: red;
+  padding: 10px;
+  border: 4px gray solid;
+  border-radius: 15px;
+}
+
+/* line 3, scss/_page_contact.scss */
 #page_contact > div {
   position: relative;
   margin: 5% auto;
   width: 1024px;
   height: 500px;
 }
-/* line 11, scss/_page_contact.scss */
+/* line 10, scss/_page_contact.scss */
 #page_contact form p {
   margin-bottom: 10px;
   display: block;
   font-weight: 800;
-  text-shadow: 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray;
+  text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
   display: inline-block;
   vertical-align: top;
-  font-family: 'Advent Pro', sans-serif;
+  font-family: "Advent Pro", sans-serif;
   font-weight: 700;
 }
-/* line 23, scss/_page_contact.scss */
+/* line 22, scss/_page_contact.scss */
 #page_contact #valider input {
   width: 80px;
   min-width: 80px;
   float: right;
   margin: 5px auto 10px 80%;
 }
-/* line 31, scss/_page_contact.scss */
+/* line 30, scss/_page_contact.scss */
 #page_contact #question {
   float: left;
   height: 200px;
@@ -352,17 +375,17 @@ section fieldset legend {
   padding: 30px;
   border: 4px gray solid;
   border-radius: 15px;
-  font-family: 'Advent Pro', sans-serif;
+  font-family: "Advent Pro", sans-serif;
   font-weight: 700;
 }
-/* line 44, scss/_page_contact.scss */
+/* line 43, scss/_page_contact.scss */
 #page_contact #question #titre {
   font-size: 16px;
-  text-shadow: 0 0 3px grey, 0 0 1px black, 0 0 10px white, 0 0 15px white, 0 0 20px white;
+  text-shadow: 0 0 3px grey, 0 0 1px black, 0 0 10px white, 0 0 15px white,0 0 20px white;
   font-style: bold;
   font-family: impact;
 }
-/* line 50, scss/_page_contact.scss */
+/* line 49, scss/_page_contact.scss */
 #page_contact #question input, #page_contact #question textarea {
   box-shadow: 0 0 4px 2px gray;
   border: 0px;
@@ -370,7 +393,7 @@ section fieldset legend {
   min-width: 150px;
   max-height: 85px;
 }
-/* line 57, scss/_page_contact.scss */
+/* line 56, scss/_page_contact.scss */
 #page_contact #question textarea {
   width: 100%;
   min-width: 200px;
@@ -379,16 +402,16 @@ section fieldset legend {
   min-height: 85px;
   max-height: 85px;
 }
-/* line 66, scss/_page_contact.scss */
+/* line 65, scss/_page_contact.scss */
 #page_contact #question label {
   font-weight: 800;
-  text-shadow: 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray;
+  text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
   width: 120px;
   display: inline-block;
   vertical-align: top;
-  font-family: 'Advent Pro', sans-serif;
+  font-family: "Advent Pro", sans-serif;
 }
-/* line 75, scss/_page_contact.scss */
+/* line 74, scss/_page_contact.scss */
 #page_contact #contact-us {
   float: left;
   height: 200px;
@@ -400,16 +423,16 @@ section fieldset legend {
   border: 4px gray solid;
   border-radius: 15px;
   font-weight: 800;
-  text-shadow: 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray;
+  text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
   display: inline-block;
   vertical-align: top;
   display: inline-block;
-  font-family: 'Advent Pro', sans-serif;
+  font-family: "Advent Pro", sans-serif;
 }
-/* line 92, scss/_page_contact.scss */
+/* line 91, scss/_page_contact.scss */
 #page_contact #contact-us #titre {
   font-size: 16px;
-  text-shadow: 0 0 3px gray, 0 0 10px white, 0 0 15px white, 0 0 20px white;
+  text-shadow: 0 0 3px gray, 0 0 10px white, 0 0 15px white,0 0 20px white;
   text-decoration: bold;
   font-family: impact;
 }
@@ -459,14 +482,14 @@ section fieldset legend {
 }
 /* line 43, scss/_page_devis.scss */
 #page_devis #premiere_etape p label {
-  text-shadow: 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray;
+  text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
   width: 100px;
   margin: 10px 3px 0px 5px;
   display: inline-block;
   font-weight: 800;
   vertical-align: center;
   text-align: left;
-  font-family: 'Advent Pro', sans-serif;
+  font-family: "Advent Pro", sans-serif;
 }
 /* line 55, scss/_page_devis.scss */
 #page_devis #deuxieme_etape {
@@ -490,12 +513,12 @@ section fieldset legend {
 /* line 79, scss/_page_devis.scss */
 #page_devis #deuxieme_etape p label {
   font-weight: 800;
-  text-shadow: 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray;
+  text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
   width: 120px;
   margin: 5px 5px 0px 5px;
   display: inline-block;
   text-align: left;
-  font-family: 'Advent Pro', sans-serif;
+  font-family: "Advent Pro", sans-serif;
   vertical-align: center;
 }
 /* line 90, scss/_page_devis.scss */
@@ -528,7 +551,7 @@ section fieldset legend {
 /* line 117, scss/_page_devis.scss */
 #page_devis #deuxieme_etape #pj {
   font-weight: 800;
-  text-shadow: 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray;
+  text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
   width: 245px;
   float: left;
   margin: 10px 30px 0 10px;
@@ -573,12 +596,12 @@ section fieldset legend {
 /* line 18, scss/_page_inscription.scss */
 #page_inscription fieldset form p label {
   font-weight: 800;
-  text-shadow: 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray;
+  text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
   display: inline-block;
   margin: 5px 3px 0px 0px;
   width: 180px;
   vertical-align: top;
-  font-family: 'Advent Pro', sans-serif;
+  font-family: "Advent Pro", sans-serif;
 }
 /* line 27, scss/_page_inscription.scss */
 #page_inscription fieldset form p input {
@@ -597,29 +620,75 @@ section fieldset legend {
   margin: 20px 8% 10px 50%;
 }
 
-/* line 1, scss/_page_membres.scss */
-#page_connexion, #page_deconnexion {
-  height: 100%;
-  width: 100%;
-}
-
-/* line 5, scss/_page_membres.scss */
+/* line 2, scss/_page_membres.scss */
 #page_connexion > div, #page_deconnexion > div {
-  background: url("../images/rmap.jpg") top left;
+  position: relative;
   height: 168px;
   width: 358px;
-  margin: 15% auto;
+  margin: 206px auto;
 }
-
-/* line 11, scss/_page_membres.scss */
+/* line 7, scss/_page_membres.scss */
 #page_connexion > div > div, #page_deconnexion > div > div {
-  background: url("../images/bloc.png") top left no-repeat;
+  position: absolute;
   height: 168px;
   width: 358px;
-  border: 0;
+}
+/* line 13, scss/_page_membres.scss */
+#page_connexion #background, #page_deconnexion #background {
+  background: url("../images/rmap.jpg") top left;
+  -webkit-animation-name: BGconnect;
+  -webkit-animation-duration: 40s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-name: BGconnect;
+  -moz-animation-duration: 40s;
+  -moz-animation-timing-function: linear;
+  -moz-animation-iteration-count: infinite;
+}
+/* line 24, scss/_page_membres.scss */
+#page_connexion #mask, #page_deconnexion #mask {
+  background: url("../images/bloc2.png") top left no-repeat;
+  padding: 20px;
+}
+/* line 28, scss/_page_membres.scss */
+#page_connexion p, #page_deconnexion p {
+  display: block;
+  width: 318px;
+  margin-bottom: 9px;
+}
+/* line 34, scss/_page_membres.scss */
+#page_connexion label, #page_deconnexion label {
+  color: #8C8C8C;
+  display: block;
+  font-size: 11px;
+  position: relative;
+}
+/* line 40, scss/_page_membres.scss */
+#page_connexion input[type="text"], #page_connexion input[type="password"], #page_deconnexion input[type="text"], #page_deconnexion input[type="password"] {
+  margin-top: 2px;
+  background: rgba(20, 20, 20, 0.6);
+  box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.3);
+  border: none;
+  color: #B3B3B3;
+  display: block;
+  font-size: 11px;
+  height: 15px;
+  padding: 5px;
+  width: 285px;
+}
+/* line 52, scss/_page_membres.scss */
+#page_connexion input[type="submit"], #page_deconnexion input[type="submit"] {
+  background: url("http://reseaupro.univ-paris-diderot.fr/userfiles/image/bouton-connexion.png");
+  background-size: 120px 40px;
+  text-indent: -8000px;
+  border: none;
+  height: 40px;
+  width: 120px;
+  display: block;
+  margin: 0 auto;
 }
 
-/* line 18, scss/_page_membres.scss */
+/* line 63, scss/_page_membres.scss */
 #page_deconnexion h1 {
   text-align: center;
   color: white;
@@ -627,44 +696,26 @@ section fieldset legend {
   line-height: 168px;
 }
 
-/* line 26, scss/_page_membres.scss */
-#page_connexion h1 {
-  text-align: center;
-  color: white;
+@-webkit-keyframes BGconnect {
+  /* line 70, scss/_page_membres.scss */
+  from {
+    background-position: 0px 0px;
+  }
+
+  /* line 73, scss/_page_membres.scss */
+  to {
+    background-position: -3000px 0px;
+  }
 }
 
-/* line 30, scss/_page_membres.scss */
-#page_connexion label {
-  padding-left: 20px;
-  color: #8C8C8C;
-  display: block;
-  font-size: 11px;
-  position: relative;
-}
+@-moz-keyframes BGconnect {
+  /* line 78, scss/_page_membres.scss */
+  from {
+    background-position: 0px 0px;
+  }
 
-/* line 37, scss/_page_membres.scss */
-#page_connexion input {
-  margin-top: 10px;
-  background: transparent url(input.gif) no-repeat left top;
-  border: 0 none;
-  color: #B3B3B3;
-  display: block;
-  font-size: 11px;
-  height: 15px;
-  margin-bottom: 15px;
-  outline-color: -moz-use-text-color;
-  outline-style: none;
-  outline-width: medium;
-  padding: 5px;
-  width: 285px;
-}
-
-/* line 52, scss/_page_membres.scss */
-#page_connexion fieldset {
-  float: left;
-  height: 200px;
-  width: 25%;
-  min-width: 40px;
-  margin: 60px 2% 0 5%;
-  padding: 30px;
+  /* line 81, scss/_page_membres.scss */
+  to {
+    background-position: -3000px 0px;
+  }
 }

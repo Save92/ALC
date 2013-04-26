@@ -8,14 +8,18 @@
 		font-family: 'Font-Titre';
 		src: url('Pacifico.ttf');
 }
+@font-face{
+		font-family: 'Font-Titre';
+		src: url('Pacifico.ttf');
+}
 html, body{
 	width: 100%;
 	height: 100%;
 }
 body{
-	min-width:1024px;
+	min-width:1004px;
 	background: #000;
-	background:url('../images/fond_metal.jpg') repeat;
+	background:url('../images/fond_metal.jpg') top center repeat;
 	//box-shadow: inset 0px 0px 1000px 5px rgba(255,255,255,0.8);
 }
 
@@ -37,6 +41,10 @@ section fieldset legend{
 		font-style: bold;
 		font-family: impact;
 		
+}
+section fieldset{
+
+		box-shadow: 0 0 25px 1px rgba(255,255,255,0.5);
 }
 
 @import "page_accueil";

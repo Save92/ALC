@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('lib/config.php');
+include('pages/config.php');
 if(isset($_GET['page'])){
 	switch($_GET['page']){
 		case 'accueil':
