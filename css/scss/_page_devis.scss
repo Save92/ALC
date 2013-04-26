@@ -1,121 +1,144 @@
-#page_devis #form_devis{
-    display:block;
-    margin: 10px auto 0;
-    width: 95%;
-    height: 350px;
-}
+#page_devis{
 
-#page_devis #premiere_etape{
-    float:left;
-    height:130px;
-    width:30%;
-    min-width: 40px;
-    margin: 40px 10% 0 0;
-    background:url('../images/metal-texture-151340.jpg') no-repeat center center;
-    padding:30px;
-    border:4px gray solid;
-    border-radius:15px;
-}
-
-#page_devis input{
-    box-shadow:0 0 4px 2px gray;
-    border: 0px;
-    border-radius: 5px;
-    width: 200px;
-        margin:5px 5px 0px 0px;
-}
-#page_devis textarea{
-    width: 100%;
-    min-width: 200px;
-    max-width: 480px;
-    height: 85px;
-    min-height: 85px;
-    max-height: 85px;
-
-}
-#page_devis #premiere_etape #valider{
-    box-shadow:0 0 4px 2px gray;
-    border: 0px;
-    width: 80px;
-    min-width:80px;
-    float:right;
-    margin: 20px 10% 10px 80%;
-    float:right;
-}
-#page_devis #premiere_etape label{
-    font-weight:800;
-    text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
-    width: 150px;
-    display: inline-block;
-    text-align: right;
-    vertical-align:center;
-        font-family: 'Advent Pro', sans-serif ;
-}
-
-#page_devis #premiere_etape p label{
-    font-weight:800;
-    text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
-    width: 100px;
-    margin:5px 5px 0px 5px;
-    display: inline-block;
-    vertical-align:center;
-    text-align: right;
-        font-family: 'Advent Pro', sans-serif ;
-}
-#page_devis #deuxieme_etape #valider{
-    box-shadow:0 0 4px 2px gray;
-    border: 0px;
-    width: 80px;
-    min-width:80px;
-    float:right;
-    margin: 10px 5% 10px 80%;
-    float:right;
-}
-#page_devis #deuxieme_etape{
-    float:left;
-    height:300px;
-    width:46%;
-    min-width:00px;
-    background:url('../images/metal-texture-151340.jpg') no-repeat center center;
-    padding:20px;
-    border:4px gray solid;
-    border-radius:15px;
-}
-/*#page_devis #valider{
-    box-shadow:0 0 4px 2px gray;
-    border: 0px;
-    width: 80px;
-    min-width:80px;
-    float:right;
-    margin: 20px 10% 10px 80%;
-    float:right;
-}*/
-#page_devis #deuxieme_etape #pj{
-    font-weight:800;
-    text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
-    width: 245px;
-    display: inline-block;
-    vertical-align:center;
-    text-align: left;
+    >div{
+        position: relative;
+        margin: 5% auto;
+        width: 1004px;
+    }       
+         #form_devis{
+        display:block;
+        margin: 10px auto 0;
+        width: 95%;
+        height: 350px;
     }
-#page_devis #deuxieme_etape label{
-    font-weight:800;
-    text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
-    width: 200px;
-    display: inline-block;
-    vertical-align:center;
-    text-align: right;
-        font-family: 'Advent Pro', sans-serif ;
-}
 
-#page_devis #deuxieme_etape p label{
-    font-weight:800;
-    text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
-    width: 200px;
-    margin:5px 5px 0px 5px;
-    display: inline-block;
-    vertical-align:center;
-    text-align: right;
-        font-family: 'Advent Pro', sans-serif ;
-    font-weight: 700;
+     #premiere_etape{
+            float:left;
+            height:160px;
+            width:300px;
+            min-width: 40px;
+            margin: 40px 10% 0 0;
+            background:url('../images/metal-texture-151340.jpg') no-repeat center center;
+            padding:5px;
+            border:4px gray solid;
+            border-radius:15px;
+  
+         input{
+            box-shadow:0 0 4px 2px gray;
+            border: 0px;
+            border-radius: 3px;
+            width: 170px;
+            margin:10px 3px 0px 0px;
+            }
+         #valider{
+            box-shadow:0 0 4px 2px gray;
+            border: 0px;
+            width: 80px;
+            min-width:80px;
+            float:right;
+            margin: 20px 20px 10px 200px;
+            float:right;
+        }
+
+          p label{
+            text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
+            width: 100px;
+            margin:10px 3px 0px 5px;
+            display: inline-block;
+                        font-weight:800;
+            vertical-align:center;
+            //vertical-align:center;
+            text-align: left;
+                font-family: 'Advent Pro', sans-serif ;
+        }
+    }
+    #deuxieme_etape{
+
+            float:right;
+            height:350px;
+            width:450px;
+            background:url('../images/metal-texture-151340.jpg') no-repeat center center;
+            padding:10px;
+            border:4px gray solid;
+            border-radius:15px;
+
+        
+
+        
+        /*#page_devis #valider{
+            box-shadow:0 0 4px 2px gray;
+            border: 0px;
+            width: 80px;
+            min-width:80px;
+            float:right;
+            margin: 20px 10% 10px 80%;
+            float:right;
+        }*/
+
+
+         p label{
+            font-weight:800;
+            text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
+            width: 120px;
+            margin:5px 5px 0px 5px;
+            display: inline-block;
+            text-align: left;
+            font-family: 'Advent Pro', sans-serif ;
+            vertical-align:center;
+        }
+
+        input{
+            box-shadow:0 0 4px 2px gray;
+            border: 0px;
+            border-radius: 3px;
+            width: 200px;
+            margin:5px 3px 0px 0px;
+
+        }
+        textarea{
+            float:left;
+            box-shadow:0 0 4px 2px gray;
+            border: 0px;
+            border-radius: 5px;
+            margin:5px 3px 0 20px;
+            width: 400px;
+            height: 80px;
+            min-width: 400px;
+            min-height: 80px;
+            max-width: 400px;
+            max-height: 80px;
+
+
+        }
+        #label_description{
+            width: 200px;
+            vertical-align:top;
+        }
+                #pj{
+            font-weight:800;
+            text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
+            width: 245px;
+            float :left;
+            margin:10px 30px 0 10px;
+            display: inline-block;
+            vertical-align:center;
+            text-align: left;
+            }
+            #input_image{
+
+            box-shadow:0 0 4px 2px gray;
+            border: 0px;
+            border-radius: 3px;
+            width: 225px;
+            margin:5px 10px 0px 10px;
+            }
+                #valider{
+            box-shadow:0 0 4px 2px gray;
+            border: 0px;
+            width: 80px;
+            min-width:80px;
+            float:right;
+            margin: 10px 5% 10px 80%;
+        }
+    }
 }

@@ -1,5 +1,6 @@
 <?php include('pages/haut.php'); ?>
 <section id="page_contact">
+	<div>
 <?php
 
 function envoi_mail($nom, $adresseMail, $message){
@@ -28,22 +29,23 @@ function envoi_mail($nom, $adresseMail, $message){
 	}
 	else{
 ?>
-<fieldset id="contact-us">
-	<legend id="titre">Nous sommes présent : </legend>
-	<p>Par Mail : <a href="maito:contact@alc.com">contact@alc.com</a></p>
-	<p>Sur Facebook : <a href="">Facebook/AlC</a></p>
-</fieldset>
-<fieldset id="question">
-	<legend id="titre"> Posez nous votre question : </legend>
-	<form method="post" >
-		<p><label for="nom">Nom : </label><input id="nom" name="nom" type="text" required></p>
-		<p><label for="mail">Adresse Mail : </label><input id="mail" name="mail" type="email" required></p>
-		<p><label for="message">Votre question : </label><textarea id="message" name="message" type="text" required></textarea></p>
-		<p id="valider"><input type="submit" value="Envoyer" ></p>
-	</form>
-</fieldset>
+	<fieldset id="contact-us">
+		<legend id="titre">Nous sommes présent : </legend>
+		<p>Par Mail : <a href="maito:contact@alc.com">contact@alc.com</a></p>
+		<p>Sur Facebook : <a href="">Facebook/AlC</a></p>
+	</fieldset>
+	<fieldset id="question">
+		<legend id="titre"> Posez nous votre question : </legend>
+		<form method="post" >
+			<p><label for="nom">Nom : </label><input id="nom" name="nom" type="text" required></p>
+			<p><label for="mail">Adresse Mail : </label><input id="mail" name="mail" type="email" required></p>
+			<p><label for="message">Votre question : </label><textarea id="message" name="message" type="text" required></textarea></p>
+			<p id="valider"><input type="submit" value="Envoyer" ></p>
+		</form>
+	</fieldset>
 <?php
 	}
 ?>
+</div>
 </section>
 <?php include('pages/bas.php'); ?>

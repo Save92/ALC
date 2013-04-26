@@ -5,9 +5,10 @@
 	<a>
 Nous sommes une entreprise agréable. 
 Crée en 201 2 etc.....
-Et blablabla
-et voila!
-
+Et blablabla<br>
+Nos remerciement à tous ceux qui sont au fond Big Up!<br>
+Et ouai!<br>
+<br>
 ALC
 </a></fieldset>
 </section>

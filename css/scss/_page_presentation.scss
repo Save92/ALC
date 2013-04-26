@@ -1,16 +1,16 @@
 #page_presentation #presentation{
-    float:left;
     height:200px;
-    width:25%;
-    min-width: 40px;
-    margin: 60px 20% 0 5%;
+    width:800px;
+
+    display: block;
+    margin: 60px auto 0 auto;
     padding:30px;
     border:4px gray solid;
     border-radius:15px;
     background:url('../images/metal-texture-151340.jpg') no-repeat center center;
-        font-weight:800;
+    font-weight:800;
     text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
-    display: inline-block;
+
     vertical-align:top;
         font-family: 'Advent Pro', sans-serif ;
 }

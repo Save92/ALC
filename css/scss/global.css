@@ -1,0 +1,677 @@
+/* line 3, C:/Users/user/Documents/GitHub/ALC/css/scss/global.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'Font-Titre';
+  src: url("Pacifico.ttf");
+}
+
+/* line 11, C:/Users/user/Documents/GitHub/ALC/css/scss/global.scss */
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 15, C:/Users/user/Documents/GitHub/ALC/css/scss/global.scss */
+body {
+  min-width: 1024px;
+  background: #000;
+  background: url("../images/fond_metal.jpg") repeat;
+}
+
+/* line 1, C:/Users/user/Documents/GitHub/ALC/css/scss/_haut.scss */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 144px;
+  min-width: 900px;
+  background: #FF0000;
+  background: url("../images/bottom.jpg");
+  border-radius: 0 0 50px 50px;
+}
+/* line 13, C:/Users/user/Documents/GitHub/ALC/css/scss/_haut.scss */
+header > a {
+  display: block;
+  float: left;
+  width: 550px;
+  height: 144px;
+  text-align: center;
+  line-height: 144px;
+  text-decoration: none;
+  color: white;
+  font-size: 70px;
+  vertical-align: middle;
+  font-family: "Font-Titre";
+  /*text-shadow: 5px 0 5px gray, 0 5px 5px gray,2px 2px 8px #EEE;*/
+  text-shadow: 0 0 5px white, 0 0 200px white, 0 0 15px white, 0 0 40px white, 0 0 70px white;
+}
+/* line 28, C:/Users/user/Documents/GitHub/ALC/css/scss/_haut.scss */
+header > form {
+  display: block;
+  width: 200px;
+  height: 30px;
+  float: right;
+  margin-top: 100px;
+  margin-right: 20px;
+  border: 3px gray solid;
+  border-radius: 15px;
+}
+/* line 39, C:/Users/user/Documents/GitHub/ALC/css/scss/_haut.scss */
+header input {
+  display: block;
+  float: left;
+  border: none;
+}
+/* line 45, C:/Users/user/Documents/GitHub/ALC/css/scss/_haut.scss */
+header input[type="text"] {
+  height: 30px;
+  width: 152px;
+  border-radius: 13px 0 0 13px;
+  padding-left: 8px;
+  outline: none;
+}
+/* line 53, C:/Users/user/Documents/GitHub/ALC/css/scss/_haut.scss */
+header input[type="submit"] {
+  background: url("../images/loupe-desactif.png") #252525 no-repeat 5px 2px;
+  border-radius: 0 13px 13px 0;
+  height: 30px;
+  width: 40px;
+  text-indent: -8000px;
+}
+/* line 61, C:/Users/user/Documents/GitHub/ALC/css/scss/_haut.scss */
+header input[type="submit"]:hover {
+  background: url("../images/loupe-desactif.png") #404040 no-repeat 3px 2px;
+}
+
+/* line 1, C:/Users/user/Documents/GitHub/ALC/css/scss/_bas.scss */
+footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 80px;
+  z-index: 10000;
+  background: #0000FF;
+  color: white;
+}
+
+/* line 11, C:/Users/user/Documents/GitHub/ALC/css/scss/_bas.scss */
+footer nav span {
+  border: 1px solid gray;
+  margin: 0 4px 0 4px;
+}
+
+/* line 15, C:/Users/user/Documents/GitHub/ALC/css/scss/_bas.scss */
+footer nav span:last-child {
+  border: none;
+  margin: 0;
+}
+
+/* line 19, C:/Users/user/Documents/GitHub/ALC/css/scss/_bas.scss */
+footer nav a {
+  font-family: 'Advent Pro', sans-serif;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  min-width: 900px;
+}
+
+/* line 26, C:/Users/user/Documents/GitHub/ALC/css/scss/_bas.scss */
+footer nav .galerie_choix {
+  position: absolute;
+  display: block;
+  z-index: 2;
+  top: 20px;
+  left: 70px;
+}
+
+/* line 36, C:/Users/user/Documents/GitHub/ALC/css/scss/_bas.scss */
+footer nav .categorie {
+  font-family: 'Advent Pro', sans-serif;
+  font-weight: 700;
+  position: absolute;
+  display: block;
+  z-index: 2;
+  top: 40px;
+  left: 70px;
+}
+
+/* line 25, C:/Users/user/Documents/GitHub/ALC/css/scss/global.scss */
+section {
+  position: absolute;
+  top: 144px;
+  bottom: 80px;
+  left: 0;
+  right: 0;
+  color: white;
+}
+
+/* line 34, C:/Users/user/Documents/GitHub/ALC/css/scss/global.scss */
+section form fieldset legend {
+  font-size: 16px;
+  text-shadow: 0 0 3px grey, 0 0 1px black, 0 0 10px white, 0 0 15px white, 0 0 20px white;
+  font-style: bold;
+  font-family: impact;
+}
+
+/* line 2, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_accueil.scss */
+#page_accueil > div {
+  position: relative;
+  margin: 5% auto;
+  width: 1024px;
+}
+/* line 7, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_accueil.scss */
+#page_accueil #presentation_alc {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  height: 200px;
+  width: 350px;
+  padding: 30px;
+  background: url("../images/metal-texture-151340.jpg") no-repeat center center;
+  border: 4px gray solid;
+  border-radius: 15px;
+  font-weight: 800;
+  text-shadow: 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray;
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 25, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_accueil.scss */
+#page_accueil #slider {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  overflow: hidden;
+  height: 250px;
+  width: 522px;
+  border: 4px gray solid;
+  border-radius: 15px;
+  font-size: 30px;
+  text-shadow: 0 0 3px gray, 0 0 10px white, 0 0 15px white, 0 0 20px white;
+  font-family: impact;
+}
+
+/* line 1, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_presentation.scss */
+#page_presentation #presentation {
+  height: 200px;
+  width: 900px;
+  margin: 60px auto 0 auto;
+  padding: 30px;
+  border: 4px gray solid;
+  border-radius: 15px;
+  background: url("../images/metal-texture-151340.jpg") no-repeat center center;
+  font-weight: 800;
+  text-shadow: 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray;
+  display: inline-block;
+  vertical-align: top;
+  font-family: 'Advent Pro', sans-serif;
+}
+
+/* line 2, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_galerie.scss */
+#page_galerie_choix #page_galerie_global {
+  display: block;
+  margin: 10px 2% 0;
+  width: 95%;
+  height: 400px;
+  background: yellow;
+}
+
+/* line 10, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_galerie.scss */
+#page_galerie_choix #liste_projets {
+  float: left;
+  height: 250px;
+  width: 40%;
+  margin: 5% 5% 0 2%;
+  background: purple;
+  padding: 10px;
+  border: 4px gray solid;
+  border-radius: 15px;
+}
+
+/* line 21, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_galerie.scss */
+#page_galerie_choix #liste_projets #icones_projets {
+  float: left;
+  margin-left: 7%;
+  margin-right: 7%;
+  background: blue;
+  height: 213px;
+  width: 366px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+/* line 32, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_galerie.scss */
+#page_galerie_choix #liste_projets #icones_projets > a {
+  float: left;
+  display: inline-block;
+  height: 80px;
+  width: 25%;
+  text-align: center;
+  margin: 2% 1% 2% 1%;
+  background: grey;
+  padding: 2px;
+  border: 4px gray solid;
+  border-radius: 15px;
+}
+
+/* line 45, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_galerie.scss */
+#page_galerie_choix #image_projet {
+  float: left;
+  height: 250px;
+  width: 40%;
+  margin: 5% 2% 0 5%;
+  background: red;
+  padding: 10px;
+  border: 4px gray solid;
+  border-radius: 15px;
+}
+
+/* line 56, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_galerie.scss */
+#page_galerie #page_galerie_global {
+  margin: 10px 2% 0;
+  width: 95%;
+  height: 400px;
+  position: relative;
+}
+
+/* line 63, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_galerie.scss */
+#page_galerie #page_galerie_global #presentation_projets {
+  float: left;
+  position: relative;
+  height: 250px;
+  width: 40%;
+  margin: 5% 5% 0 2%;
+  background: url("../images/metal-texture-151340.jpg") no-repeat center center;
+  padding: 10px;
+  border: 4px gray solid;
+  border-radius: 15px;
+}
+
+/* line 75, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_galerie.scss */
+#page_galerie #page_galerie_global #presentation_projets > a {
+  position: absolute;
+  font-weight: 800;
+  text-shadow: 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray;
+  display: inline-block;
+  vertical-align: top;
+  font-family: 'Advent Pro', sans-serif;
+  font-weight: 700;
+}
+
+/* line 85, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_galerie.scss */
+#page_galerie #page_galerie_global #presentation_projets #p_footer {
+  position: absolute;
+  bottom: 0px;
+  text-align: center;
+  text-shadow: 0 0 2px white, 0 0 3px grey, 0 0 4px white, 0 0 4px gray, 0 0 4px gray;
+  display: inline-block;
+  vertical-align: top;
+  font-family: 'Advent Pro', sans-serif;
+  font-weight: 700;
+}
+
+/* line 2, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_contact.scss */
+#page_contact form p {
+  margin-bottom: 10px;
+}
+
+/* line 7, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_contact.scss */
+#page_contact form p {
+  display: block;
+  font-weight: 800;
+  text-shadow: 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray;
+  display: inline-block;
+  vertical-align: top;
+  font-family: 'Advent Pro', sans-serif;
+  font-weight: 700;
+}
+
+/* line 18, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_contact.scss */
+#page_contact #valider input {
+  width: 80px;
+  min-width: 80px;
+  float: right;
+  margin: 5px auto 10px 80%;
+}
+
+/* line 24, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_contact.scss */
+#page_contact #question #titre {
+  font-size: 16px;
+  text-shadow: 0 0 3px grey, 0 0 1px black, 0 0 10px white, 0 0 15px white, 0 0 20px white;
+  font-style: bold;
+  font-family: impact;
+}
+
+/* line 31, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_contact.scss */
+#page_contact #question {
+  float: left;
+  height: 200px;
+  width: 25%;
+  min-width: 40px;
+  margin: 50px 20px 0 5%;
+  background: url("../images/metal-texture-151340.jpg") no-repeat center center;
+  padding: 30px;
+  border: 4px gray solid;
+  border-radius: 15px;
+  font-family: 'Advent Pro', sans-serif;
+  font-weight: 700;
+}
+
+/* line 44, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_contact.scss */
+#page_bas {
+  background: url("../images/bottom.jpg");
+}
+
+/* line 48, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_contact.scss */
+#page_contact input, #page_contact textarea {
+  box-shadow: 0 0 4px 2px gray;
+  border: 0px;
+  border-radius: 5px;
+  min-width: 150px;
+  max-height: 85px;
+}
+
+/* line 55, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_contact.scss */
+#page_contact textarea {
+  width: 100%;
+  min-width: 200px;
+  max-width: 400px;
+  height: 85px;
+  min-height: 85px;
+  max-height: 85px;
+}
+
+/* line 64, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_contact.scss */
+#page_contact label {
+  font-weight: 800;
+  text-shadow: 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray;
+  width: 120px;
+  display: inline-block;
+  vertical-align: top;
+  font-family: 'Advent Pro', sans-serif;
+}
+
+/* line 73, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_contact.scss */
+#page_contact #contact-us {
+  float: left;
+  height: 200px;
+  width: 25%;
+  min-width: 40px;
+  margin: 50px 10% 0 10%;
+  background: url("../images/metal-texture-151340.jpg") no-repeat center center;
+  padding: 30px;
+  border: 4px gray solid;
+  border-radius: 15px;
+  font-weight: 800;
+  text-shadow: 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray;
+  display: inline-block;
+  vertical-align: top;
+  display: inline-block;
+  font-family: 'Advent Pro', sans-serif;
+}
+
+/* line 91, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_contact.scss */
+#page_contact #contact-us #titre {
+  font-size: 16px;
+  text-shadow: 0 0 3px gray, 0 0 10px white, 0 0 15px white, 0 0 20px white;
+  text-decoration: bold;
+  font-family: impact;
+}
+
+/* line 1, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_devis.scss */
+#page_devis #form_devis {
+  display: block;
+  margin: 10px auto 0;
+  width: 95%;
+  height: 350px;
+}
+
+/* line 8, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_devis.scss */
+#page_devis #premiere_etape {
+  float: left;
+  height: 130px;
+  width: 30%;
+  min-width: 40px;
+  margin: 40px 10% 0 0;
+  background: url("../images/metal-texture-151340.jpg") no-repeat center center;
+  padding: 30px;
+  border: 4px gray solid;
+  border-radius: 15px;
+}
+
+/* line 20, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_devis.scss */
+#page_devis input {
+  box-shadow: 0 0 4px 2px gray;
+  border: 0px;
+  border-radius: 5px;
+  width: 200px;
+  margin: 5px 5px 0px 0px;
+}
+
+/* line 27, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_devis.scss */
+#page_devis textarea {
+  width: 100%;
+  min-width: 200px;
+  max-width: 480px;
+  height: 85px;
+  min-height: 85px;
+  max-height: 85px;
+}
+
+/* line 36, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_devis.scss */
+#page_devis #premiere_etape #valider {
+  box-shadow: 0 0 4px 2px gray;
+  border: 0px;
+  width: 80px;
+  min-width: 80px;
+  float: right;
+  margin: 20px 10% 10px 80%;
+  float: right;
+}
+
+/* line 45, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_devis.scss */
+#page_devis #premiere_etape label {
+  font-weight: 800;
+  text-shadow: 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray;
+  width: 150px;
+  display: inline-block;
+  text-align: right;
+  vertical-align: center;
+  font-family: 'Advent Pro', sans-serif;
+}
+
+/* line 55, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_devis.scss */
+#page_devis #premiere_etape p label {
+  font-weight: 800;
+  text-shadow: 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray;
+  width: 100px;
+  margin: 5px 5px 0px 5px;
+  display: inline-block;
+  vertical-align: center;
+  text-align: right;
+  font-family: 'Advent Pro', sans-serif;
+}
+
+/* line 65, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_devis.scss */
+#page_devis #deuxieme_etape #valider {
+  box-shadow: 0 0 4px 2px gray;
+  border: 0px;
+  width: 80px;
+  min-width: 80px;
+  float: right;
+  margin: 10px 5% 10px 80%;
+  float: right;
+}
+
+/* line 74, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_devis.scss */
+#page_devis #deuxieme_etape {
+  float: left;
+  height: 300px;
+  width: 46%;
+  min-width: 00px;
+  background: url("../images/metal-texture-151340.jpg") no-repeat center center;
+  padding: 20px;
+  border: 4px gray solid;
+  border-radius: 15px;
+}
+
+/*#page_devis #valider{
+    box-shadow:0 0 4px 2px gray;
+    border: 0px;
+    width: 80px;
+    min-width:80px;
+    float:right;
+    margin: 20px 10% 10px 80%;
+    float:right;
+}*/
+/* line 93, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_devis.scss */
+#page_devis #deuxieme_etape #pj {
+  font-weight: 800;
+  text-shadow: 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray;
+  width: 245px;
+  display: inline-block;
+  vertical-align: center;
+  text-align: left;
+}
+
+/* line 101, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_devis.scss */
+#page_devis #deuxieme_etape label {
+  font-weight: 800;
+  text-shadow: 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray;
+  width: 200px;
+  display: inline-block;
+  vertical-align: center;
+  text-align: right;
+  font-family: 'Advent Pro', sans-serif;
+}
+
+/* line 111, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_devis.scss */
+#page_devis #deuxieme_etape p label {
+  font-weight: 800;
+  text-shadow: 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray;
+  width: 200px;
+  margin: 5px 5px 0px 5px;
+  display: inline-block;
+  vertical-align: center;
+  text-align: right;
+  font-family: 'Advent Pro', sans-serif;
+  font-weight: 700;
+}
+
+/* line 1, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_inscription.scss */
+#page_inscription fieldset {
+  float: left;
+  height: 200px;
+  width: 40%;
+  min-width: 40px;
+  margin: 50px 10% 0 5%;
+  background: url("../images/metal-texture-151340.jpg") no-repeat center center;
+  padding: 30px;
+  border: 4px gray solid;
+  border-radius: 15px;
+}
+
+/* line 14, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_inscription.scss */
+#page_inscription fieldset form p label {
+  font-weight: 800;
+  text-shadow: 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray;
+  display: inline-block;
+  width: 200px;
+  vertical-align: top;
+  font-family: 'Advent Pro', sans-serif;
+}
+
+/* line 22, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_inscription.scss */
+#page_inscription fieldset form p input {
+  box-shadow: 0 0 4px 2px gray;
+  border: 0px;
+  border-radius: 5px;
+  margin: 5px 0px 0px 30px;
+  width: 190px;
+  max-height: 85px;
+}
+
+/* line 30, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_inscription.scss */
+#page_inscription #envoyer {
+  width: 80px;
+  min-width: 80px;
+  float: right;
+  margin: 20px 8% 10px 50%;
+}
+
+/* line 1, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_membres.scss */
+#page_connexion, #page_deconnexion {
+  height: 100%;
+  width: 100%;
+}
+
+/* line 5, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_membres.scss */
+#page_connexion > div, #page_deconnexion > div {
+  background: url("../images/rmap.jpg") top left;
+  height: 168px;
+  width: 358px;
+  margin: 15% auto;
+}
+
+/* line 11, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_membres.scss */
+#page_connexion > div > div, #page_deconnexion > div > div {
+  background: url("../images/bloc.png") top left no-repeat;
+  height: 168px;
+  width: 358px;
+  border: 0;
+}
+
+/* line 18, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_membres.scss */
+#page_deconnexion h1 {
+  text-align: center;
+  color: white;
+  width: 100%;
+  line-height: 168px;
+}
+
+/* line 26, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_membres.scss */
+#page_connexion h1 {
+  text-align: center;
+  color: white;
+}
+
+/* line 30, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_membres.scss */
+#page_connexion label {
+  padding-left: 20px;
+  color: #8C8C8C;
+  display: block;
+  font-size: 11px;
+  position: relative;
+}
+
+/* line 37, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_membres.scss */
+#page_connexion input {
+  margin-top: 10px;
+  background: transparent url(input.gif) no-repeat left top;
+  border: 0 none;
+  color: #B3B3B3;
+  display: block;
+  font-size: 11px;
+  height: 15px;
+  margin-bottom: 15px;
+  outline-color: -moz-use-text-color;
+  outline-style: none;
+  outline-width: medium;
+  padding: 5px;
+  width: 285px;
+}
+
+/* line 52, C:/Users/user/Documents/GitHub/ALC/css/scss/_page_membres.scss */
+#page_connexion fieldset {
+  float: left;
+  height: 200px;
+  width: 25%;
+  min-width: 40px;
+  margin: 60px 2% 0 5%;
+  padding: 30px;
+}

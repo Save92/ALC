@@ -48,7 +48,7 @@ header > a {
   vertical-align: middle;
   font-family: "Font-Titre";
   /*text-shadow: 5px 0 5px gray, 0 5px 5px gray,2px 2px 8px #EEE;*/
-  text-shadow: 0 0 5px #FFF, 0 0 200px #FFF, 0 0 15px #FFF,0 0 40px #FFF, 0 0 70px #FFF;
+  text-shadow: 0 0 5px white, 0 0 200px white, 0 0 15px white, 0 0 40px white, 0 0 70px white;
 }
 /* line 28, scss/_haut.scss */
 header > form {
@@ -98,30 +98,31 @@ footer {
   z-index: 10000;
   background: #0000FF;
   color: white;
+  background: url("../images/bottom.jpg");
 }
 
-/* line 11, scss/_bas.scss */
+/* line 12, scss/_bas.scss */
 footer nav span {
   border: 1px solid gray;
   margin: 0 4px 0 4px;
 }
 
-/* line 15, scss/_bas.scss */
+/* line 16, scss/_bas.scss */
 footer nav span:last-child {
   border: none;
   margin: 0;
 }
 
-/* line 19, scss/_bas.scss */
+/* line 20, scss/_bas.scss */
 footer nav a {
-  font-family: "Advent Pro", sans-serif;
+  font-family: 'Advent Pro', sans-serif;
   font-weight: 700;
   color: white;
   text-decoration: none;
   min-width: 900px;
 }
 
-/* line 26, scss/_bas.scss */
+/* line 27, scss/_bas.scss */
 footer nav .galerie_choix {
   position: absolute;
   display: block;
@@ -130,9 +131,9 @@ footer nav .galerie_choix {
   left: 70px;
 }
 
-/* line 36, scss/_bas.scss */
+/* line 37, scss/_bas.scss */
 footer nav .categorie {
-  font-family: "Advent Pro", sans-serif;
+  font-family: 'Advent Pro', sans-serif;
   font-weight: 700;
   position: absolute;
   display: block;
@@ -152,9 +153,9 @@ section {
 }
 
 /* line 34, scss/global.scss */
-section form fieldset legend {
+section fieldset legend {
   font-size: 16px;
-  text-shadow: 0 0 3px grey, 0 0 1px black, 0 0 10px white, 0 0 15px white,0 0 20px white;
+  text-shadow: 0 0 3px grey, 0 0 1px black, 0 0 10px white, 0 0 15px white, 0 0 20px white;
   font-style: bold;
   font-family: impact;
 }
@@ -163,7 +164,7 @@ section form fieldset legend {
 #page_accueil > div {
   position: relative;
   margin: 5% auto;
-  width: 1024px;
+  width: 1004px;
 }
 /* line 7, scss/_page_accueil.scss */
 #page_accueil #presentation_alc {
@@ -177,7 +178,7 @@ section form fieldset legend {
   border: 4px gray solid;
   border-radius: 15px;
   font-weight: 800;
-  text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
+  text-shadow: 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray;
   display: inline-block;
   vertical-align: top;
 }
@@ -192,26 +193,24 @@ section form fieldset legend {
   border: 4px gray solid;
   border-radius: 15px;
   font-size: 30px;
-  text-shadow: 0 0 3px gray, 0 0 10px white, 0 0 15px white,0 0 20px white;
+  text-shadow: 0 0 3px gray, 0 0 10px white, 0 0 15px white, 0 0 20px white;
   font-family: impact;
 }
 
 /* line 1, scss/_page_presentation.scss */
 #page_presentation #presentation {
-  float: left;
   height: 200px;
-  width: 25%;
-  min-width: 40px;
-  margin: 60px 20% 0 5%;
+  width: 800px;
+  display: block;
+  margin: 60px auto 0 auto;
   padding: 30px;
   border: 4px gray solid;
   border-radius: 15px;
   background: url("../images/metal-texture-151340.jpg") no-repeat center center;
   font-weight: 800;
-  text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
-  display: inline-block;
+  text-shadow: 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray;
   vertical-align: top;
-  font-family: "Advent Pro", sans-serif;
+  font-family: 'Advent Pro', sans-serif;
 }
 
 /* line 2, scss/_page_galerie.scss */
@@ -298,10 +297,10 @@ section form fieldset legend {
 #page_galerie #page_galerie_global #presentation_projets > a {
   position: absolute;
   font-weight: 800;
-  text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
+  text-shadow: 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray;
   display: inline-block;
   vertical-align: top;
-  font-family: "Advent Pro", sans-serif;
+  font-family: 'Advent Pro', sans-serif;
   font-weight: 700;
 }
 
@@ -310,76 +309,69 @@ section form fieldset legend {
   position: absolute;
   bottom: 0px;
   text-align: center;
-  text-shadow: 0 0 2px white,0 0 3px grey,0 0 4px white,0 0 4px gray,0 0 4px gray;
+  text-shadow: 0 0 2px white, 0 0 3px grey, 0 0 4px white, 0 0 4px gray, 0 0 4px gray;
   display: inline-block;
   vertical-align: top;
-  font-family: "Advent Pro", sans-serif;
+  font-family: 'Advent Pro', sans-serif;
   font-weight: 700;
 }
 
-/* line 2, scss/_page_contact.scss */
+/* line 4, scss/_page_contact.scss */
+#page_contact > div {
+  position: relative;
+  margin: 5% auto;
+  width: 1024px;
+  height: 500px;
+}
+/* line 11, scss/_page_contact.scss */
 #page_contact form p {
   margin-bottom: 10px;
-}
-
-/* line 7, scss/_page_contact.scss */
-#page_contact form p {
   display: block;
   font-weight: 800;
-  text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
+  text-shadow: 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray;
   display: inline-block;
   vertical-align: top;
-  font-family: "Advent Pro", sans-serif;
+  font-family: 'Advent Pro', sans-serif;
   font-weight: 700;
 }
-
-/* line 18, scss/_page_contact.scss */
+/* line 23, scss/_page_contact.scss */
 #page_contact #valider input {
   width: 80px;
   min-width: 80px;
   float: right;
   margin: 5px auto 10px 80%;
 }
-
-/* line 24, scss/_page_contact.scss */
-#page_contact #question #titre {
-  font-size: 16px;
-  text-shadow: 0 0 3px grey, 0 0 1px black, 0 0 10px white, 0 0 15px white,0 0 20px white;
-  font-style: bold;
-  font-family: impact;
-}
-
 /* line 31, scss/_page_contact.scss */
 #page_contact #question {
   float: left;
   height: 200px;
-  width: 25%;
+  width: 300px;
   min-width: 40px;
-  margin: 50px 20px 0 5%;
+  margin: 30px 50px 0 50px;
   background: url("../images/metal-texture-151340.jpg") no-repeat center center;
   padding: 30px;
   border: 4px gray solid;
   border-radius: 15px;
-  font-family: "Advent Pro", sans-serif;
+  font-family: 'Advent Pro', sans-serif;
   font-weight: 700;
 }
-
 /* line 44, scss/_page_contact.scss */
-#page_bas {
-  background: url("../images/bottom.jpg");
+#page_contact #question #titre {
+  font-size: 16px;
+  text-shadow: 0 0 3px grey, 0 0 1px black, 0 0 10px white, 0 0 15px white, 0 0 20px white;
+  font-style: bold;
+  font-family: impact;
 }
-
-/* line 48, scss/_page_contact.scss */
-#page_contact input, #page_contact textarea {
+/* line 50, scss/_page_contact.scss */
+#page_contact #question input, #page_contact #question textarea {
   box-shadow: 0 0 4px 2px gray;
   border: 0px;
   border-radius: 5px;
   min-width: 150px;
   max-height: 85px;
 }
-
-/* line 55, scss/_page_contact.scss */
-#page_contact textarea {
+/* line 57, scss/_page_contact.scss */
+#page_contact #question textarea {
   width: 100%;
   min-width: 200px;
   max-width: 400px;
@@ -387,119 +379,172 @@ section form fieldset legend {
   min-height: 85px;
   max-height: 85px;
 }
-
-/* line 64, scss/_page_contact.scss */
-#page_contact label {
+/* line 66, scss/_page_contact.scss */
+#page_contact #question label {
   font-weight: 800;
-  text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
+  text-shadow: 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray;
   width: 120px;
   display: inline-block;
   vertical-align: top;
-  font-family: "Advent Pro", sans-serif;
+  font-family: 'Advent Pro', sans-serif;
 }
-
-/* line 73, scss/_page_contact.scss */
+/* line 75, scss/_page_contact.scss */
 #page_contact #contact-us {
   float: left;
   height: 200px;
-  width: 25%;
+  width: 225px;
   min-width: 40px;
-  margin: 50px 10% 0 10%;
+  margin: 30px 50px 0 120px;
   background: url("../images/metal-texture-151340.jpg") no-repeat center center;
   padding: 30px;
   border: 4px gray solid;
   border-radius: 15px;
   font-weight: 800;
-  text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
+  text-shadow: 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray;
   display: inline-block;
   vertical-align: top;
   display: inline-block;
-  font-family: "Advent Pro", sans-serif;
+  font-family: 'Advent Pro', sans-serif;
 }
-
-/* line 91, scss/_page_contact.scss */
+/* line 92, scss/_page_contact.scss */
 #page_contact #contact-us #titre {
   font-size: 16px;
-  text-shadow: 0 0 3px gray, 0 0 10px white, 0 0 15px white,0 0 20px white;
+  text-shadow: 0 0 3px gray, 0 0 10px white, 0 0 15px white, 0 0 20px white;
   text-decoration: bold;
   font-family: impact;
 }
 
-/* line 1, scss/_page_devis.scss */
+/* line 3, scss/_page_devis.scss */
+#page_devis > div {
+  position: relative;
+  margin: 5% auto;
+  width: 1004px;
+}
+/* line 8, scss/_page_devis.scss */
 #page_devis #form_devis {
   display: block;
   margin: 10px auto 0;
   width: 95%;
   height: 350px;
 }
-
-/* line 8, scss/_page_devis.scss */
+/* line 15, scss/_page_devis.scss */
 #page_devis #premiere_etape {
   float: left;
-  height: 130px;
-  width: 30%;
+  height: 160px;
+  width: 300px;
   min-width: 40px;
   margin: 40px 10% 0 0;
   background: url("../images/metal-texture-151340.jpg") no-repeat center center;
-  padding: 30px;
+  padding: 5px;
   border: 4px gray solid;
   border-radius: 15px;
 }
-
-/* line 20, scss/_page_devis.scss */
-#page_devis input {
+/* line 26, scss/_page_devis.scss */
+#page_devis #premiere_etape input {
   box-shadow: 0 0 4px 2px gray;
   border: 0px;
-  border-radius: 5px;
-  width: 200px;
-  margin: 5px 5px 0px 0px;
+  border-radius: 3px;
+  width: 170px;
+  margin: 10px 3px 0px 0px;
 }
-
-/* line 27, scss/_page_devis.scss */
-#page_devis textarea {
-  width: 100%;
-  min-width: 200px;
-  max-width: 480px;
-  height: 85px;
-  min-height: 85px;
-  max-height: 85px;
-}
-
-/* line 36, scss/_page_devis.scss */
+/* line 33, scss/_page_devis.scss */
 #page_devis #premiere_etape #valider {
   box-shadow: 0 0 4px 2px gray;
   border: 0px;
   width: 80px;
   min-width: 80px;
   float: right;
-  margin: 20px 10% 10px 80%;
+  margin: 20px 20px 10px 200px;
   float: right;
 }
-
-/* line 45, scss/_page_devis.scss */
-#page_devis #premiere_etape label {
-  font-weight: 800;
-  text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
-  width: 150px;
-  display: inline-block;
-  text-align: right;
-  vertical-align: center;
-  font-family: "Advent Pro", sans-serif;
-}
-
-/* line 55, scss/_page_devis.scss */
+/* line 43, scss/_page_devis.scss */
 #page_devis #premiere_etape p label {
-  font-weight: 800;
-  text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
+  text-shadow: 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray;
   width: 100px;
+  margin: 10px 3px 0px 5px;
+  display: inline-block;
+  font-weight: 800;
+  vertical-align: center;
+  text-align: left;
+  font-family: 'Advent Pro', sans-serif;
+}
+/* line 55, scss/_page_devis.scss */
+#page_devis #deuxieme_etape {
+  float: right;
+  height: 350px;
+  width: 450px;
+  background: url("../images/metal-texture-151340.jpg") no-repeat center center;
+  padding: 10px;
+  border: 4px gray solid;
+  border-radius: 15px;
+  /*#page_devis #valider{
+      box-shadow:0 0 4px 2px gray;
+      border: 0px;
+      width: 80px;
+      min-width:80px;
+      float:right;
+      margin: 20px 10% 10px 80%;
+      float:right;
+  }*/
+}
+/* line 79, scss/_page_devis.scss */
+#page_devis #deuxieme_etape p label {
+  font-weight: 800;
+  text-shadow: 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray;
+  width: 120px;
   margin: 5px 5px 0px 5px;
   display: inline-block;
+  text-align: left;
+  font-family: 'Advent Pro', sans-serif;
   vertical-align: center;
-  text-align: right;
-  font-family: "Advent Pro", sans-serif;
 }
-
-/* line 65, scss/_page_devis.scss */
+/* line 90, scss/_page_devis.scss */
+#page_devis #deuxieme_etape input {
+  box-shadow: 0 0 4px 2px gray;
+  border: 0px;
+  border-radius: 3px;
+  width: 200px;
+  margin: 5px 3px 0px 0px;
+}
+/* line 98, scss/_page_devis.scss */
+#page_devis #deuxieme_etape textarea {
+  float: left;
+  box-shadow: 0 0 4px 2px gray;
+  border: 0px;
+  border-radius: 5px;
+  margin: 5px 3px 0 20px;
+  width: 400px;
+  height: 80px;
+  min-width: 400px;
+  min-height: 80px;
+  max-width: 400px;
+  max-height: 80px;
+}
+/* line 113, scss/_page_devis.scss */
+#page_devis #deuxieme_etape #label_description {
+  width: 200px;
+  vertical-align: top;
+}
+/* line 117, scss/_page_devis.scss */
+#page_devis #deuxieme_etape #pj {
+  font-weight: 800;
+  text-shadow: 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray;
+  width: 245px;
+  float: left;
+  margin: 10px 30px 0 10px;
+  display: inline-block;
+  vertical-align: center;
+  text-align: left;
+}
+/* line 127, scss/_page_devis.scss */
+#page_devis #deuxieme_etape #input_image {
+  box-shadow: 0 0 4px 2px gray;
+  border: 0px;
+  border-radius: 3px;
+  width: 225px;
+  margin: 5px 10px 0px 10px;
+}
+/* line 135, scss/_page_devis.scss */
 #page_devis #deuxieme_etape #valider {
   box-shadow: 0 0 4px 2px gray;
   border: 0px;
@@ -507,98 +552,44 @@ section form fieldset legend {
   min-width: 80px;
   float: right;
   margin: 10px 5% 10px 80%;
-  float: right;
 }
 
-/* line 74, scss/_page_devis.scss */
-#page_devis #deuxieme_etape {
-  float: left;
-  height: 300px;
-  width: 46%;
-  min-width: 00px;
-  background: url("../images/metal-texture-151340.jpg") no-repeat center center;
-  padding: 20px;
-  border: 4px gray solid;
-  border-radius: 15px;
+/* line 2, scss/_page_inscription.scss */
+#page_inscription > div {
+  position: relative;
+  margin: 5% auto;
+  width: 1004px;
 }
-
-/*#page_devis #valider{
-    box-shadow:0 0 4px 2px gray;
-    border: 0px;
-    width: 80px;
-    min-width:80px;
-    float:right;
-    margin: 20px 10% 10px 80%;
-    float:right;
-}*/
-/* line 93, scss/_page_devis.scss */
-#page_devis #deuxieme_etape #pj {
-  font-weight: 800;
-  text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
-  width: 245px;
-  display: inline-block;
-  vertical-align: center;
-  text-align: left;
-}
-
-/* line 101, scss/_page_devis.scss */
-#page_devis #deuxieme_etape label {
-  font-weight: 800;
-  text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
-  width: 200px;
-  display: inline-block;
-  vertical-align: center;
-  text-align: right;
-  font-family: "Advent Pro", sans-serif;
-}
-
-/* line 111, scss/_page_devis.scss */
-#page_devis #deuxieme_etape p label {
-  font-weight: 800;
-  text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
-  width: 200px;
-  margin: 5px 5px 0px 5px;
-  display: inline-block;
-  vertical-align: center;
-  text-align: right;
-  font-family: "Advent Pro", sans-serif;
-  font-weight: 700;
-}
-
-/* line 1, scss/_page_inscription.scss */
+/* line 7, scss/_page_inscription.scss */
 #page_inscription fieldset {
-  float: left;
-  height: 200px;
-  width: 40%;
-  min-width: 40px;
-  margin: 50px 10% 0 5%;
+  height: 230px;
+  width: 400px;
+  margin: 60px auto 0 auto;
   background: url("../images/metal-texture-151340.jpg") no-repeat center center;
-  padding: 30px;
+  padding: 10px;
   border: 4px gray solid;
   border-radius: 15px;
 }
-
-/* line 14, scss/_page_inscription.scss */
+/* line 18, scss/_page_inscription.scss */
 #page_inscription fieldset form p label {
   font-weight: 800;
-  text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
+  text-shadow: 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray, 0 0 4px gray;
   display: inline-block;
-  width: 200px;
+  margin: 5px 3px 0px 0px;
+  width: 180px;
   vertical-align: top;
-  font-family: "Advent Pro", sans-serif;
+  font-family: 'Advent Pro', sans-serif;
 }
-
-/* line 22, scss/_page_inscription.scss */
+/* line 27, scss/_page_inscription.scss */
 #page_inscription fieldset form p input {
   box-shadow: 0 0 4px 2px gray;
   border: 0px;
   border-radius: 5px;
-  margin: 5px 0px 0px 30px;
+  margin: 5px 3px 0px 0px;
   width: 190px;
   max-height: 85px;
 }
-
-/* line 30, scss/_page_inscription.scss */
+/* line 37, scss/_page_inscription.scss */
 #page_inscription #envoyer {
   width: 80px;
   min-width: 80px;

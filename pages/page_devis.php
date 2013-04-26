@@ -1,5 +1,6 @@
 <?php include('pages/haut.php'); ?>
 <section id="page_devis">
+	<div>
 <?php
 	if(isset($_POST['description']) && isset($_POST['etape'])) {
 
@@ -72,8 +73,8 @@
 		<p><label for="annee">Année : </label><input id="annee" name="annee" type="text"></p>
 		<p><label for="min">Budget minimum : </label><input id="min" name="min" type="text"></p>
 		<p><label for="max">Budget maximum : </label><input id="max" name="max" type="text"></p>
-		<p><label for="description">Description de votre projet : </label><br><textarea id="description" name="description" type="text" required></textarea></p>
-		<p><label id="pj">Ajouter une photo (3 maximum) : </label><input type="file" ><input type="hidden" name="etape" value="valid"><br><input id="valider" type="submit"></p>
+		<p><label for="description" id="label_description">Description de votre projet : </label><textarea id="description" name="description" type="text" required></textarea></p>
+		<p><label id="pj">Ajouter une photo (3 maximum) : </label><input id="input_image" type="file" ><input type="hidden" name="etape" value="valid"><br><input id="valider" type="submit"></p>
 	</a>
 	</fieldset>
 </form>
@@ -97,5 +98,6 @@
 <?php
 	}
 ?>
+<div>
 	</section>
 <?php include('pages/bas.php'); ?>
