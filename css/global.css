@@ -596,7 +596,7 @@ section fieldset {
   border: 4px gray solid;
   border-radius: 15px;
 }
-/* line 18, scss/_page_inscription.scss */
+/* line 20, scss/_page_inscription.scss */
 #page_inscription fieldset form p label {
   font-weight: 800;
   text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
@@ -606,7 +606,7 @@ section fieldset {
   vertical-align: top;
   font-family: "Advent Pro", sans-serif;
 }
-/* line 27, scss/_page_inscription.scss */
+/* line 29, scss/_page_inscription.scss */
 #page_inscription fieldset form p input {
   box-shadow: 0 0 4px 2px gray;
   border: 0px;
@@ -615,7 +615,7 @@ section fieldset {
   width: 190px;
   max-height: 85px;
 }
-/* line 37, scss/_page_inscription.scss */
+/* line 39, scss/_page_inscription.scss */
 #page_inscription #envoyer {
   width: 80px;
   min-width: 80px;
@@ -699,25 +699,83 @@ section fieldset {
   line-height: 168px;
 }
 
+/* line 70, scss/_page_membres.scss */
+#page_membres > div {
+  position: relative;
+  margin: 5% auto;
+  width: 1004px;
+}
+/* line 75, scss/_page_membres.scss */
+#page_membres fieldset {
+  width: 450px;
+  float: left;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+}
+/* line 81, scss/_page_membres.scss */
+#page_membres fieldset label {
+  height: 50px;
+}
+/* line 85, scss/_page_membres.scss */
+#page_membres fieldset #cache:checked ~ label h1 {
+  display: none;
+}
+/* line 88, scss/_page_membres.scss */
+#page_membres fieldset label h4, #page_membres fieldset div {
+  display: none;
+}
+/* line 92, scss/_page_membres.scss */
+#page_membres fieldset #cache:checked ~ label h4,
+#page_membres fieldset #cache:checked ~ div {
+  display: block;
+}
+/* line 97, scss/_page_membres.scss */
+#page_membres fieldset ul {
+  padding: 10px 25px;
+  list-style-type: none;
+}
+/* line 101, scss/_page_membres.scss */
+#page_membres fieldset li {
+  float: left;
+  display: block;
+  width: 100px;
+  height: 128px;
+}
+/* line 106, scss/_page_membres.scss */
+#page_membres fieldset li img {
+  margin-left: 18px;
+}
+/* line 109, scss/_page_membres.scss */
+#page_membres fieldset li a {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+/* line 116, scss/_page_membres.scss */
+#page_membres fieldset:first-child {
+  margin-right: 50px;
+}
+
 @-webkit-keyframes BGconnect {
-  /* line 70, scss/_page_membres.scss */
+  /* line 121, scss/_page_membres.scss */
   from {
     background-position: 0px 0px;
   }
 
-  /* line 73, scss/_page_membres.scss */
+  /* line 124, scss/_page_membres.scss */
   to {
     background-position: -3000px 0px;
   }
 }
 
 @-moz-keyframes BGconnect {
-  /* line 78, scss/_page_membres.scss */
+  /* line 129, scss/_page_membres.scss */
   from {
     background-position: 0px 0px;
   }
 
-  /* line 81, scss/_page_membres.scss */
+  /* line 132, scss/_page_membres.scss */
   to {
     background-position: -3000px 0px;
   }

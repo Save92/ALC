@@ -13,6 +13,7 @@
 	<header>
 	
 		<a href="?page=accueil"><!--<img src="images/logo_psd.gif"/>-->Art Line Concept</a>
+		<button>Connexion</button>
 		<form action="?page=recherche" method="post">
 			<input type="text" name="content" placeHolder="Recherche...">
 			<input type="submit" name="recherche_ok">

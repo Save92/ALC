@@ -83,7 +83,6 @@ else
 }
 if ($defaut) {
 ?>
-<h1> Par ici l'inscription : </h1>
 			<fieldset>
 				<legend id="titre"> Pour vous inscrire, veuillez remplir les champs ci-dessous : </legend>
 	<form id="form_inscription" method="post" >
@@ -91,11 +90,11 @@ if ($defaut) {
 	
 <?php	if (isset($vide_mail) || isset($vide_pwd) || isset($vide_login) || isset($vide_nom) || isset($vide_prenom)){
 			echo "<p>Erreur : case ";
-			if (isset($vide_mail)){echo"mail ";}
-			if (isset($vide_login)){echo"login ";}
-			if (isset($vide_pwd)){echo"password ";}
-			if (isset($vide_nom)){echo"nom ";}
-			if (isset($vide_prenom)){echo"prenom ";}
+			if (!isset($vide_mail)){echo"mail ";}
+			if (!isset($vide_login)){echo"login ";}
+			if (!isset($vide_pwd)){echo"password ";}
+			if (!isset($vide_nom)){echo"nom ";}
+			if (!isset($vide_prenom)){echo"prenom ";}
 			echo "vide.";
 			echo" </p>";
 		}
@@ -106,9 +105,9 @@ if ($defaut) {
 			echo" </p>";
 		}
 		 ?>
-		<a><p><label for="mail">Adresse Mail : </label><input id="mail" name="mail" type="email" required></p>
-		<p><label for="prenom">Prenom : </label><input id="prenom" name="prenom" type="text" required></p>
-		<p><label for="nom">Nom : </label><input id="nom" name="nom" type="text" required></p>
+		<a><p><label for="mail">Adresse Mail : </label><input id="mail" name="mail" type="email" class="<?php if (empty($vide_mail)){echo "error ";} if (isset($indispo_mail)){echo"indispo";} ?>" required></p>
+		<p><label for="prenom">Prenom : </label><input id="prenom" name="prenom" type="text" class="<?php if (isset($vide_login)){echo "error";} ?>" required></p>
+		<p><label for="nom">Nom : </label><input id="nom" name="nom" type="text" class="<?php if (isset($vide_pwd)){echo "error";} ?>" required></p>
 		<br>
 		<p><label for="login">Choisissez votre identifiant : </label><input id="login" name="login" type="text" required></p>
 		<p><label for="pwd">Votre mot de passe : </label><input id="pwd" name="pwd" type="password" required></p>
