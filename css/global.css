@@ -816,3 +816,38 @@ section fieldset {
     background-position: -3000px 0px;
   }
 }
+
+/* line 2, scss/_page_recherche.scss */
+#page_recherche #block_recherche {
+  float: left;
+  height: 300px;
+  width: 450px;
+  min-width: 40px;
+  margin: 30px 0px 0px 40px;
+  background: url("../images/metal-texture-151340.jpg") no-repeat center center;
+  padding: 10px;
+  border: 4px gray solid;
+  border-radius: 15px;
+  font-weight: 800;
+  text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
+  display: inline-block;
+  vertical-align: top;
+  font-family: "Advent Pro", sans-serif;
+}
+/* line 19, scss/_page_recherche.scss */
+#page_recherche #block_recherche_2 {
+  float: right;
+  height: 200px;
+  width: 300px;
+  min-width: 40px;
+  margin: 80px 70px 0 0px;
+  background: url("../images/metal-texture-151340.jpg") no-repeat center center;
+  padding: 10px;
+  border: 4px gray solid;
+  border-radius: 15px;
+  font-weight: 800;
+  text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
+  display: block;
+  vertical-align: top;
+  font-family: "Advent Pro", sans-serif;
+}

@@ -1,20 +1,36 @@
-#page_recherche #block_recherche{
-    float:left;
-    height:200px;
-    width:25%;
-    min-width: 40px;
-    margin: 60px 2% 0 5%;
-    background:url('../images/metal-texture-151340.jpg') no-repeat center center;
-    padding:30px;
-    border:4px gray solid;
-    border-radius:15px;
-}
-#page_recherche #block_recherche div{
-    font-weight:800;
-    text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
-    width: 200px;
-    margin:5px 5px 0px 5px;
-    display: inline-block;
-    vertical-align:center;
+#page_recherche{
+    #block_recherche{
+        float:left;
+        height:300px;
+        width:450px;
+        min-width: 40px;
+        margin: 30px 0px 0px 40px;
+        background:url('../images/metal-texture-151340.jpg') no-repeat center center;
+        padding:10px;
+        border:4px gray solid;
+        border-radius:15px;
+        font-weight:800;
+        text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
+        display: inline-block;
+        vertical-align:top;
         font-family: 'Advent Pro', sans-serif ;
     }
+
+        #block_recherche_2{
+        float:right;
+        height:200px;
+        width:300px;
+        min-width: 40px;
+        margin: 80px 70px 0 0px;
+        background:url('../images/metal-texture-151340.jpg') no-repeat center center;
+        padding:10px;
+        border:4px gray solid;
+        border-radius:15px;
+        font-weight:800;
+        text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
+        display: block;
+        vertical-align:top;
+        font-family: 'Advent Pro', sans-serif ;
+        }
+
+}
