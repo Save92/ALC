@@ -13,7 +13,8 @@
 	<header>
 	
 		<a href="?page=accueil"><!--<img src="images/logo_psd.gif"/>-->Art Line Concept</a>
-		<button>Connexion</button>
+		<?php if(!isset($_SESSION['id'])){echo'<div><a href="?page=membre">Connexion</a><a href="?page=inscription">Inscription</a></div>';}
+		else {echo'<div><a href="?page=membre">Mr. Journaud Nicolas</a><a href="?page=deconnexion">Deconnexion</a></div>';}?>
 		<form action="?page=recherche" method="post">
 			<input type="text" name="content" placeHolder="Recherche...">
 			<input type="submit" name="recherche_ok">

@@ -92,6 +92,42 @@ header input[type="submit"] {
 header input[type="submit"]:hover {
   background: url("../images/loupe-desactif.png") #404040 no-repeat 3px 2px;
 }
+/* line 64, scss/_haut.scss */
+header div {
+  height: 30px;
+  min-width: 200px;
+  border: 3px solid gray;
+  border-radius: 15px;
+  background-color: black;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+/* line 74, scss/_haut.scss */
+header div a {
+  border: none;
+  min-width: 100px;
+  height: 30px;
+  display: inline-block;
+  float: left;
+  padding: 0 5px;
+  text-align: center;
+  line-height: 30px;
+  text-decoration: none;
+  text-shadow: 0 0 10px white,0 0 10px white,0 0 4px white,0 0 4px white;
+}
+/* line 87, scss/_haut.scss */
+header div a:first-child {
+  border-radius: 13px 0 0 13px;
+  background-color: #252525;
+  color: white;
+}
+/* line 92, scss/_haut.scss */
+header div a:last-child {
+  border-radius: 0  13px 13px 0;
+  background-color: #404040;
+  color: white;
+}
 
 /* line 1, scss/_bas.scss */
 footer {

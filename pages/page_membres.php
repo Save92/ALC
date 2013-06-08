@@ -82,7 +82,7 @@ include('pages/bas.php');
 					<li>
 						<a href="">
 							<img src="http://www.centaures-footus.com/modules/Gallery/icone-Dossier.png" width="64px" height="64px" />
-							<p>Toyota civic</p>
+							<p>Honda civic</p>
 						<a/>
 					</li>
 					<?php
