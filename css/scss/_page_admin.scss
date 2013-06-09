@@ -1,0 +1,67 @@
+#page_admin{
+	>div{
+        position: relative;
+        margin: 5% auto;
+        width: 1004px;
+    }
+    fieldset{
+    	overflow:hidden;
+    	background: rgba(0,0,0,0.5);
+    	padding: 10px;
+    	float:left;
+
+    	ul{
+	    	padding: 10px 25px;
+    		list-style-type:none;
+    	}
+		li{
+			a{
+				color:white;
+				text-decoration: none;
+				text-align:center;
+			}
+		}
+    }
+	fieldset:first-child{ 
+	    margin-right:50px;
+    	width:200px;
+	}
+	fieldset:last-child{
+		width: 700px;
+	}
+	table{
+		border:white;
+		.icon_del{
+			display: block;
+			background: url('http://icons.iconarchive.com/icons/deleket/sleek-xp-basic/16/Close-2-icon.png') 16px 16px;
+			height:16px;
+			width: 16px;
+			float:left;
+		}
+		.icon_val{
+			float:left;
+			display: block;
+			background: url('http://icons.iconarchive.com/icons/custom-icon-design/pretty-office-8/16/Accept-icon.png') 16px 16px;
+			height:16px;
+			width: 16px;
+		}
+	}
+	#carrousel{
+		table{
+			float:left;
+			margin: 10px 0 0 20px;
+		}
+		form{
+			float:right;
+			width:250px;
+			height: 200px;
+			border: 1px white solid;
+			padding: 10px;
+			margin:15px 15px 15px 0;
+			.right{
+				float:right;
+			}
+
+		}
+	}
+}

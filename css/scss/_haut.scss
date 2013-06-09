@@ -77,22 +77,27 @@ header{
 			height: 30px;
 			display:inline-block;
 			float:left;
+			color:white;
 			padding:0 5px;
+			font-weight: 700;
 			text-align: center;
 			line-height:30px;;
 			text-decoration: none;
-			text-shadow: 0 0 10px white,0 0 10px white,0 0 4px white,0 0 4px white;
-
+			text-shadow:0 0 5px grey, 0 0 5px red, 0 0 5px orange, 0 0 5px yellow, 0 0 15px orange, 0 0 25px yellow,0 0 30px red;
+			transition-property:text-shadow;
+			transition-duration:300ms;
+		}
+		a:hover{
+			text-shadow:0 0 1px white, 0 0 2px white,0 0 2px white, 0 0 7px grey, 0 0 15px white, 0 0 18px white,0 0 25px white;
+			color:black;
 		}
 		a:first-child{
 			border-radius: 13px 0 0 13px;
 			background-color: #252525;
-			color:white;
 		}
 		a:last-child{
 			border-radius: 0  13px 13px 0;
 			background-color: #404040;
-			color: white;
 		}
 	}
 

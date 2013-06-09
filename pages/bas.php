@@ -8,7 +8,8 @@ $liste_tableau = json_decode($liste, true);
 		<nav>
 			<a href="?page=presentation">Présentation</a>
 			<span></span>
-			<a href="?page=galerie">Galerie</a>
+			<a href="?page=galerie" id="galerie">Galerie</a>
+			<div class="galerie_choix">
 			<?php
 				foreach($liste_tableau as $nom){
 					echo '<a href="#" >'.$nom['nom'].'</a><span></span>';
@@ -17,18 +18,22 @@ $liste_tableau = json_decode($liste, true);
 				foreach ($liste_tableau as $categorie) {
 					echo '<div  class="categorie" id="galerie_lien_'.$categorie['nom'].'">';
 					foreach ($categorie["sous_liste"] as $objet) {
-						echo '<a href="">'.$objet['nom'].'</a><span></span>';
+						echo '<a href="?page=galerie&'.$categorie['nom'].'='.$objet['nom'].'">'.$objet['nom'].'</a><span></span>';
 					};
 					echo"</div>";
 				};
 			?>
+			</div>
 			<span></span>
 			<a href="?page=membre">Mon Compte</a>
 			<span></span>
 			<a href="?page=devis">Mon/Mes Projets</a>
-			<span></span>
-			<a href="?page=deconnexion">Déconnexion</a>
-			<span></span>
+			<?php if(isset($_SESSION["admin"]))
+			{
+				echo'
+				<span></span>
+				<a href="?page=admin">Administration</a>';
+			}?>
 		</nav>
 		<?php } else{ ?>
 		<nav>
@@ -49,15 +54,11 @@ $liste_tableau = json_decode($liste, true);
 					echo"</div>";
 				};
 			?>
+			</div>
 			<span></span>
 			<a href="?page=contact">Nous contacter</a>
 			<span></span>
 			<a href="?page=devis">Envie de soumettre un projet ?</a>
-			<span></span>
-			<a href="?page=inscription">Par ici pour s'inscrire !</a>
-			<span></span>
-			<a href="?page=membre"> ou se connecter.</a>
-			<span></span>
 		</nav>
 		<?php }?>
 	</footer>

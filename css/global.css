@@ -110,23 +110,30 @@ header div a {
   height: 30px;
   display: inline-block;
   float: left;
+  color: white;
   padding: 0 5px;
+  font-weight: 700;
   text-align: center;
   line-height: 30px;
   text-decoration: none;
-  text-shadow: 0 0 10px white,0 0 10px white,0 0 4px white,0 0 4px white;
+  text-shadow: 0 0 5px grey, 0 0 5px red, 0 0 5px orange, 0 0 5px yellow, 0 0 15px orange, 0 0 25px yellow,0 0 30px red;
+  transition-property: text-shadow;
+  transition-duration: 300ms;
 }
-/* line 87, scss/_haut.scss */
+/* line 90, scss/_haut.scss */
+header div a:hover {
+  text-shadow: 0 0 1px white, 0 0 2px white,0 0 2px white, 0 0 7px grey, 0 0 15px white, 0 0 18px white,0 0 25px white;
+  color: black;
+}
+/* line 94, scss/_haut.scss */
 header div a:first-child {
   border-radius: 13px 0 0 13px;
   background-color: #252525;
-  color: white;
 }
-/* line 92, scss/_haut.scss */
+/* line 98, scss/_haut.scss */
 header div a:last-child {
   border-radius: 0  13px 13px 0;
   background-color: #404040;
-  color: white;
 }
 
 /* line 1, scss/_bas.scss */
@@ -143,19 +150,29 @@ footer {
 }
 
 /* line 12, scss/_bas.scss */
-footer nav span {
-  border: 1px solid gray;
-  margin: 0 4px 0 4px;
+footer nav {
+  height: 40px;
+  margin: 10px 5px 10px 5px;
 }
 
 /* line 16, scss/_bas.scss */
+footer nav span {
+  border: 1px solid orange;
+  margin: 0 4px 0 4px;
+  box-shadow: 0 0 2px grey, 0 0 1px red, 0 0 5px orange, 0 0 5px yellow,0 0 10px red;
+}
+
+/* line 22, scss/_bas.scss */
 footer nav span:last-child {
   border: none;
   margin: 0;
 }
 
-/* line 20, scss/_bas.scss */
+/* line 26, scss/_bas.scss */
 footer nav a {
+  font-size: 18px;
+  line-height: 30px;
+  text-shadow: 0 0 3px grey, 0 0 1px red, 0 0 10px orange, 0 0 15px yellow,0 0 20px red;
   font-family: "Advent Pro", sans-serif;
   font-weight: 700;
   color: white;
@@ -163,24 +180,38 @@ footer nav a {
   min-width: 900px;
 }
 
-/* line 27, scss/_bas.scss */
+/* line 36, scss/_bas.scss */
+footer nav a:hover {
+  font-size: 18px;
+  line-height: 30px;
+  text-shadow: 0 0 1px white, 0 0 2px grey, 0 0 7px grey, 0 0 15px white, 0 0 18px white,0 0 25px white;
+  transition-property: text-shadow;
+  transition-duration: 300ms;
+  font-family: "Advent Pro", sans-serif;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  min-width: 900px;
+}
+
+/* line 48, scss/_bas.scss */
 footer nav .galerie_choix {
   position: absolute;
   display: block;
   z-index: 2;
-  top: 20px;
-  left: 70px;
+  top: 33px;
+  left: 95px;
 }
 
-/* line 37, scss/_bas.scss */
+/* line 58, scss/_bas.scss */
 footer nav .categorie {
   font-family: "Advent Pro", sans-serif;
   font-weight: 700;
   position: absolute;
   display: block;
   z-index: 2;
-  top: 40px;
-  left: 70px;
+  top: 53px;
+  left: 95px;
 }
 
 /* line 29, scss/global.scss */
@@ -199,9 +230,11 @@ section fieldset legend {
   text-shadow: 0 0 3px grey, 0 0 1px black, 0 0 10px white, 0 0 15px white,0 0 20px white;
   font-style: bold;
   font-family: impact;
+  position: absolute;
+  margin: -50px 0px 0px 0px;
 }
 
-/* line 45, scss/global.scss */
+/* line 46, scss/global.scss */
 section fieldset {
   box-shadow: 0 0 25px 1px rgba(255, 255, 255, 0.5);
 }
@@ -741,7 +774,7 @@ section fieldset {
   margin: 5% auto;
   width: 1004px;
 }
-/* line 75, scss/_page_membres.scss */
+/* line 76, scss/_page_membres.scss */
 #page_membres fieldset {
   width: 450px;
   float: left;
@@ -749,69 +782,83 @@ section fieldset {
   background: rgba(0, 0, 0, 0.5);
   padding: 10px;
 }
-/* line 81, scss/_page_membres.scss */
+/* line 82, scss/_page_membres.scss */
 #page_membres fieldset label {
   height: 50px;
 }
-/* line 85, scss/_page_membres.scss */
+/* line 86, scss/_page_membres.scss */
 #page_membres fieldset #cache:checked ~ label h1 {
   display: none;
 }
-/* line 88, scss/_page_membres.scss */
+/* line 89, scss/_page_membres.scss */
 #page_membres fieldset label h4, #page_membres fieldset div {
   display: none;
 }
-/* line 92, scss/_page_membres.scss */
+/* line 93, scss/_page_membres.scss */
 #page_membres fieldset #cache:checked ~ label h4,
 #page_membres fieldset #cache:checked ~ div {
   display: block;
 }
-/* line 97, scss/_page_membres.scss */
+/* line 96, scss/_page_membres.scss */
+#page_membres fieldset div p {
+  margin: 5px 0px 0px 10px;
+  text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
+}
+/* line 101, scss/_page_membres.scss */
+#page_membres fieldset input {
+  margin-right: 40px;
+  box-shadow: 0px 0px 4px 2px gray;
+  border: 0px none;
+  border-radius: 5px 5px 5px 5px;
+  float: right;
+}
+/* line 108, scss/_page_membres.scss */
 #page_membres fieldset ul {
   padding: 10px 25px;
   list-style-type: none;
 }
-/* line 101, scss/_page_membres.scss */
+/* line 112, scss/_page_membres.scss */
 #page_membres fieldset li {
   float: left;
   display: block;
   width: 100px;
   height: 128px;
 }
-/* line 106, scss/_page_membres.scss */
+/* line 117, scss/_page_membres.scss */
 #page_membres fieldset li img {
   margin-left: 18px;
 }
-/* line 109, scss/_page_membres.scss */
+/* line 120, scss/_page_membres.scss */
 #page_membres fieldset li a {
   color: white;
   text-decoration: none;
   text-align: center;
 }
-/* line 116, scss/_page_membres.scss */
+/* line 127, scss/_page_membres.scss */
 #page_membres fieldset:first-child {
   margin-right: 50px;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 @-webkit-keyframes BGconnect {
-  /* line 121, scss/_page_membres.scss */
+  /* line 133, scss/_page_membres.scss */
   from {
     background-position: 0px 0px;
   }
 
-  /* line 124, scss/_page_membres.scss */
+  /* line 136, scss/_page_membres.scss */
   to {
     background-position: -3000px 0px;
   }
 }
 
 @-moz-keyframes BGconnect {
-  /* line 129, scss/_page_membres.scss */
+  /* line 141, scss/_page_membres.scss */
   from {
     background-position: 0px 0px;
   }
 
-  /* line 132, scss/_page_membres.scss */
+  /* line 144, scss/_page_membres.scss */
   to {
     background-position: -3000px 0px;
   }
@@ -850,4 +897,76 @@ section fieldset {
   display: block;
   vertical-align: top;
   font-family: "Advent Pro", sans-serif;
+}
+
+/* line 2, scss/_page_admin.scss */
+#page_admin > div {
+  position: relative;
+  margin: 5% auto;
+  width: 1004px;
+}
+/* line 7, scss/_page_admin.scss */
+#page_admin fieldset {
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  float: left;
+}
+/* line 13, scss/_page_admin.scss */
+#page_admin fieldset ul {
+  padding: 10px 25px;
+  list-style-type: none;
+}
+/* line 18, scss/_page_admin.scss */
+#page_admin fieldset li a {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+/* line 25, scss/_page_admin.scss */
+#page_admin fieldset:first-child {
+  margin-right: 50px;
+  width: 200px;
+}
+/* line 29, scss/_page_admin.scss */
+#page_admin fieldset:last-child {
+  width: 700px;
+}
+/* line 32, scss/_page_admin.scss */
+#page_admin table {
+  border: white;
+}
+/* line 34, scss/_page_admin.scss */
+#page_admin table .icon_del {
+  display: block;
+  background: url("http://icons.iconarchive.com/icons/deleket/sleek-xp-basic/16/Close-2-icon.png") 16px 16px;
+  height: 16px;
+  width: 16px;
+  float: left;
+}
+/* line 41, scss/_page_admin.scss */
+#page_admin table .icon_val {
+  float: left;
+  display: block;
+  background: url("http://icons.iconarchive.com/icons/custom-icon-design/pretty-office-8/16/Accept-icon.png") 16px 16px;
+  height: 16px;
+  width: 16px;
+}
+/* line 50, scss/_page_admin.scss */
+#page_admin #carrousel table {
+  float: left;
+  margin: 10px 0 0 20px;
+}
+/* line 54, scss/_page_admin.scss */
+#page_admin #carrousel form {
+  float: right;
+  width: 250px;
+  height: 200px;
+  border: 1px white solid;
+  padding: 10px;
+  margin: 15px 15px 15px 0;
+}
+/* line 61, scss/_page_admin.scss */
+#page_admin #carrousel form .right {
+  float: right;
 }

@@ -33,8 +33,9 @@ if(isset($_GET['page'])){
 		case 'deconnexion':
 			include('pages/page_membres.php');
 		break;
-
-
+		case 'admin':
+			include('pages/page_admin.php');
+		break;
 
 
 		default:

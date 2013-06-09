@@ -6,8 +6,8 @@ if(!empty($_GET['page'])){
 		include('pages/haut.php'); 
 		?>
 			<section id="page_deconnexion">
-				<meta http-equiv="refresh" content="2; URL=<?php echo $root; ?>" ></meta>
-				<div><div><h1> Deconnecté</h1></div></div>
+				<meta http-equiv="refresh" content="2; URL=?page=accueil" ></meta>
+				<div><div><h1>Deconnecté</h1></div></div>
 			</section>
 			</body>
 			</html>
@@ -16,7 +16,24 @@ if(!empty($_GET['page'])){
 	}
 }
 if(!empty($_POST['login']) && !empty($_POST['password'])){
-	$_SESSION['id'] = "2";
+	try
+	{
+		$bdd = new PDO('mysql:host=localhost;dbname=alc', 'root', '');
+	}
+	catch(Exception $e)
+	{
+		die('Erreur : '.$e->getMessage());
+	}
+	$mdp = md5($_POST["password"]);
+	$req = $bdd->query('SELECT * FROM membre WHERE mail_membre = \''.$_POST["login"].'\' OR mdp_membre = \''.$mdp.'\' ');
+	if( $donnes = $req->fetch())
+	{
+		$_SESSION['id'] = $donnes['num_membre'];
+		$_SESSION['nom_complet'] = $donnes['nom_membre']." ".$donnes['prenom_membre'];
+		if ($donnes['permission_membre'] == 1) {$_SESSION['admin'] = "1";}
+
+	}
+
 }
 
 
@@ -54,18 +71,16 @@ include('pages/bas.php');
 					<h4>Pour caché les informations, cliquez ici</h4>
 				</label>
 				<div>
-
+					<form method="post">	
 					<p><h3>Modifications du mots de passe</h3></p>
-					<p>écriver votre mots de passe:</p>
-					<p><input type="text"></p>
-					<p>écriver votre nouveau mots de passe:</p>
-					<p><input type="text"></p>
-					<p>Reécriver le nouveau mots de passe:</p>
-					<p><input type="text"></p>
-
-					<p><h3>Modifications de l'adresse mail</h3></p>
-					<p></p>
-					<p><input type="text"></p>
+					<p>Saisir votre mot de passe :
+					<input type="text"></p>
+					<p>Saisir votre nouveau mot de passe :
+					<input type="text"></p>
+					<p>Réécrire le nouveau mots de passe :
+					<input type="text"></p>
+					<p><input type="submit" value="Soumettre"></p>
+					<form>
 				</div>
 
 
