@@ -25,7 +25,7 @@ if(!empty($_POST['login']) && !empty($_POST['password'])){
 		die('Erreur : '.$e->getMessage());
 	}
 	$mdp = md5($_POST["password"]);
-	$req = $bdd->query('SELECT * FROM membre WHERE mail_membre = \''.$_POST["login"].'\' OR mdp_membre = \''.$mdp.'\' ');
+	$req = $bdd->query('SELECT * FROM membre WHERE mail_membre = \''.$_POST["login"].'\' AND mdp_membre = \''.$mdp.'\' ');
 	if( $donnes = $req->fetch())
 	{
 		$_SESSION['id'] = $donnes['num_membre'];
@@ -34,6 +34,27 @@ if(!empty($_POST['login']) && !empty($_POST['password'])){
 
 	}
 
+}
+if(isset($_POST['mdp']) && isset($_POST['new_mdp']) && isset($_POST['repeat_mdp'])){
+	if($_POST['new_mdp']==$_POST['repeat_mdp']){
+		$bdd = new PDO('mysql:host=127.0.0.1;dbname=alc', 'root', '');
+		$req = $bdd->prepare('SELECT mdp_membre FROM `membre` 
+		WHERE num_membre= ? AND mdp_membre= ?');
+		$req->execute(array($_SESSION['id'],md5($_POST['mdp'])));
+		while($donnees=$req->fetch()){
+			if($donnees['num_membre']==$_SESSION['id'])
+			{
+				$req2 = $bdd->prepare('UPDATE `membre` set mdp_membre= ? 
+				WHERE num_membre= ?');
+				$req2->execute(array(md5($_POST['new_mdp']), $_SESSION['id']));
+				$mdp_info="Changement du mot de passe effectué !";
+			}
+			else $mdp_info="Votre mot de passe est incorrect !";
+		}
+	}
+	else{
+		$mdp_info="Les deux nouveaux mot de passe ne sont pas correspondant.";
+	}
 }
 
 
@@ -70,48 +91,54 @@ include('pages/bas.php');
 					<h1>Pour affichez les informations, cliquez ici</h1>
 					<h4>Pour caché les informations, cliquez ici</h4>
 				</label>
+				<?php if(isset($mdp_info)){
+					echo '<p>'.$mdp_info.'</p>';
+				}	
+				?>
 				<div>
 					<form method="post">	
 					<p><h3>Modifications du mots de passe</h3></p>
 					<p>Saisir votre mot de passe :
-					<input type="text"></p>
+					<input name="mdp" type="password" required></p>
 					<p>Saisir votre nouveau mot de passe :
-					<input type="text"></p>
+					<input name="new_mdp" type="password" required></p>
 					<p>Réécrire le nouveau mots de passe :
-					<input type="text"></p>
+					<input name="repeat_mdp" type="password" required></p>
 					<p><input type="submit" value="Soumettre"></p>
 					<form>
 				</div>
-
-
-
-
 			</fieldset>
 			<fieldset>
 				<legend>Gestion de projet</legend> 
 				<ul>
 					<?php
-
-					for($i = 1; $i <= 10; $i++)
-					{ ?>
-					<li>
-						<a href="">
-							<img src="http://www.centaures-footus.com/modules/Gallery/icone-Dossier.png" width="64px" height="64px" />
-							<p>Honda civic</p>
-						<a/>
-					</li>
-					<?php
+						$variable = $_SESSION['id'];
+						$bdd = new PDO('mysql:host=127.0.0.1;dbname=alc', 'root', '');
+						$res = $bdd->prepare('SELECT projet.num_projet,nom_projet,theme,date_projet,num_image
+						FROM `projet`,`image` WHERE projet.num_projet=image.num_projet AND projet.num_membre= ? GROUP BY projet.num_projet');
+						$res->execute(array($variable));
+						$count =$res->rowCount();
+						if ($count!=0){
+							while($donnees=$res->fetch())
+							{
+							echo '<li>
+								<a href="?page=suivi_projet&suivi_projet='.$donnees['num_projet'].'">
+								<img width="90px" height="90px" src="upload/'.$donnees['num_image'].'.jpg">
+								<p>'.$donnees['nom_projet'].'</p>
+								</a>
+								</li>';
+							}
+							//req->closeCursor();
+						}
+						else
+						{
+							echo "Aucun projet correspondant...";
 					}
 					?>
 				</ul>
-
-				
-
-
 			</fieldset>
 		</div>
 	</section>
-
 <?php
 include('pages/bas.php');
 //session_destroy();

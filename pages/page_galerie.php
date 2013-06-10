@@ -6,9 +6,8 @@ else{ $variable = NULL;}
 switch ($variable){
 	case "Date":
 		$variable2 = $_GET['Date'];
-		echo $variable2;
 		$bdd = new PDO('mysql:host=127.0.0.1;dbname=alc', 'root', '');
-		$res = $bdd->prepare('SELECT marque,modele,annee,type,nom_projet,theme,date_projet,num_image
+		$res = $bdd->prepare('SELECT marque,modele,annee,type,projet.num_projet,nom_projet,theme,date_projet,num_image
 FROM `vehicule`,`projet`,`image` WHERE vehicule.num_vehicule=projet.num_vehicule 
 AND projet.num_projet=image.num_projet AND date_projet= ? GROUP BY projet.num_projet');
 		$res->execute(array($_GET['Date']));
@@ -25,9 +24,9 @@ AND projet.num_projet=image.num_projet AND date_projet= ? GROUP BY projet.num_pr
 			<tr>';
 			while($donnees = $res->fetch())
 			{
-				//href=?page=projet&projet="id_projet"
+				//href=
 			echo '<td>
-					<a href="">
+					<a href="?page=projet&projet='.$donnees['num_projet'].'">
 						<img width="90px" height="90px" src="upload/'.$donnees['num_image'].'.jpg">
 						<span>'.$donnees['date_projet'].' '.$donnees['nom_projet'].' '.$donnees['type'].' '.$donnees['marque'].'</span>
 					</a>
@@ -52,7 +51,7 @@ AND projet.num_projet=image.num_projet AND date_projet= ? GROUP BY projet.num_pr
 			<div>
 			<table id="icones_projets">
 			<tr>';
-			echo "Aucun projet correspondant...;
+			echo "Aucun projet correspondant...
 				</table></div>
 		</fieldset>
 		</section>
@@ -60,9 +59,8 @@ AND projet.num_projet=image.num_projet AND date_projet= ? GROUP BY projet.num_pr
 	break;
 	case "Theme":
 	$variable3 = $_GET['Theme'];
-	echo $variable3;
 			$bdd = new PDO('mysql:host=127.0.0.1;dbname=alc', 'root', '');
-		$res2 = $bdd->prepare('SELECT marque,modele,annee,type,nom_projet,theme,date_projet,num_image
+		$res2 = $bdd->prepare('SELECT marque,modele,annee,type,projet.num_projet,nom_projet,theme,date_projet,num_image
 FROM `vehicule`,`projet`,`image` WHERE vehicule.num_vehicule=projet.num_vehicule 
 AND projet.num_projet=image.num_projet AND theme= ? GROUP BY projet.num_projet');
 		$res2->execute(array($_GET['Theme']));
@@ -82,7 +80,7 @@ AND projet.num_projet=image.num_projet AND theme= ? GROUP BY projet.num_projet')
 			{
 				//href=?page=projet&projet="id_projet"
 			echo '<td>
-					<a href="">
+					<a href="?page=projet&projet='.$donnees['num_projet'].'">
 						<img width="90px" height="90px" src="upload/'.$donnees['num_image'].'.jpg">
 						<span>'.$donnees['date_projet'].' '.$donnees['nom_projet'].' '.$donnees['type'].' '.$donnees['marque'].'</span>
 					</a>
@@ -123,20 +121,31 @@ AND projet.num_projet=image.num_projet AND theme= ? GROUP BY projet.num_projet')
 			<legend>Par Date :</legend>
 			<div>
 				';
-				foreach ($liste_tableau[1] as $categorie) {
-					foreach ($liste_tableau["sous_liste"] as $objet) {
-						echo '<a href="?page=galerie&'.$categorie['nom'].'='.$objet['nom'].'">'.$objet['nom'].'</a><span></span>';
+				foreach ($liste_tableau as $categorie) {
+				if($categorie['nom'] == "Date"){
+					foreach ($categorie["sous_liste"] as $objet) {
+						echo '<a href="?page=galerie&'.$categorie['nom'].'='.$objet['nom'].'">'.$objet['nom'].'</a><br><span></span>';
 					};
+					}
 				};
-					echo"</div>";
 			echo '
 			</div>
 			</fieldset>
 			<fieldset id="liste_projets_Theme">
 			<legend>Par Thème :</legend>
 			<div>
+			';
+				foreach ($liste_tableau as $categorie) {
+				if($categorie['nom'] == "Theme"){
+					foreach ($categorie["sous_liste"] as $objet) {
+						echo '<a href="?page=galerie&'.$categorie['nom'].'='.$objet['nom'].'">'.$objet['nom'].'</a><br><span></span>';
+						};
+					}
+				};
+			echo '
 			</div>
 			</fieldset>
+			</div>
 			</section>
 		';
 ?>

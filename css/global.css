@@ -178,23 +178,17 @@ footer nav a {
   color: white;
   text-decoration: none;
   min-width: 900px;
-}
-
-/* line 36, scss/_bas.scss */
-footer nav a:hover {
-  font-size: 18px;
-  line-height: 30px;
-  text-shadow: 0 0 1px white, 0 0 2px grey, 0 0 7px grey, 0 0 15px white, 0 0 18px white,0 0 25px white;
   transition-property: text-shadow;
   transition-duration: 300ms;
-  font-family: "Advent Pro", sans-serif;
-  font-weight: bold;
-  color: black;
-  text-decoration: none;
-  min-width: 900px;
 }
 
-/* line 48, scss/_bas.scss */
+/* line 38, scss/_bas.scss */
+footer nav a:hover {
+  text-shadow: 0 0 1px white, 0 0 2px grey, 0 0 7px grey, 0 0 15px white, 0 0 18px white,0 0 25px white;
+  color: black;
+}
+
+/* line 42, scss/_bas.scss */
 footer nav .galerie_choix {
   position: absolute;
   display: block;
@@ -203,7 +197,7 @@ footer nav .galerie_choix {
   left: 95px;
 }
 
-/* line 58, scss/_bas.scss */
+/* line 52, scss/_bas.scss */
 footer nav .categorie {
   font-family: "Advent Pro", sans-serif;
   font-weight: 700;
@@ -230,8 +224,6 @@ section fieldset legend {
   text-shadow: 0 0 3px grey, 0 0 1px black, 0 0 10px white, 0 0 15px white,0 0 20px white;
   font-style: bold;
   font-family: impact;
-  position: absolute;
-  margin: -50px 0px 0px 0px;
 }
 
 /* line 46, scss/global.scss */
@@ -310,14 +302,14 @@ section fieldset {
 }
 
 /* line 3, scss/_page_galerie.scss */
-#page_galerie #page_galerie_global {
+#page_galerie_choix #page_galerie_global {
   margin: 10px 2% 0;
   width: 95%;
   height: 400px;
   position: relative;
 }
 /* line 10, scss/_page_galerie.scss */
-#page_galerie #page_galerie_global #presentation_projets {
+#page_galerie_choix #page_galerie_global #presentation_projets {
   float: left;
   position: relative;
   height: 250px;
@@ -329,7 +321,7 @@ section fieldset {
   border-radius: 15px;
 }
 /* line 22, scss/_page_galerie.scss */
-#page_galerie #page_galerie_global #presentation_projets > a {
+#page_galerie_choix #page_galerie_global #presentation_projets > a {
   position: absolute;
   font-weight: 800;
   text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
@@ -339,7 +331,7 @@ section fieldset {
   font-weight: 700;
 }
 /* line 32, scss/_page_galerie.scss */
-#page_galerie #page_galerie_global #presentation_projets #p_footer {
+#page_galerie_choix #page_galerie_global #presentation_projets #p_footer {
   position: absolute;
   bottom: 0px;
   text-align: center;
@@ -349,14 +341,61 @@ section fieldset {
   font-family: "Advent Pro", sans-serif;
   font-weight: 700;
 }
+/* line 43, scss/_page_galerie.scss */
+#page_galerie_choix #liste_projets_Date {
+  float: left;
+  height: 200px;
+  width: 225px;
+  min-width: 40px;
+  margin: 30px 50px 0 120px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border: 4px gray solid;
+  border-radius: 15px;
+  font-weight: 800;
+  text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
+  display: inline-block;
+  vertical-align: top;
+  display: inline-block;
+}
+/* line 58, scss/_page_galerie.scss */
+#page_galerie_choix #liste_projets_Date div a {
+  text-decoration: none;
+  color: white;
+  font-family: "Advent Pro", sans-serif;
+}
+/* line 64, scss/_page_galerie.scss */
+#page_galerie_choix #liste_projets_Theme {
+  float: left;
+  text-decoration: none;
+  height: 200px;
+  width: 225px;
+  min-width: 40px;
+  margin: 30px 50px 0 120px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border: 4px gray solid;
+  border-radius: 15px;
+  font-weight: 800;
+  text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
+  display: inline-block;
+  vertical-align: top;
+  display: inline-block;
+}
+/* line 81, scss/_page_galerie.scss */
+#page_galerie_choix #liste_projets_Theme div a {
+  text-decoration: none;
+  color: white;
+  font-family: "Advent Pro", sans-serif;
+}
 
-/* line 49, scss/_page_galerie.scss */
+/* line 93, scss/_page_galerie.scss */
 #page_galerie_choix > div {
   position: relative;
   margin: 80px auto 0 auto;
   width: 1024px;
 }
-/* line 54, scss/_page_galerie.scss */
+/* line 98, scss/_page_galerie.scss */
 #page_galerie_choix #liste_projets {
   float: left;
   height: 400px;
@@ -365,11 +404,13 @@ section fieldset {
   background: url("../images/metal-texture-151340.jpg") no-repeat center center;
   padding: 10px;
   border: 4px gray solid;
+  background: rgba(0, 0, 0, 0.2);
   border-radius: 15px;
 }
-/* line 64, scss/_page_galerie.scss */
+/* line 108, scss/_page_galerie.scss */
 #page_galerie_choix #liste_projets > div {
   margin-top: 20px;
+  margin-left: 9px;
   width: 425px;
   overflow-y: hidden;
   height: 320px;
@@ -378,7 +419,7 @@ section fieldset {
   box-shadow: inset 0 0 20px 1px rgba(0, 0, 0, 0.5);
   background: rgba(0, 0, 0, 0.2);
 }
-/* line 75, scss/_page_galerie.scss */
+/* line 120, scss/_page_galerie.scss */
 #page_galerie_choix #liste_projets #icones_projets a {
   margin: 5px;
   display: block;
@@ -391,11 +432,11 @@ section fieldset {
   text-decoration: none;
   color: white;
 }
-/* line 86, scss/_page_galerie.scss */
+/* line 131, scss/_page_galerie.scss */
 #page_galerie_choix #liste_projets #icones_projets a img {
   border-radius: 15px;
 }
-/* line 94, scss/_page_galerie.scss */
+/* line 139, scss/_page_galerie.scss */
 #page_galerie_choix #image_projet {
   margin-top: 10px;
   float: right;
@@ -406,7 +447,7 @@ section fieldset {
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.4);
   border-radius: 15px;
 }
-/* line 103, scss/_page_galerie.scss */
+/* line 148, scss/_page_galerie.scss */
 #page_galerie_choix #image_projet img {
   border-radius: 15px;
 }
@@ -897,6 +938,126 @@ section fieldset {
   display: block;
   vertical-align: top;
   font-family: "Advent Pro", sans-serif;
+}
+
+/* line 2, scss/_page_projet.scss */
+#page_projet #description_projets {
+  float: left;
+  position: relative;
+  height: 290px;
+  width: 350px;
+  margin: 65px 20px 0px 50px;
+  background: url("../images/metal-texture-151340.jpg") no-repeat center center;
+  padding: 10px;
+  border: 4px gray solid;
+  border-radius: 15px;
+}
+/* line 12, scss/_page_projet.scss */
+#page_projet #description_projets legend {
+  font-size: 16px;
+  text-shadow: 0 0 3px gray, 0 0 10px white, 0 0 15px white,0 0 20px white;
+  text-decoration: bold;
+  font-family: impact;
+}
+/* line 19, scss/_page_projet.scss */
+#page_projet #liste_image_projet {
+  float: left;
+  height: 290px;
+  width: 230px;
+  margin: 80px 0px 0 2px;
+  background: url("../images/metal-texture-151340.jpg") no-repeat center center;
+  padding: 2px;
+  border: 4px gray solid;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.2);
+  overflow-y: hidden;
+  box-shadow: inset 0 0 20px 1px rgba(0, 0, 0, 0.5);
+}
+/* line 31, scss/_page_projet.scss */
+#page_projet #liste_image_projet img {
+  margin: 5px 5px 0 2px;
+  border-radius: 10px;
+}
+/* line 35, scss/_page_projet.scss */
+#page_projet #liste_image_projet h2 {
+  position: absolute;
+  margin: -20px 0 0 10px;
+  font-size: 16px;
+  font-family: impact;
+}
+/* line 42, scss/_page_projet.scss */
+#page_projet #image_projet {
+  float: left;
+  height: 300px;
+  width: 320px;
+  background: rgba(0, 0, 0, 0.7);
+  margin: 80px 80px 0px 20px;
+  border-radius: 15px;
+}
+/* line 51, scss/_page_projet.scss */
+#page_projet #image_projet img {
+  border-radius: 15px;
+  margin: 5px 5px 5px 5px;
+}
+
+/* line 2, scss/_page_suivi_projet.scss */
+#page_suivi_projet #description_suivi_projets {
+  float: left;
+  position: relative;
+  height: 290px;
+  width: 350px;
+  margin: 65px 20px 0px 50px;
+  background: url("../images/metal-texture-151340.jpg") no-repeat center center;
+  padding: 10px;
+  border: 4px gray solid;
+  border-radius: 15px;
+}
+/* line 12, scss/_page_suivi_projet.scss */
+#page_suivi_projet #description_suivi_projets legend {
+  font-size: 16px;
+  text-shadow: 0 0 3px gray, 0 0 10px white, 0 0 15px white,0 0 20px white;
+  text-decoration: bold;
+  font-family: impact;
+}
+/* line 19, scss/_page_suivi_projet.scss */
+#page_suivi_projet #liste_image_suivi_projet {
+  float: left;
+  height: 290px;
+  width: 230px;
+  margin: 80px 0px 0 2px;
+  background: url("../images/metal-texture-151340.jpg") no-repeat center center;
+  padding: 2px;
+  border: 4px gray solid;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.2);
+  overflow-y: hidden;
+  box-shadow: inset 0 0 20px 1px rgba(0, 0, 0, 0.5);
+}
+/* line 31, scss/_page_suivi_projet.scss */
+#page_suivi_projet #liste_image_suivi_projet img {
+  margin: 5px 5px 0 2px;
+  border-radius: 10px;
+}
+/* line 35, scss/_page_suivi_projet.scss */
+#page_suivi_projet #liste_image_suivi_projet h2 {
+  position: absolute;
+  margin: -20px 0 0 10px;
+  font-size: 16px;
+  font-family: impact;
+}
+/* line 42, scss/_page_suivi_projet.scss */
+#page_suivi_projet #image_projet {
+  float: left;
+  height: 300px;
+  width: 320px;
+  background: rgba(0, 0, 0, 0.7);
+  margin: 80px 80px 0px 20px;
+  border-radius: 15px;
+}
+/* line 51, scss/_page_suivi_projet.scss */
+#page_suivi_projet #image_projet img {
+  border-radius: 15px;
+  margin: 5px 5px 5px 5px;
 }
 
 /* line 2, scss/_page_admin.scss */

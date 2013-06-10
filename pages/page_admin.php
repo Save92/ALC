@@ -64,23 +64,31 @@ if(!isset($_SESSION['admin'])){
 		break;
 		case "devis":
 			if(isset($_GET['fonction']))
-				{if($_GET['fonction'] == "delete"){
+				{
+				if($_GET['fonction'] == "delete"){
 					$req = $bdd->query('DELETE FROM devis WHERE num_devis =\''.$_GET['id'].'\'');
 				}
 				elseif($_GET['fonction'] == "update"){
 					$req1 = $bdd->query('SELECT * FROM devis WHERE num_devis =\''.$_GET['id'].'\'');
-
+					$donnes1 = $req1->fecth();
 					$req2 = $bdd->query('DELETE FROM devis WHERE num_devis =\''.$_GET['id'].'\'');
+					$donnes2 = $req1->fecth();
 
-					$req3 = $bdd->prepare('INSERT INTO projet(nom_projet, num_vehicule, theme, date_projet, description_projet, motcles_projet ) VALUES(:nom, :num_vehicule, :theme, :date, :description, :motcles)');
-					$req3->execute(array(
-					    'nom' => $req1['marque'],
-					    'num_vehicule' => "",
-					    'theme' => $req1['theme'],
-					    'date' => $date("Y"),
-					    'description' => $req1['description'],
-					    'motcles' => ""
-					    ));
+					$req3 = $bdd->query('SELECT * FROM membre WHERE mail_membre =\''.$donnes1['mail_devis'].'\'');
+					if(true){
+
+
+						$req4 = $bdd->prepare('INSERT INTO projet(nom_projet, num_vehicule, theme, date_projet, description_projet, motcles_projet ) VALUES(:nom, :num_vehicule, :theme, :date, :description, :motcles)');
+						$req4->execute(array(
+						    'nom' => $donnes1['marque'],
+						    'num_vehicule' => "",
+						    'theme' => $donnes1['theme'],
+						    'date' => $date("Y"),
+						    'description' => $donnes1['description'],
+						    'motcles' => ""
+						    ));
+					}
+
 				}};
 			$req = $bdd->query('SELECT * FROM devis');
 			echo' 

@@ -14,7 +14,7 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=alc', 'root', '');
 
 $req = $bdd->prepare('SELECT num_projet, nom_projet, theme, date_projet, description_projet, motscles_projet FROM projet WHERE motscles_projet= ?');
 $req->execute(array($_POST['content']));
-//if ($req->fetch()){
+if ($req->fetch()){
 	while($donnees = $req->fetch())
 	{
 		echo"
@@ -23,12 +23,12 @@ $req->execute(array($_POST['content']));
 		   	</p>
 		   	<br>";
 	}
-/*}
+}
 else
 {
 echo "Aucun résultat trouvé pour \"".$_POST['content']."\"";
-}*/
-$req->closeCursor(); // Termine le traitement de la requête
+}
+//$req->closeCursor(); // Termine le traitement de la requête
 ?>
 		</div>
 	</fieldset>

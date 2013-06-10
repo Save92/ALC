@@ -32,18 +32,12 @@ footer nav a {
 	color:white;
 	text-decoration: none;
 	min-width:900px;
-}
-footer nav a:hover{
-	font-size: 18px;
-	line-height:30px;
-	text-shadow:0 0 1px white, 0 0 2px grey, 0 0 7px grey, 0 0 15px white, 0 0 18px white,0 0 25px white;
 	transition-property:text-shadow;
 	transition-duration:300ms;
-	font-family: 'Advent Pro', sans-serif ;
-    font-weight:bold;
+}
+footer nav a:hover{
+	text-shadow:0 0 1px white, 0 0 2px grey, 0 0 7px grey, 0 0 15px white, 0 0 18px white,0 0 25px white;
 	color:black;
-	text-decoration: none;
-	min-width:900px;
 }
 footer nav .galerie_choix {
 	position:absolute;

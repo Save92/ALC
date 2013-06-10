@@ -12,7 +12,7 @@ $liste_tableau = json_decode($liste, true);
 			<div class="galerie_choix">
 			<?php
 				foreach($liste_tableau as $nom){
-					echo '<a href="#" >'.$nom['nom'].'</a><span></span>';
+					echo '<a>'.$nom['nom'].'</a><span></span>';
 				};
 				echo "</div>";
 				foreach ($liste_tableau as $categorie) {
@@ -49,7 +49,7 @@ $liste_tableau = json_decode($liste, true);
 				foreach ($liste_tableau as $categorie) {
 					echo '<div  class="categorie" id="galerie_lien_'.$categorie['nom'].'">';
 					foreach ($categorie["sous_liste"] as $objet) {
-						echo '<a href="">'.$objet['nom'].'</a><span></span>';
+						echo '<a href="?page=galerie&'.$categorie['nom'].'='.$objet['nom'].'">'.$objet['nom'].'</a><span></span>';
 					};
 					echo"</div>";
 				};
@@ -62,7 +62,7 @@ $liste_tableau = json_decode($liste, true);
 		</nav>
 		<?php }?>
 	</footer>
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="js/jquery-1.9.1.min.js"></script>
 	<script src="js/jquery.orbit-1.2.3.js"></script>
 	<script src="js/script.js"></script>
 </body>

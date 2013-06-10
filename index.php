@@ -12,11 +12,14 @@ if(isset($_GET['page'])){
 		case 'contact':
 			include('pages/page_contact.php');
 		break;
-		case 'galerie_choix':
-			include('pages/page_galerie_choix.php');
-		break;
 		case 'galerie':
 			include('pages/page_galerie.php');
+		break;
+		case 'projet':
+			include('pages/page_projet.php');
+		break;
+		case 'suivi_projet':
+			include('pages/page_suivi_projet.php');
 		break;
 		case 'inscription':
 			include('pages/page_inscription.php');
