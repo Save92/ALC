@@ -1,15 +1,5 @@
 <?php
 	include('pages/haut.php'); 
-	try
-	{
-		$bdd = new PDO('mysql:host=localhost;dbname=alc', 'root', '');
-	}
-	catch(Exception $e)
-	{
-		die('Erreur : '.$e->getMessage());
-	}
-
-
 ?>
 <section id="page_accueil">
 	<div>

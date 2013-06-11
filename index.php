@@ -1,6 +1,14 @@
 <?php
 session_start();
 include('pages/config.php');
+	try
+	{
+		$bdd = new PDO('mysql:host=localhost;dbname=alc', 'root', '');
+	}
+	catch(Exception $e)
+	{
+		die('Erreur : '.$e->getMessage());
+	}
 if(isset($_GET['page'])){
 	switch($_GET['page']){
 		case 'accueil':

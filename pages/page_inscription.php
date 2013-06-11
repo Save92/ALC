@@ -24,14 +24,7 @@
 	envoi_mail($_POST['nom'],$_POST['mail'],$_POST['message'] );
 */
 if (!empty($_POST['mail'])&& !empty($_POST['pwd']) && !empty($_POST['nom']) && !empty($_POST['prenom'])) {
-	try
-	{
-		$bdd = new PDO('mysql:host=localhost;dbname=alc', 'root', '');
-	}
-	catch(Exception $e)
-	{
-		die('Erreur : '.$e->getMessage());
-	}
+
 
 	$req1 = $bdd->query('SELECT mail_membre FROM membre WHERE mail_membre = \''.$_POST["mail"].'\'');
 	if ($verif = $req1->fetch() != true) {

@@ -2,14 +2,7 @@
 <section id="page_devis">
 	<div>
 <?php
-		try
-		{
-			$bdd = new PDO('mysql:host=localhost;dbname=alc', 'root', '');
-		}
-		catch(Exception $e)
-		{
-			die('Erreur : '.$e->getMessage());
-		}
+
 	if(isset($_POST['description']) && isset($_POST['etape'])) {
 
 		if(isset($_POST['type'])) {$type = $_POST['type'];} else{ $marque = "";}

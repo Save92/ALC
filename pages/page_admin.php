@@ -3,14 +3,6 @@ include('pages/haut.php');
 if(!isset($_SESSION['admin'])){
 	echo '<section id="page_admin">!!! Accées Interdit !!!</section>';
 }else{
-	try
-	{
-		$bdd = new PDO('mysql:host=localhost;dbname=alc', 'root', '');
-	}
-	catch(Exception $e)
-	{
-		die('Erreur : '.$e->getMessage());
-	}
  ?>
 <section id="page_admin">
 <div>

@@ -6,7 +6,6 @@ if(isset($_GET['projet'])){$num_projet_var =$_GET['projet'];}
 	<fieldset id="description_projets">
 		<?php
 
-	$bdd = new PDO('mysql:host=127.0.0.1;dbname=alc', 'root', '');
 	$res3 = $bdd->query('SELECT * FROM projet WHERE num_projet= "'.$num_projet_var.'" ');
 	$res4 = $bdd->query('SELECT * FROM image WHERE num_projet= "'.$num_projet_var.'"');
 	$count =$res3->rowCount();

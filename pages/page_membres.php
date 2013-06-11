@@ -1,5 +1,4 @@
 <?php 
-$bdd = new PDO('mysql:host=127.0.0.1;dbname=alc', 'root', '');
 if(!empty($_GET['page'])){
 	if($_GET['page'] == "deconnexion"){
 		$_SESSION['id'] = 0;
@@ -17,14 +16,6 @@ if(!empty($_GET['page'])){
 	}
 }
 if(!empty($_POST['login']) && !empty($_POST['password'])){
-	try
-	{
-		$bdd = new PDO('mysql:host=localhost;dbname=alc', 'root', '');
-	}
-	catch(Exception $e)
-	{
-		die('Erreur : '.$e->getMessage());
-	}
 	$mdp = md5($_POST["password"]);
 	$req = $bdd->query('SELECT * FROM membre WHERE mail_membre = \''.$_POST["login"].'\' AND mdp_membre = \''.$mdp.'\' ');
 	if( $donnes = $req->fetch())
@@ -177,7 +168,6 @@ include('pages/bas.php');
 				<ul>
 					<?php
 						$variable = $_SESSION['id'];
-						$bdd = new PDO('mysql:host=127.0.0.1;dbname=alc', 'root', '');
 						$res = $bdd->prepare('SELECT projet.num_projet,nom_projet,theme,date_projet,num_image
 						FROM `projet`,`image` WHERE projet.num_projet=image.num_projet AND projet.num_membre= ? GROUP BY projet.num_projet');
 						$res->execute(array($variable));

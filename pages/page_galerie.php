@@ -6,7 +6,6 @@ else{ $variable = NULL;}
 switch ($variable){
 	case "Date":
 		$variable2 = $_GET['Date'];
-		$bdd = new PDO('mysql:host=127.0.0.1;dbname=alc', 'root', '');
 		$res = $bdd->query('SELECT num_projet,en_ligne,nom_projet FROM projet WHERE en_ligne = "1" AND date_projet="'.$_GET["Date"].'" ');
 		$count =$res->rowCount();
 		if ($count!=0){
@@ -70,7 +69,6 @@ switch ($variable){
 		</section>';}
 	break;
 	case "Theme":
-		$bdd = new PDO('mysql:host=127.0.0.1;dbname=alc', 'root', '');
 		//$res2 = $bdd->query('SELECT projet.num_projet,nom_projet,num_image,en_ligne FROM `projet`,`image` WHERE projet.num_projet=image.num_projet AND en_ligne = "1" AND theme="'.$_GET["Theme"].'" GROUP BY projet.num_projet');
 		$res2 = $bdd->query('SELECT num_projet,en_ligne,nom_projet FROM projet WHERE en_ligne = "1" AND theme="'.$_GET["Theme"].'" ');
 		$count2 =$res2->rowCount();

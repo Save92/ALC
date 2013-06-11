@@ -8,7 +8,6 @@ include('pages/haut.php'); ?>
 <?php
 
 $var_error=true;
-$bdd = new PDO('mysql:host=127.0.0.1;dbname=alc', 'root', '');
 $req = $bdd->query('SELECT * FROM projet');
 $req2 = $bdd->query('SELECT motscles_projet FROM projet');
 	$motcles=explode(" ", $_POST['content']);

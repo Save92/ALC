@@ -3,7 +3,6 @@ $id_membre=$_SESSION['id'];
 if(isset($_GET['suivi_projet'])) $num_projet_var=$_GET['suivi_projet'];
 if(isset($_SESSION['admin'])) $admin=true;
 else $admin=false;
-$bdd = new PDO('mysql:host=127.0.0.1;dbname=alc', 'root', '');
 if (isset($_POST['requete'])){
 switch($_POST['requete']){
 	case "projet":
