@@ -10,10 +10,32 @@
         border:4px gray solid;
         border-radius:15px;
         font-weight:800;
-        text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
+        
         display: inline-block;
         vertical-align:top;
         font-family: 'Advent Pro', sans-serif ;
+        #liste_resultat_projet {
+            height: 280px;
+            overflow-x:hidden;
+            overflow-y:auto;
+             strong{
+                position:absolute;
+                margin: -25px 0 0 0;
+            }   
+            p{ 
+                background: rgba(0,0,0,0.2);
+                margin-bottom: 5px;
+                a{
+                color: #d8d7c8;
+                text-shadow:none;
+                text-decoration: none;
+                    span{                   
+                        color:white;
+                        text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
+                    }
+                }
+            }
+        }
     }
 
         #block_recherche_2{
@@ -31,6 +53,27 @@
         display: block;
         vertical-align:top;
         font-family: 'Advent Pro', sans-serif ;
+        #liste_resultat_vehicule {
+            height: 185px;
+            overflow-x:hidden;
+            overflow-y:auto; 
+            strong{
+                position:absolute;
+                margin: -25px 0 0 0;
+            } 
+            p{ 
+                background: rgba(0,0,0,0.2);
+                margin-bottom: 5px;
+                a{
+                    color: #d8d7c8;
+                    text-shadow:none;
+                    text-decoration: none;
+                    span{
+                        color:white;
+                        text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
+                    }
+                }
+            }    
         }
-
+    }
 }

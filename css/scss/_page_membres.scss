@@ -9,7 +9,34 @@
 			height:168px;
 			width: 358px;
 		}
+			input[type="submit"]{
+		background:url("http://reseaupro.univ-paris-diderot.fr/userfiles/image/bouton-connexion.png") ;
+		background-size: 120px 40px;
+		text-indent: -8000px;
+		border:none;
+		height: 40px;
+		width: 120px;
+		display: block;
+		margin: 0 auto;
 	}
+
+	}
+		span{
+			position:absolute;
+			top:350px;
+			width:100%;
+			text-align: center;
+			display: block;
+			z-index: 10;
+			a{
+				margin:20px auto;
+				display: block;
+				text-decoration: none;
+				color: white;
+
+			}
+		}
+
 	#background {
 		background: url("../images/rmap.jpg") top left;
 		-webkit-animation-name: BGconnect;
@@ -49,15 +76,32 @@
 		padding: 5px;
 		width: 285px;
 	}
+			#field_mdp_oublie{
+			height:200px;
+			width:300px;
+			margin:60px auto;
+			background: rgba(0,0,0,0.5);
+			p{
+				width:200px;
+				margin: 10px auto;
+				font-size: 16px;
+        		text-shadow:0 0 3px grey, 0 0 1px black, 0 0 10px white, 0 0 15px white,0 0 20px white;
+        		//font-style: 700;
+        		font-weight: 590;
+        		text-align: center;
+        		font-family: 'secret';
+        		label{
+        			color:white;
+        			font-style: bold;
+        			font-size: 16px;
+        			font-family: 'advent pro';
+        		}
+			}
 	input[type="submit"]{
-		background:url("http://reseaupro.univ-paris-diderot.fr/userfiles/image/bouton-connexion.png") ;
-		background-size: 120px 40px;
-		text-indent: -8000px;
-		border:none;
-		height: 40px;
-		width: 120px;
-		display: block;
-		margin: 0 auto;
+				margin: 20px 45px;
+
+			}
+
 	}
 }
 #page_deconnexion h1{
@@ -82,6 +126,15 @@
     	label{
     		height:50px;
     	}
+    	legend{
+				font-size: 16px;
+        		text-shadow:0 0 3px gray, 0 0 10px white, 0 0 15px white,0 0 20px white;
+        		text-decoration: bold;
+        		font-family: impact;
+        		position: absolute;
+        		margin: -25px 0 0 0;
+    	}
+
 
     	#cache:checked ~ label h1{
     	 display:none;
@@ -93,17 +146,47 @@
     	#cache:checked ~ div{
     	 display:block;
     	}
+    	h1{
+    			font-size: 16px;
+        		text-shadow:0 0 3px gray, 0 0 10px white, 0 0 15px white,0 0 20px white;
+        		text-decoration: bold;
+        		font-family: impact;
+    	}
     	div p{
     		margin:5px 0px 0px 10px;
     		text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
 
-    	}
-    	    		input{
-    	    		margin-right: 40px;
+    	
+    	    #modif_mdp{
+	    			float:right;
+	    	   		margin-right: 0px;
     			    box-shadow: 0px 0px 4px 2px gray;
 					border: 0px none;
 					border-radius: 5px 5px 5px 5px;
+			}
+   			input[type="password"]{
 					float:right;
+    			width:110px;
+    			box-shadow: 0px 0px 4px 2px gray;
+				border: 0px none;
+				border-radius: 5px 5px 5px 5px;
+    		}
+			#sup_mdp{
+					clear:right;
+					margin-right: 55px;
+    				width:110px;
+    			    box-shadow: 0px 0px 4px 2px gray;
+					border: 0px none;
+					border-radius: 5px 5px 5px 5px;
+			} 
+			#sup_compte{
+				margin-left: 40px;
+    				width:110px;
+    			    box-shadow: 0px 0px 4px 2px gray;
+					border: 0px none;
+					border-radius: 5px 5px 5px 5px;
+
+			}
     		}
     	ul{
     	padding: 10px 25px;
@@ -126,6 +209,7 @@
     }
 	fieldset:first-child{ 
 	    margin-right:50px;
+	    width:350px;
 	    background: rgba(0,0,0,0.5);
 	}
 }

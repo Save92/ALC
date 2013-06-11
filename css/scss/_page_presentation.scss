@@ -3,7 +3,7 @@
     width:800px;
 
     display: block;
-    margin: 60px auto 0 auto;
+    margin: 50px auto 0 auto;
     padding:30px;
     border:4px gray solid;
     border-radius:15px;
@@ -13,4 +13,12 @@
 
     vertical-align:top;
         font-family: 'Advent Pro', sans-serif ;
+            legend {
+                    font-size: 18px;
+                    text-shadow:0 0 3px gray, 0 0 10px white, 0 0 15px white,0 0 20px white;
+                    text-decoration: bold;
+                    font-family: impact;
+                    margin: -43px 0 0 0;
+
+                    }
 }

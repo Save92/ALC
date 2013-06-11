@@ -7,10 +7,7 @@ switch ($variable){
 	case "Date":
 		$variable2 = $_GET['Date'];
 		$bdd = new PDO('mysql:host=127.0.0.1;dbname=alc', 'root', '');
-		$res = $bdd->prepare('SELECT marque,modele,annee,type,projet.num_projet,nom_projet,theme,date_projet,num_image
-FROM `vehicule`,`projet`,`image` WHERE vehicule.num_vehicule=projet.num_vehicule 
-AND projet.num_projet=image.num_projet AND date_projet= ? GROUP BY projet.num_projet');
-		$res->execute(array($_GET['Date']));
+		$res = $bdd->query('SELECT projet.num_projet,nom_projet,num_image FROM `projet`,`image` WHERE projet.num_projet=image.num_projet AND en_ligne = "1" AND date_projet='.$_GET["Date"].' GROUP BY projet.num_projet');
 		$count =$res->rowCount();
 		if ($count!=0){
 			echo '
@@ -28,7 +25,7 @@ AND projet.num_projet=image.num_projet AND date_projet= ? GROUP BY projet.num_pr
 			echo '<td>
 					<a href="?page=projet&projet='.$donnees['num_projet'].'">
 						<img width="90px" height="90px" src="upload/'.$donnees['num_image'].'.jpg">
-						<span>'.$donnees['date_projet'].' '.$donnees['nom_projet'].' '.$donnees['type'].' '.$donnees['marque'].'</span>
+						<span>'.$donnees['nom_projet'].'</span>
 					</a>
 
 					</td>';
@@ -58,12 +55,9 @@ AND projet.num_projet=image.num_projet AND date_projet= ? GROUP BY projet.num_pr
 		";
 	break;
 	case "Theme":
-	$variable3 = $_GET['Theme'];
 			$bdd = new PDO('mysql:host=127.0.0.1;dbname=alc', 'root', '');
-		$res2 = $bdd->prepare('SELECT marque,modele,annee,type,projet.num_projet,nom_projet,theme,date_projet,num_image
-FROM `vehicule`,`projet`,`image` WHERE vehicule.num_vehicule=projet.num_vehicule 
-AND projet.num_projet=image.num_projet AND theme= ? GROUP BY projet.num_projet');
-		$res2->execute(array($_GET['Theme']));
+		$res2 = $bdd->query('SELECT projet.num_projet,nom_projet,num_image,en_ligne FROM `projet`,`image` WHERE projet.num_projet=image.num_projet AND en_ligne = "1" AND theme="'.$_GET["Theme"].'" GROUP BY projet.num_projet');
+		var_dump($res2);
 		$count2 =$res2->rowCount();
 		//echo $count2;
 		if ($count2!=0){
@@ -79,13 +73,12 @@ AND projet.num_projet=image.num_projet AND theme= ? GROUP BY projet.num_projet')
 			while($donnees = $res2->fetch())
 			{
 				//href=?page=projet&projet="id_projet"
-			echo '<td>
-					<a href="?page=projet&projet='.$donnees['num_projet'].'">
-						<img width="90px" height="90px" src="upload/'.$donnees['num_image'].'.jpg">
-						<span>'.$donnees['date_projet'].' '.$donnees['nom_projet'].' '.$donnees['type'].' '.$donnees['marque'].'</span>
-					</a>
-
-					</td>';
+					echo '<td>
+						<a href="?page=projet&projet='.$donnees['num_projet'].'">
+							<img width="90px" height="90px" src="upload/'.$donnees['num_image'].'.jpg">
+							<span>'.$donnees['nom_projet'].'</span>
+						</a>
+						</td>';
 			}
 			echo "</tr>
 			

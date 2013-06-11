@@ -14,7 +14,7 @@
 <section id="page_accueil">
 	<div>
 		<div>
-			<h1>Bienvenue sur <br> Art Line Concept</h1>	
+			<h1>Bienvenue<br>sur Art<br>Line<br>Concept!</h1>
 			<div id="slider">
 				<div id="featured" style="width: 840px; height: 250px;"> 
 					<?php 

@@ -16,12 +16,17 @@
             float:left;
             height:160px;
             width:300px;
+            vertical-align: top;
             min-width: 40px;
             margin: 40px 10% 0 0;
             background:url('../images/metal-texture-151340.jpg') no-repeat center center;
             padding:5px;
             border:4px gray solid;
             border-radius:15px;
+            >legend{
+
+                margin: -25px 0 0 0;
+            }
   
          input{
             box-shadow:0 0 4px 2px gray;
@@ -61,7 +66,9 @@
             padding:10px;
             border:4px gray solid;
             border-radius:15px;
-
+            >legend{
+                margin: -25px 0 0 0;
+            }
         
 
         

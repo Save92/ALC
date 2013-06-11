@@ -46,10 +46,10 @@ if(!isset($_SESSION['admin'])){
 			echo' 
 				<fieldset>
 					<legend>Liste des Membres</legend>
-					<table>
+					<table cellspacing="0" id="table_membre">
 						<thead><td width="100px">Nom</td><td width="100px">Prenom</td><td width="200px">Mail</td><td width="200px">Date Inscription</td></thead>';
 			while($donnes = $req->fetch()){
-				echo'<tr><td>'.$donnes["nom_membre"].'</td><td>'.$donnes["prenom_membre"].'</td><td>'.$donnes["mail_membre"].'</td><td>'.date ('d-m-Y G:i',$donnes["date_inscription"]).'</td><td class="icon_del"><a href="?page=admin&choix=membre&fonction=delete&id='.$donnes["num_membre"].'"></a></td></tr>';
+				echo'<tr><td>'.$donnes["nom_membre"].'</td><td>'.$donnes["prenom_membre"].'</td><td>'.$donnes["mail_membre"].'</td><td>'.date ('d-m-Y G:i',$donnes["date_inscription"]).'</td><td><a class="icon_del" href="?page=admin&choix=membre&fonction=delete&id='.$donnes["num_membre"].'"></a></td></tr>';
 			}
 			echo'
 					</table><br><br>
@@ -70,50 +70,123 @@ if(!isset($_SESSION['admin'])){
 				}
 				elseif($_GET['fonction'] == "update"){
 					$req1 = $bdd->query('SELECT * FROM devis WHERE num_devis =\''.$_GET['id'].'\'');
-					$donnes1 = $req1->fecth();
-					$req2 = $bdd->query('DELETE FROM devis WHERE num_devis =\''.$_GET['id'].'\'');
-					$donnes2 = $req1->fecth();
+					while($donnes1 = $req1->fetch()){
 
-					$req3 = $bdd->query('SELECT * FROM membre WHERE mail_membre =\''.$donnes1['mail_devis'].'\'');
-					if(true){
+						$req2 = $bdd->query('SELECT * FROM membre WHERE mail_membre =\''.$donnes1['mail_devis'].'\'');
+						$count = $req2->rowCount();
+															
+						if ($count == 0) {
+							$req4 = $bdd->prepare('INSERT INTO membre(nom_membre, prenom_membre, mail_membre, mdp_membre, date_inscription ) VALUES(:nom, :prenom, :mail, :mdp, :date)');
+							$req4->execute(array(
+							    'nom' => $donnes1['nom_devis'],
+							    'prenom' => $donnes1['prenom_devis'],
+							    'mail' => $donnes1['mail_devis'],
+							    'mdp' => "098f6bcd4621d373cade4e832627b4f6",
+							    'date' => time()
+							));
+							$membre = $bdd->lastInsertId();
+						} 
+						else { while($donnes2 = $req2->fetch()){$membre = $donnes2['num_membre'];}}
 
+						$req3 = $bdd->query('SELECT * FROM vehicule WHERE marque =\''.$donnes1['marque'].'\' AND modele =\''.$donnes1['modele'].'\' AND annee =\''.$donnes1['annee'].'\' ');
+						$count2 = $req3->rowCount();
 
-						$req4 = $bdd->prepare('INSERT INTO projet(nom_projet, num_vehicule, theme, date_projet, description_projet, motcles_projet ) VALUES(:nom, :num_vehicule, :theme, :date, :description, :motcles)');
+						if ($count2 == 0) {
+							$req4 = $bdd->prepare('INSERT INTO vehicule(marque, modele, annee, type ) VALUES(:marque, :modele, :annee, :type)');
+							$req4->execute(array(
+							    'marque' => $donnes1['marque'],
+							    'modele' => $donnes1['modele'],
+							    'annee' => $donnes1['annee'],
+							    'type' => $donnes1['type']
+							));
+							$vehicule = $bdd->lastInsertId();
+						}
+						else { while($donnes2 = $req3->fetch()){$vehicule = $donnes2['num_vehicule'];}}
+						$req4 = $bdd->prepare('INSERT INTO projet(nom_projet, num_vehicule, num_membre, date_projet, description_projet, motscles_projet,theme) VALUES(:nom, :num_vehicule, :num_membre, :date, :description, :motcles, :theme)');
 						$req4->execute(array(
-						    'nom' => $donnes1['marque'],
-						    'num_vehicule' => "",
-						    'theme' => $donnes1['theme'],
-						    'date' => $date("Y"),
-						    'description' => $donnes1['description'],
-						    'motcles' => ""
-						    ));
-					}
+							    'nom' => $donnes1['marque'],
+							    'num_vehicule' => $vehicule,
+							    'num_membre' => $membre,
+							    'date' => date("Y"),
+							    'description' => $donnes1['description'],
+							    'motcles' => "",
+							    'theme' => $donnes1['type']
+						));
+						
+						$req2 = $bdd->query('DELETE FROM devis WHERE num_devis =\''.$_GET['id'].'\'');
 
-				}};
+				}}};
 			$req = $bdd->query('SELECT * FROM devis');
 			echo' 
 				<fieldset>
 					<legend>Liste des Devis</legend>
-					<table>
-						<thead><td width="100px">Nom</td><td width="100px">Prenom</td><td width="150px">Mail</td><td width="100px">Marque</td><td>Modéle</td><td>Annee</td><td>Budget Min</td><td>Budget Max</td></thead>';
+					<table cellspacing="0" cellpadding="0" id="table_devis">
+						<thead><td width="90px">Nom</td><td width="90px">Prenom</td><td width="130px">Mail</td><td width="80px">Marque</td><td width="100px">Modéle</td><td width="50px">Annee</td><td width="80px">Budget Min</td><td  width="80px">Budget Max</td></thead>';
 			while($donnes = $req->fetch()){
-				echo'<tr><td>'.$donnes["nom_devis"].'</td><td>'.$donnes["prenom_devis"].'</td><td>'.$donnes["mail_devis"].'</td><td>'.$donnes["marque"].'</td><td>'.$donnes["modele"].'</td><td>'.$donnes["annee"].'</td><td>'.$donnes["budget_min"].'</td><td>'.$donnes["budget_max"].'</td><td rowspan=2><a class="icon_del" href="?page=admin&choix=devis&fonction=delete&id='.$donnes["num_devis"].'"></a><a class="icon_val" href="?page=admin&choix=devis&fonction=update&id='.$donnes["num_devis"].'"></a></td></tr>';
-				echo'<tr><td colspan=4>'.utf8_encode($donnes["description"]).'</td></tr>';
+				echo'<tr><td>'.$donnes["nom_devis"].'</td><td>'.$donnes["prenom_devis"].'</td><td>'.$donnes["mail_devis"].'</td><td>'.utf8_encode($donnes["marque"]).'</td><td>'.utf8_encode($donnes["modele"]).'</td><td>'.$donnes["annee"].'</td><td>'.$donnes["budget_min"].'</td><td>'.$donnes["budget_max"].'</td></tr>';
+				echo'<tr><td colspan=7>'.utf8_encode($donnes["description"]).'</td><td><a class="icon_del" href="?page=admin&choix=devis&fonction=delete&id='.$donnes["num_devis"].'"></a><a class="icon_val" href="?page=admin&choix=devis&fonction=update&id='.$donnes["num_devis"].'"></a></td></tr>';
 			}
 			echo'
 					</table>
 				</fieldset>';
 		break;
-
-
-
 		case "projets":
+			if(!isset($_GET['trie'])){$_GET['trie'] = "";}
+			switch ($_GET['trie']) {
+				case 'en_attente':
+					$req = $bdd->query('SELECT * FROM projet WHERE status = "0"');
+					break;
+				case 'en_cours':
+					$req = $bdd->query('SELECT * FROM projet WHERE status = "1"');
+					break;
+				case 'termine':
+					$req = $bdd->query('SELECT * FROM projet WHERE status = "2"');
+					break;
+				case 'abandonne':
+					$req = $bdd->query('SELECT * FROM projet WHERE status = "3"');
+					break;
+				default:
+					$req = $bdd->query('SELECT * FROM projet');
+					break;
+			}
 			echo' 
 				<fieldset>
 					<legend>Liste des Projets</legend>
-					<table>
-						<thead><td width="100px">Nom</td><td width="100px">Prenom</td><td width="200px">Mail</td><td width="200px">Date Inscription</td></thead>';
-				echo'					</table>
+					<nav><a href="?page=admin&choix=projets&trie=en_attente">En Attente</a>  <a href="?page=admin&choix=projets&trie=en_cours">En Cours</a>  <a href="?page=admin&choix=projets&trie=termine">Terminé</a>  <a href="?page=admin&choix=projets&trie=abandonne">Abandonné</a> <a href="?page=admin&choix=projets">Tous</a></nav>
+					<div>
+					<table cellspacing="0" cellpadding="0" id="table_projets">
+						<thead><td width="100px">Nom</td><td width="40px">Date</td><td width="70px">Status</td><td width="50px">En ligne</td></thead>';
+			while($donnes = $req->fetch()){
+				switch($donnes['status']){
+					case 0:
+						$status="En attente";
+					break;
+					case 1:
+						$status="En cours";
+					break;
+					case 2:
+						$status="Terminé";
+					break;
+					case 3:
+						$status="Abandonné";
+					break;
+					default:
+					$status="Error 0329";
+				}
+				switch($donnes['en_ligne']){
+					case false:
+						$enligne= "Non";
+					break;
+					case true:
+						$enligne="Oui";
+					break;
+					default:
+						$enligne="Error 0329";
+				}
+				echo'<tr><td><a href="?page=suivi_projet&suivi_projet='.$donnes["num_projet"].'">'.$donnes["nom_projet"].'</a></td><td>'.$donnes["date_projet"].'</td><td>'.$status.'</td><td>'.$enligne.'</td></tr>';
+			}
+				echo'					</table></div>
+
 				</fieldset>';
 		break;
 		case "vehicule":
@@ -134,10 +207,10 @@ if(!isset($_SESSION['admin'])){
 			echo' 
 				<fieldset>
 					<legend>Liste des Vehicules</legend>
-					<table>
-						<thead><td width="100px">Marque</td><td width="100px">Modèle</td><td width="70px">Années</td><td width="50px">Projet</td><td width="50px">Devis</td></thead>';
+					<table cellspacing="0" cellpadding="0" id="table_vehicule">
+						<thead><td width="100px">Marque</td><td width="100px">Modèle</td><td width="70px">Année</td><td width="70px">Type</td></thead>';
 			while($donnes = $req->fetch()){
-				echo'<tr><td>'.$donnes["marque"].'</td><td>'.$donnes["modele"].'</td><td>'.$donnes["annee"].'</td><td></td><td></td><td class="icon_del"><a href="?page=admin&choix=vehicule&fonction=delete&id='.$donnes["num_vehicule"].'"></a></td></tr>';
+				echo'<tr><td>'.$donnes["marque"].'</td><td>'.$donnes["modele"].'</td><td>'.$donnes["annee"].'</td><td>'.$donnes["type"].'</td><td><a class="icon_del" href="?page=admin&choix=vehicule&fonction=delete&id='.$donnes["num_vehicule"].'"></a></td></tr>';
 			}
 			echo'
 

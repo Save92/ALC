@@ -9,8 +9,16 @@
 		src: url('Pacifico.ttf');
 }
 @font-face{
-		font-family: 'Font-Titre';
-		src: url('Pacifico.ttf');
+		font-family: 'Miso';
+		src: url('miso-regular.ttf');
+}
+@font-face{
+		font-family: 'Font-Theme';
+		src: url('28 Days Later.ttf');
+}
+@font-face{
+		font-family: 'secret';
+		src: url('Top Secret.ttf');
 }
 html, body{
 	width: 100%;
@@ -36,15 +44,12 @@ section{
 }
 
 section fieldset legend{
-		font-size: 16px;
-		text-shadow:0 0 3px grey, 0 0 1px black, 0 0 10px white, 0 0 15px white,0 0 20px white;
-		font-style: bold;
-		font-family: impact;
-    	//position: absolute;
-    	//margin: -50px 0px 0px 0px;
+		font-size: 18px;
+		font-family: 'Font-Titre';
+    	position: absolute;
+    	margin: -40px 0px 0px 0px;
 }
 section fieldset{
-
 		box-shadow: 0 0 25px 1px rgba(255,255,255,0.5);
 }
 

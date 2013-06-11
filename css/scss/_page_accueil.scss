@@ -1,19 +1,23 @@
 #page_accueil{
     >div{
         position: relative;
-        margin: 5% auto;
+        margin: 30px auto;
         width: 1004px;
     }
     >div>div{
 
     }
     h1{
-        display: inline-block;
         float:left;
-        padding: 80px 0 0 10px;
-        font-family: "Advent Pro";
-        font-size: 45px;
-        text-shadow: 0 -1px 1px white, 0 -2px 4px white, 0 -3px 10px white, 0 -4px 20px white, 0 -6px 40px white;
+        margin-left: 30px;
+        height:400px;
+        width:250px;
+        color: #BCC1C4;
+        text-align: center;
+        text-shadow: 0 0 1px #FFFFFF, 0 0 2px #050100 ,0 0 10px #F8FF6B, 0 0 15px #FF2A00, 0 0 15px #F0ED41, 0 0 20px #DE9D2C, 0 0 30px #FF2A00, 0 0 40px #FF2A00, 0 0 50px #FF2A00, 0 0 75px #FF2A00;
+        letter-spacing: 5px;
+        font: 55px 'Miso';
+
     
     }
     #slider{
@@ -29,7 +33,7 @@
         //font-family: impact;
     }
     #presentation_alc{
-        margin: 40px 40px 0;
+        margin: 20px 40px 0 40px;
         height:200px;
         width:850px;
         // min-width: ;
@@ -42,6 +46,14 @@
         text-shadow:0 0 1px black, 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
         display: inline-block;
         vertical-align:top;
+        legend{
+        margin:-50px 0 0 0;
+        font-size: 18px;
+        text-shadow:0 0 3px grey, 0 0 1px black, 0 0 10px white, 0 0 15px white,0 0 20px white;
+        font-style: bold;
+        font-family: 'Font-Titre';
+
+        }
     }
 }
 .orbit-wrapper{

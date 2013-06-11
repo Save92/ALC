@@ -1,4 +1,5 @@
 <?php 
+$bdd = new PDO('mysql:host=127.0.0.1;dbname=alc', 'root', '');
 if(!empty($_GET['page'])){
 	if($_GET['page'] == "deconnexion"){
 		$_SESSION['id'] = 0;
@@ -37,10 +38,11 @@ if(!empty($_POST['login']) && !empty($_POST['password'])){
 }
 if(isset($_POST['mdp']) && isset($_POST['new_mdp']) && isset($_POST['repeat_mdp'])){
 	if($_POST['new_mdp']==$_POST['repeat_mdp']){
-		$bdd = new PDO('mysql:host=127.0.0.1;dbname=alc', 'root', '');
-		$req = $bdd->prepare('SELECT mdp_membre FROM `membre` 
+		$req = $bdd->prepare('SELECT num_membre, mdp_membre FROM `membre` 
 		WHERE num_membre= ? AND mdp_membre= ?');
 		$req->execute(array($_SESSION['id'],md5($_POST['mdp'])));
+		$count1 =$req->rowCount();
+		if ($count1!=0){
 		while($donnees=$req->fetch()){
 			if($donnees['num_membre']==$_SESSION['id'])
 			{
@@ -49,16 +51,66 @@ if(isset($_POST['mdp']) && isset($_POST['new_mdp']) && isset($_POST['repeat_mdp'
 				$req2->execute(array(md5($_POST['new_mdp']), $_SESSION['id']));
 				$mdp_info="Changement du mot de passe effectué !";
 			}
+			}
+		}
 			else $mdp_info="Votre mot de passe est incorrect !";
 		}
+	else{$mdp_info="Les deux nouveaux mot de passe ne sont pas correspondant."; }
+	
+}
+if(isset($_POST['sup_mdp']))
+{
+	$req1 = $bdd->prepare('SELECT mdp_membre FROM `membre` 
+		WHERE num_membre= ? AND mdp_membre= ?');
+		$req1->execute(array($_SESSION['id'],md5($_POST['sup_mdp'])));
+		$count =$req1->rowCount();
+	if ($count!=0){
+	while($donnees1=$req1->fetch()){
+		
+				$req3 = $bdd->prepare('DELETE FROM `membre` WHERE num_membre= ?');
+				$req3->execute(array($_SESSION['id']));
+				$mdp_info="Votre compte à été supprimer !";
+				session_destroy();
+				echo '<meta http-equiv="refresh" content="2; URL=?page=accueil" ></meta>';
+		}
+		
 	}
-	else{
-		$mdp_info="Les deux nouveaux mot de passe ne sont pas correspondant.";
-	}
+	else $mdp_info="Mot de passe incorrect !";
 }
 
+if(isset($_GET['mdp']))
+{
+			//Fonction mdp oublié
+		if (isset($_POST['oublie']))
+		{
+			$resultat = $bdd->query('UPDATE membre SET mdp_membre = "'.md5("test").'" WHERE mail_membre = \''.$_POST["mail"].'\'');
+			if($resultat->rowCount() != 0)
+			{
+				$mdp_info="Mot de passe réinitialisé à 'test'.";
 
-if(empty($_SESSION['id'])){
+			}	
+			else $mdp_info="Mail incorrect !";
+
+		}
+	include('pages/haut.php'); 
+	echo '
+			<section id="page_connexion">
+			<fieldset id="field_mdp_oublie"> <br>
+			<form id="mdp_oublie" method="post">
+			<p>Mot de passe oublié ?</p>';
+			if(isset($mdp_info)){
+					echo '<p>'.$mdp_info.'</p>';
+				}	
+				echo'
+			<p><label for="mail">Votre adresse Mail : </label><input id="mail" name="mail" type="email" required></p>
+			<input type="text" name="oublie" value="ok" style="display:none;">
+			<p><input type="submit"></p>
+			</form>	
+			</fieldset>
+			</section>';
+	include('pages/bas.php');
+}
+elseif(empty($_SESSION['id'])){
 	include('pages/haut.php'); 
 	?>
 		<section id="page_connexion">
@@ -74,6 +126,7 @@ if(empty($_SESSION['id'])){
 					</form>
 				</div>
 			</div>
+			<span><a href="?page=membre&mdp=oublie">Mot de passe oublié ?<a></span>
 		</section>
 <?php
 include('pages/bas.php');
@@ -104,9 +157,20 @@ include('pages/bas.php');
 					<input name="new_mdp" type="password" required></p>
 					<p>Réécrire le nouveau mots de passe :
 					<input name="repeat_mdp" type="password" required></p>
-					<p><input type="submit" value="Soumettre"></p>
-					<form>
+						<p><input id="modif_mdp" type="submit" value="Soumettre"></p><br>
+					</form>
+						<br>
+					<form method="post">
+						<p><h3>Pour supprimer votre compte :</h3></p>
+						<p>Saisir votre mot de passe :
+						<input id="sup_mdp" name="sup_mdp" type="password" required></p>
+						<p> Et appuyer sur "Supprimer" :
+						<input id="sup_compte" type="submit" value="Supprimer"></p>
+					</form>
+
 				</div>
+
+
 			</fieldset>
 			<fieldset>
 				<legend>Gestion de projet</legend> 

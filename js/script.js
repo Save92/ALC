@@ -30,10 +30,37 @@ $(document).ready(function (){
 		$("#background").fadeTo(500,0);
 	});
 
-	$("#icones_projets a").mouseenter(function(){
+	var projet_image = $("#image_projet img").attr("src");
+	console.log(projet_image);
+
+	$("#liste_image_suivi_projet a").mouseenter(function(){
 		var image = $(this).find("img").attr("src");
-		$("#image_projet img").fadeTo(500,0);
+		$("#image_projet img").hide();
 		$("#image_projet img").attr("src",image);
-		$("#image_projet img").fadeTo(500,1);
+		$("#image_projet img").show();
+	});
+	$("#liste_image_suivi_projet").bind({
+		mouseenter:function(){
+			$("#image_projet").show();
+		},
+		mouseleave: function(){
+			if(projet_image){
+				$("#image_projet img").attr("src",projet_image);
+			}
+			else{
+				$("#image_projet").fadeOut(500);	
+			}
+		}});
+	$('#menu_admin a').click(function(){
+		var windows = $(this).attr("id");
+		console.log(windows);
+		$("#admin").show();
+		$(".suivi_projet").hide();
+		$("."+windows).show();
+		return false;
+	});
+	$('#table_projets tr').click(function(){
+		var url = $(this).find('a').attr("href");
+		window.location = url;
 	});
 });

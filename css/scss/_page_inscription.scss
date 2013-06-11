@@ -6,12 +6,19 @@
     }  
     fieldset{
         height:230px;
-        width:400px;
+        width:430px;
         margin: 60px auto 0 auto;
         background:url('../images/metal-texture-151340.jpg') no-repeat center center;
         padding:10px;
         border:4px gray solid;
         border-radius:15px;
+        legend {
+                font-size: 18px;
+                margin: -30px 0 0 0;
+                text-shadow:0 0 3px grey, 0 0 1px black, 0 0 10px white, 0 0 15px white,0 0 20px white;
+                font-style: bold;
+                font-family: 'Font-Titre';
+        }
 
         form p{
             .error{
@@ -40,6 +47,6 @@
             width: 80px;
         min-width:80px;
         float:right;
-        margin: 20px 8% 10px 50%;
+        margin: 20px 55px 10px 250px;
     }
 }

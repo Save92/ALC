@@ -10,17 +10,27 @@
 }
 
 @font-face {
-  font-family: 'Font-Titre';
-  src: url("Pacifico.ttf");
+  font-family: 'Miso';
+  src: url("miso-regular.ttf");
 }
 
-/* line 15, scss/global.scss */
+@font-face {
+  font-family: 'Font-Theme';
+  src: url("28 Days Later.ttf");
+}
+
+@font-face {
+  font-family: 'secret';
+  src: url("Top Secret.ttf");
+}
+
+/* line 23, scss/global.scss */
 html, body {
   width: 100%;
   height: 100%;
 }
 
-/* line 19, scss/global.scss */
+/* line 27, scss/global.scss */
 body {
   min-width: 1004px;
   background: #000;
@@ -208,7 +218,7 @@ footer nav .categorie {
   left: 95px;
 }
 
-/* line 29, scss/global.scss */
+/* line 37, scss/global.scss */
 section {
   position: absolute;
   top: 144px;
@@ -218,15 +228,15 @@ section {
   color: white;
 }
 
-/* line 38, scss/global.scss */
+/* line 46, scss/global.scss */
 section fieldset legend {
-  font-size: 16px;
-  text-shadow: 0 0 3px grey, 0 0 1px black, 0 0 10px white, 0 0 15px white,0 0 20px white;
-  font-style: bold;
-  font-family: impact;
+  font-size: 18px;
+  font-family: 'Font-Titre';
+  position: absolute;
+  margin: -40px 0px 0px 0px;
 }
 
-/* line 46, scss/global.scss */
+/* line 52, scss/global.scss */
 section fieldset {
   box-shadow: 0 0 25px 1px rgba(255, 255, 255, 0.5);
 }
@@ -234,19 +244,22 @@ section fieldset {
 /* line 2, scss/_page_accueil.scss */
 #page_accueil > div {
   position: relative;
-  margin: 5% auto;
+  margin: 30px auto;
   width: 1004px;
 }
 /* line 10, scss/_page_accueil.scss */
 #page_accueil h1 {
-  display: inline-block;
   float: left;
-  padding: 80px 0 0 10px;
-  font-family: "Advent Pro";
-  font-size: 45px;
-  text-shadow: 0 -1px 1px white, 0 -2px 4px white, 0 -3px 10px white, 0 -4px 20px white, 0 -6px 40px white;
+  margin-left: 30px;
+  height: 400px;
+  width: 250px;
+  color: #BCC1C4;
+  text-align: center;
+  text-shadow: 0 0 1px #FFFFFF, 0 0 2px #050100 ,0 0 10px #F8FF6B, 0 0 15px #FF2A00, 0 0 15px #F0ED41, 0 0 20px #DE9D2C, 0 0 30px #FF2A00, 0 0 40px #FF2A00, 0 0 50px #FF2A00, 0 0 75px #FF2A00;
+  letter-spacing: 5px;
+  font: 55px 'Miso';
 }
-/* line 19, scss/_page_accueil.scss */
+/* line 23, scss/_page_accueil.scss */
 #page_accueil #slider {
   float: right;
   overflow: hidden;
@@ -256,9 +269,9 @@ section fieldset {
   border: 4px gray solid;
   border-radius: 15px;
 }
-/* line 31, scss/_page_accueil.scss */
+/* line 35, scss/_page_accueil.scss */
 #page_accueil #presentation_alc {
-  margin: 40px 40px 0;
+  margin: 20px 40px 0 40px;
   height: 200px;
   width: 850px;
   padding: 30px;
@@ -270,17 +283,25 @@ section fieldset {
   display: inline-block;
   vertical-align: top;
 }
+/* line 49, scss/_page_accueil.scss */
+#page_accueil #presentation_alc legend {
+  margin: -50px 0 0 0;
+  font-size: 18px;
+  text-shadow: 0 0 3px grey, 0 0 1px black, 0 0 10px white, 0 0 15px white,0 0 20px white;
+  font-style: bold;
+  font-family: 'Font-Titre';
+}
 
-/* line 47, scss/_page_accueil.scss */
+/* line 59, scss/_page_accueil.scss */
 .orbit-wrapper {
   border-radius: 10px;
 }
 
-/* line 50, scss/_page_accueil.scss */
+/* line 62, scss/_page_accueil.scss */
 #featured {
   border-radius: 10px;
 }
-/* line 53, scss/_page_accueil.scss */
+/* line 65, scss/_page_accueil.scss */
 #featured img {
   border-radius: 10px;
 }
@@ -290,7 +311,7 @@ section fieldset {
   height: 200px;
   width: 800px;
   display: block;
-  margin: 60px auto 0 auto;
+  margin: 50px auto 0 auto;
   padding: 30px;
   border: 4px gray solid;
   border-radius: 15px;
@@ -299,6 +320,14 @@ section fieldset {
   text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
   vertical-align: top;
   font-family: "Advent Pro", sans-serif;
+}
+/* line 16, scss/_page_presentation.scss */
+#page_presentation #presentation legend {
+  font-size: 18px;
+  text-shadow: 0 0 3px gray, 0 0 10px white, 0 0 15px white,0 0 20px white;
+  text-decoration: bold;
+  font-family: impact;
+  margin: -43px 0 0 0;
 }
 
 /* line 3, scss/_page_galerie.scss */
@@ -358,13 +387,21 @@ section fieldset {
   vertical-align: top;
   display: inline-block;
 }
-/* line 58, scss/_page_galerie.scss */
+/* line 57, scss/_page_galerie.scss */
+#page_galerie_choix #liste_projets_Date > legend {
+  font-size: 18px;
+  margin: -50px 0 0 0;
+  text-shadow: 0 0 3px grey, 0 0 1px black, 0 0 10px white, 0 0 15px white,0 0 20px white;
+  font-style: bold;
+  font-family: 'Font-Titre';
+}
+/* line 64, scss/_page_galerie.scss */
 #page_galerie_choix #liste_projets_Date div a {
   text-decoration: none;
   color: white;
   font-family: "Advent Pro", sans-serif;
 }
-/* line 64, scss/_page_galerie.scss */
+/* line 70, scss/_page_galerie.scss */
 #page_galerie_choix #liste_projets_Theme {
   float: left;
   text-decoration: none;
@@ -382,20 +419,28 @@ section fieldset {
   vertical-align: top;
   display: inline-block;
 }
-/* line 81, scss/_page_galerie.scss */
+/* line 86, scss/_page_galerie.scss */
+#page_galerie_choix #liste_projets_Theme > legend {
+  font-size: 18px;
+  margin: -50px 0 0 0;
+  text-shadow: 0 0 3px grey, 0 0 1px black, 0 0 10px white, 0 0 15px white,0 0 20px white;
+  font-style: bold;
+  font-family: 'Font-Titre';
+}
+/* line 93, scss/_page_galerie.scss */
 #page_galerie_choix #liste_projets_Theme div a {
   text-decoration: none;
   color: white;
   font-family: "Advent Pro", sans-serif;
 }
 
-/* line 93, scss/_page_galerie.scss */
+/* line 105, scss/_page_galerie.scss */
 #page_galerie_choix > div {
   position: relative;
   margin: 80px auto 0 auto;
   width: 1024px;
 }
-/* line 98, scss/_page_galerie.scss */
+/* line 110, scss/_page_galerie.scss */
 #page_galerie_choix #liste_projets {
   float: left;
   height: 400px;
@@ -407,7 +452,7 @@ section fieldset {
   background: rgba(0, 0, 0, 0.2);
   border-radius: 15px;
 }
-/* line 108, scss/_page_galerie.scss */
+/* line 120, scss/_page_galerie.scss */
 #page_galerie_choix #liste_projets > div {
   margin-top: 20px;
   margin-left: 9px;
@@ -419,7 +464,22 @@ section fieldset {
   box-shadow: inset 0 0 20px 1px rgba(0, 0, 0, 0.5);
   background: rgba(0, 0, 0, 0.2);
 }
-/* line 120, scss/_page_galerie.scss */
+/* line 131, scss/_page_galerie.scss */
+#page_galerie_choix #liste_projets > legend {
+  font-size: 18px;
+  margin: -30px 0 0 0;
+  text-shadow: 0 0 3px grey, 0 0 1px black, 0 0 10px white, 0 0 15px white,0 0 20px white;
+  font-style: bold;
+  font-family: 'Font-Titre';
+}
+/* line 138, scss/_page_galerie.scss */
+#page_galerie_choix #liste_projets h3 {
+  font-size: 15px;
+  margin-left: 190px;
+  text-shadow: 0 0 3px grey, 0 0 1px black, 0 0 10px white, 0 0 15px white,0 0 20px white;
+  font-family: 'Font-Theme';
+}
+/* line 147, scss/_page_galerie.scss */
 #page_galerie_choix #liste_projets #icones_projets a {
   margin: 5px;
   display: block;
@@ -432,11 +492,11 @@ section fieldset {
   text-decoration: none;
   color: white;
 }
-/* line 131, scss/_page_galerie.scss */
+/* line 158, scss/_page_galerie.scss */
 #page_galerie_choix #liste_projets #icones_projets a img {
   border-radius: 15px;
 }
-/* line 139, scss/_page_galerie.scss */
+/* line 166, scss/_page_galerie.scss */
 #page_galerie_choix #image_projet {
   margin-top: 10px;
   float: right;
@@ -447,7 +507,7 @@ section fieldset {
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.4);
   border-radius: 15px;
 }
-/* line 148, scss/_page_galerie.scss */
+/* line 175, scss/_page_galerie.scss */
 #page_galerie_choix #image_projet img {
   border-radius: 15px;
 }
@@ -493,12 +553,13 @@ section fieldset {
 }
 /* line 43, scss/_page_contact.scss */
 #page_contact #question #titre {
-  font-size: 16px;
+  margin: -50px 0 0 0;
+  font-size: 18px;
   text-shadow: 0 0 3px grey, 0 0 1px black, 0 0 10px white, 0 0 15px white,0 0 20px white;
   font-style: bold;
-  font-family: impact;
+  font-family: 'Font-Titre';
 }
-/* line 49, scss/_page_contact.scss */
+/* line 51, scss/_page_contact.scss */
 #page_contact #question input, #page_contact #question textarea {
   box-shadow: 0 0 4px 2px gray;
   border: 0px;
@@ -506,7 +567,7 @@ section fieldset {
   min-width: 150px;
   max-height: 85px;
 }
-/* line 56, scss/_page_contact.scss */
+/* line 58, scss/_page_contact.scss */
 #page_contact #question textarea {
   width: 100%;
   min-width: 200px;
@@ -515,7 +576,7 @@ section fieldset {
   min-height: 85px;
   max-height: 85px;
 }
-/* line 65, scss/_page_contact.scss */
+/* line 67, scss/_page_contact.scss */
 #page_contact #question label {
   font-weight: 800;
   text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
@@ -524,7 +585,7 @@ section fieldset {
   vertical-align: top;
   font-family: "Advent Pro", sans-serif;
 }
-/* line 74, scss/_page_contact.scss */
+/* line 76, scss/_page_contact.scss */
 #page_contact #contact-us {
   float: left;
   height: 200px;
@@ -542,12 +603,13 @@ section fieldset {
   display: inline-block;
   font-family: "Advent Pro", sans-serif;
 }
-/* line 91, scss/_page_contact.scss */
+/* line 93, scss/_page_contact.scss */
 #page_contact #contact-us #titre {
-  font-size: 16px;
-  text-shadow: 0 0 3px gray, 0 0 10px white, 0 0 15px white,0 0 20px white;
-  text-decoration: bold;
-  font-family: impact;
+  margin: -50px 0 0 0;
+  font-size: 18px;
+  text-shadow: 0 0 3px grey, 0 0 1px black, 0 0 10px white, 0 0 15px white,0 0 20px white;
+  font-style: bold;
+  font-family: 'Font-Titre';
 }
 
 /* line 3, scss/_page_devis.scss */
@@ -568,6 +630,7 @@ section fieldset {
   float: left;
   height: 160px;
   width: 300px;
+  vertical-align: top;
   min-width: 40px;
   margin: 40px 10% 0 0;
   background: url("../images/metal-texture-151340.jpg") no-repeat center center;
@@ -576,6 +639,10 @@ section fieldset {
   border-radius: 15px;
 }
 /* line 26, scss/_page_devis.scss */
+#page_devis #premiere_etape > legend {
+  margin: -25px 0 0 0;
+}
+/* line 31, scss/_page_devis.scss */
 #page_devis #premiere_etape input {
   box-shadow: 0 0 4px 2px gray;
   border: 0px;
@@ -583,7 +650,7 @@ section fieldset {
   width: 170px;
   margin: 10px 3px 0px 0px;
 }
-/* line 33, scss/_page_devis.scss */
+/* line 38, scss/_page_devis.scss */
 #page_devis #premiere_etape #valider {
   box-shadow: 0 0 4px 2px gray;
   border: 0px;
@@ -593,7 +660,7 @@ section fieldset {
   margin: 20px 20px 10px 200px;
   float: right;
 }
-/* line 43, scss/_page_devis.scss */
+/* line 48, scss/_page_devis.scss */
 #page_devis #premiere_etape p label {
   text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
   width: 100px;
@@ -604,7 +671,7 @@ section fieldset {
   text-align: left;
   font-family: "Advent Pro", sans-serif;
 }
-/* line 55, scss/_page_devis.scss */
+/* line 60, scss/_page_devis.scss */
 #page_devis #deuxieme_etape {
   float: right;
   height: 350px;
@@ -623,7 +690,11 @@ section fieldset {
       float:right;
   }*/
 }
-/* line 79, scss/_page_devis.scss */
+/* line 69, scss/_page_devis.scss */
+#page_devis #deuxieme_etape > legend {
+  margin: -25px 0 0 0;
+}
+/* line 86, scss/_page_devis.scss */
 #page_devis #deuxieme_etape p label {
   font-weight: 800;
   text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
@@ -634,7 +705,7 @@ section fieldset {
   font-family: "Advent Pro", sans-serif;
   vertical-align: center;
 }
-/* line 90, scss/_page_devis.scss */
+/* line 97, scss/_page_devis.scss */
 #page_devis #deuxieme_etape input {
   box-shadow: 0 0 4px 2px gray;
   border: 0px;
@@ -642,7 +713,7 @@ section fieldset {
   width: 200px;
   margin: 5px 3px 0px 0px;
 }
-/* line 98, scss/_page_devis.scss */
+/* line 105, scss/_page_devis.scss */
 #page_devis #deuxieme_etape textarea {
   float: left;
   box-shadow: 0 0 4px 2px gray;
@@ -656,12 +727,12 @@ section fieldset {
   max-width: 400px;
   max-height: 80px;
 }
-/* line 113, scss/_page_devis.scss */
+/* line 120, scss/_page_devis.scss */
 #page_devis #deuxieme_etape #label_description {
   width: 200px;
   vertical-align: top;
 }
-/* line 117, scss/_page_devis.scss */
+/* line 124, scss/_page_devis.scss */
 #page_devis #deuxieme_etape #pj {
   font-weight: 800;
   text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
@@ -672,7 +743,7 @@ section fieldset {
   vertical-align: center;
   text-align: left;
 }
-/* line 127, scss/_page_devis.scss */
+/* line 134, scss/_page_devis.scss */
 #page_devis #deuxieme_etape #input_image {
   box-shadow: 0 0 4px 2px gray;
   border: 0px;
@@ -680,7 +751,7 @@ section fieldset {
   width: 225px;
   margin: 5px 10px 0px 10px;
 }
-/* line 135, scss/_page_devis.scss */
+/* line 142, scss/_page_devis.scss */
 #page_devis #deuxieme_etape #valider {
   box-shadow: 0 0 4px 2px gray;
   border: 0px;
@@ -699,14 +770,22 @@ section fieldset {
 /* line 7, scss/_page_inscription.scss */
 #page_inscription fieldset {
   height: 230px;
-  width: 400px;
+  width: 430px;
   margin: 60px auto 0 auto;
   background: url("../images/metal-texture-151340.jpg") no-repeat center center;
   padding: 10px;
   border: 4px gray solid;
   border-radius: 15px;
 }
-/* line 20, scss/_page_inscription.scss */
+/* line 15, scss/_page_inscription.scss */
+#page_inscription fieldset legend {
+  font-size: 18px;
+  margin: -30px 0 0 0;
+  text-shadow: 0 0 3px grey, 0 0 1px black, 0 0 10px white, 0 0 15px white,0 0 20px white;
+  font-style: bold;
+  font-family: 'Font-Titre';
+}
+/* line 27, scss/_page_inscription.scss */
 #page_inscription fieldset form p label {
   font-weight: 800;
   text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
@@ -716,7 +795,7 @@ section fieldset {
   vertical-align: top;
   font-family: "Advent Pro", sans-serif;
 }
-/* line 29, scss/_page_inscription.scss */
+/* line 36, scss/_page_inscription.scss */
 #page_inscription fieldset form p input {
   box-shadow: 0 0 4px 2px gray;
   border: 0px;
@@ -725,12 +804,12 @@ section fieldset {
   width: 190px;
   max-height: 85px;
 }
-/* line 39, scss/_page_inscription.scss */
+/* line 46, scss/_page_inscription.scss */
 #page_inscription #envoyer {
   width: 80px;
   min-width: 80px;
   float: right;
-  margin: 20px 8% 10px 50%;
+  margin: 20px 55px 10px 250px;
 }
 
 /* line 2, scss/_page_membres.scss */
@@ -746,7 +825,34 @@ section fieldset {
   height: 168px;
   width: 358px;
 }
-/* line 13, scss/_page_membres.scss */
+/* line 12, scss/_page_membres.scss */
+#page_connexion > div input[type="submit"], #page_deconnexion > div input[type="submit"] {
+  background: url("http://reseaupro.univ-paris-diderot.fr/userfiles/image/bouton-connexion.png");
+  background-size: 120px 40px;
+  text-indent: -8000px;
+  border: none;
+  height: 40px;
+  width: 120px;
+  display: block;
+  margin: 0 auto;
+}
+/* line 24, scss/_page_membres.scss */
+#page_connexion span, #page_deconnexion span {
+  position: absolute;
+  top: 350px;
+  width: 100%;
+  text-align: center;
+  display: block;
+  z-index: 10;
+}
+/* line 31, scss/_page_membres.scss */
+#page_connexion span a, #page_deconnexion span a {
+  margin: 20px auto;
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+/* line 40, scss/_page_membres.scss */
 #page_connexion #background, #page_deconnexion #background {
   background: url("../images/rmap.jpg") top left;
   -webkit-animation-name: BGconnect;
@@ -758,25 +864,25 @@ section fieldset {
   -moz-animation-timing-function: linear;
   -moz-animation-iteration-count: infinite;
 }
-/* line 24, scss/_page_membres.scss */
+/* line 51, scss/_page_membres.scss */
 #page_connexion #mask, #page_deconnexion #mask {
   background: url("../images/bloc2.png") top left no-repeat;
   padding: 20px;
 }
-/* line 28, scss/_page_membres.scss */
+/* line 55, scss/_page_membres.scss */
 #page_connexion p, #page_deconnexion p {
   display: block;
   width: 318px;
   margin-bottom: 9px;
 }
-/* line 34, scss/_page_membres.scss */
+/* line 61, scss/_page_membres.scss */
 #page_connexion label, #page_deconnexion label {
   color: #8C8C8C;
   display: block;
   font-size: 11px;
   position: relative;
 }
-/* line 40, scss/_page_membres.scss */
+/* line 67, scss/_page_membres.scss */
 #page_connexion input[type="text"], #page_connexion input[type="password"], #page_deconnexion input[type="text"], #page_deconnexion input[type="password"] {
   margin-top: 2px;
   background: rgba(20, 20, 20, 0.6);
@@ -789,19 +895,36 @@ section fieldset {
   padding: 5px;
   width: 285px;
 }
-/* line 52, scss/_page_membres.scss */
-#page_connexion input[type="submit"], #page_deconnexion input[type="submit"] {
-  background: url("http://reseaupro.univ-paris-diderot.fr/userfiles/image/bouton-connexion.png");
-  background-size: 120px 40px;
-  text-indent: -8000px;
-  border: none;
-  height: 40px;
-  width: 120px;
-  display: block;
-  margin: 0 auto;
+/* line 79, scss/_page_membres.scss */
+#page_connexion #field_mdp_oublie, #page_deconnexion #field_mdp_oublie {
+  height: 200px;
+  width: 300px;
+  margin: 60px auto;
+  background: rgba(0, 0, 0, 0.5);
+}
+/* line 84, scss/_page_membres.scss */
+#page_connexion #field_mdp_oublie p, #page_deconnexion #field_mdp_oublie p {
+  width: 200px;
+  margin: 10px auto;
+  font-size: 16px;
+  text-shadow: 0 0 3px grey, 0 0 1px black, 0 0 10px white, 0 0 15px white,0 0 20px white;
+  font-weight: 590;
+  text-align: center;
+  font-family: 'secret';
+}
+/* line 93, scss/_page_membres.scss */
+#page_connexion #field_mdp_oublie p label, #page_deconnexion #field_mdp_oublie p label {
+  color: white;
+  font-style: bold;
+  font-size: 16px;
+  font-family: 'advent pro';
+}
+/* line 100, scss/_page_membres.scss */
+#page_connexion #field_mdp_oublie input[type="submit"], #page_deconnexion #field_mdp_oublie input[type="submit"] {
+  margin: 20px 45px;
 }
 
-/* line 63, scss/_page_membres.scss */
+/* line 107, scss/_page_membres.scss */
 #page_deconnexion h1 {
   text-align: center;
   color: white;
@@ -809,13 +932,13 @@ section fieldset {
   line-height: 168px;
 }
 
-/* line 70, scss/_page_membres.scss */
+/* line 114, scss/_page_membres.scss */
 #page_membres > div {
   position: relative;
   margin: 5% auto;
   width: 1004px;
 }
-/* line 76, scss/_page_membres.scss */
+/* line 120, scss/_page_membres.scss */
 #page_membres fieldset {
   width: 450px;
   float: left;
@@ -823,83 +946,125 @@ section fieldset {
   background: rgba(0, 0, 0, 0.5);
   padding: 10px;
 }
-/* line 82, scss/_page_membres.scss */
+/* line 126, scss/_page_membres.scss */
 #page_membres fieldset label {
   height: 50px;
 }
-/* line 86, scss/_page_membres.scss */
+/* line 129, scss/_page_membres.scss */
+#page_membres fieldset legend {
+  font-size: 16px;
+  text-shadow: 0 0 3px gray, 0 0 10px white, 0 0 15px white,0 0 20px white;
+  text-decoration: bold;
+  font-family: impact;
+  position: absolute;
+  margin: -25px 0 0 0;
+}
+/* line 139, scss/_page_membres.scss */
 #page_membres fieldset #cache:checked ~ label h1 {
   display: none;
 }
-/* line 89, scss/_page_membres.scss */
+/* line 142, scss/_page_membres.scss */
 #page_membres fieldset label h4, #page_membres fieldset div {
   display: none;
 }
-/* line 93, scss/_page_membres.scss */
+/* line 146, scss/_page_membres.scss */
 #page_membres fieldset #cache:checked ~ label h4,
 #page_membres fieldset #cache:checked ~ div {
   display: block;
 }
-/* line 96, scss/_page_membres.scss */
+/* line 149, scss/_page_membres.scss */
+#page_membres fieldset h1 {
+  font-size: 16px;
+  text-shadow: 0 0 3px gray, 0 0 10px white, 0 0 15px white,0 0 20px white;
+  text-decoration: bold;
+  font-family: impact;
+}
+/* line 155, scss/_page_membres.scss */
 #page_membres fieldset div p {
   margin: 5px 0px 0px 10px;
   text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
 }
-/* line 101, scss/_page_membres.scss */
-#page_membres fieldset input {
-  margin-right: 40px;
+/* line 160, scss/_page_membres.scss */
+#page_membres fieldset div p #modif_mdp {
+  float: right;
+  margin-right: 0px;
   box-shadow: 0px 0px 4px 2px gray;
   border: 0px none;
   border-radius: 5px 5px 5px 5px;
-  float: right;
 }
-/* line 108, scss/_page_membres.scss */
+/* line 167, scss/_page_membres.scss */
+#page_membres fieldset div p input[type="password"] {
+  float: right;
+  width: 110px;
+  box-shadow: 0px 0px 4px 2px gray;
+  border: 0px none;
+  border-radius: 5px 5px 5px 5px;
+}
+/* line 174, scss/_page_membres.scss */
+#page_membres fieldset div p #sup_mdp {
+  clear: right;
+  margin-right: 55px;
+  width: 110px;
+  box-shadow: 0px 0px 4px 2px gray;
+  border: 0px none;
+  border-radius: 5px 5px 5px 5px;
+}
+/* line 182, scss/_page_membres.scss */
+#page_membres fieldset div p #sup_compte {
+  margin-left: 40px;
+  width: 110px;
+  box-shadow: 0px 0px 4px 2px gray;
+  border: 0px none;
+  border-radius: 5px 5px 5px 5px;
+}
+/* line 191, scss/_page_membres.scss */
 #page_membres fieldset ul {
   padding: 10px 25px;
   list-style-type: none;
 }
-/* line 112, scss/_page_membres.scss */
+/* line 195, scss/_page_membres.scss */
 #page_membres fieldset li {
   float: left;
   display: block;
   width: 100px;
   height: 128px;
 }
-/* line 117, scss/_page_membres.scss */
+/* line 200, scss/_page_membres.scss */
 #page_membres fieldset li img {
   margin-left: 18px;
 }
-/* line 120, scss/_page_membres.scss */
+/* line 203, scss/_page_membres.scss */
 #page_membres fieldset li a {
   color: white;
   text-decoration: none;
   text-align: center;
 }
-/* line 127, scss/_page_membres.scss */
+/* line 210, scss/_page_membres.scss */
 #page_membres fieldset:first-child {
   margin-right: 50px;
+  width: 350px;
   background: rgba(0, 0, 0, 0.5);
 }
 
 @-webkit-keyframes BGconnect {
-  /* line 133, scss/_page_membres.scss */
+  /* line 217, scss/_page_membres.scss */
   from {
     background-position: 0px 0px;
   }
 
-  /* line 136, scss/_page_membres.scss */
+  /* line 220, scss/_page_membres.scss */
   to {
     background-position: -3000px 0px;
   }
 }
 
 @-moz-keyframes BGconnect {
-  /* line 141, scss/_page_membres.scss */
+  /* line 225, scss/_page_membres.scss */
   from {
     background-position: 0px 0px;
   }
 
-  /* line 144, scss/_page_membres.scss */
+  /* line 228, scss/_page_membres.scss */
   to {
     background-position: -3000px 0px;
   }
@@ -917,12 +1082,38 @@ section fieldset {
   border: 4px gray solid;
   border-radius: 15px;
   font-weight: 800;
-  text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
   display: inline-block;
   vertical-align: top;
   font-family: "Advent Pro", sans-serif;
 }
-/* line 19, scss/_page_recherche.scss */
+/* line 17, scss/_page_recherche.scss */
+#page_recherche #block_recherche #liste_resultat_projet {
+  height: 280px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+/* line 21, scss/_page_recherche.scss */
+#page_recherche #block_recherche #liste_resultat_projet strong {
+  position: absolute;
+  margin: -25px 0 0 0;
+}
+/* line 25, scss/_page_recherche.scss */
+#page_recherche #block_recherche #liste_resultat_projet p {
+  background: rgba(0, 0, 0, 0.2);
+  margin-bottom: 5px;
+}
+/* line 28, scss/_page_recherche.scss */
+#page_recherche #block_recherche #liste_resultat_projet p a {
+  color: #d8d7c8;
+  text-shadow: none;
+  text-decoration: none;
+}
+/* line 32, scss/_page_recherche.scss */
+#page_recherche #block_recherche #liste_resultat_projet p a span {
+  color: white;
+  text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
+}
+/* line 41, scss/_page_recherche.scss */
 #page_recherche #block_recherche_2 {
   float: right;
   height: 200px;
@@ -939,14 +1130,41 @@ section fieldset {
   vertical-align: top;
   font-family: "Advent Pro", sans-serif;
 }
+/* line 56, scss/_page_recherche.scss */
+#page_recherche #block_recherche_2 #liste_resultat_vehicule {
+  height: 185px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+/* line 60, scss/_page_recherche.scss */
+#page_recherche #block_recherche_2 #liste_resultat_vehicule strong {
+  position: absolute;
+  margin: -25px 0 0 0;
+}
+/* line 64, scss/_page_recherche.scss */
+#page_recherche #block_recherche_2 #liste_resultat_vehicule p {
+  background: rgba(0, 0, 0, 0.2);
+  margin-bottom: 5px;
+}
+/* line 67, scss/_page_recherche.scss */
+#page_recherche #block_recherche_2 #liste_resultat_vehicule p a {
+  color: #d8d7c8;
+  text-shadow: none;
+  text-decoration: none;
+}
+/* line 71, scss/_page_recherche.scss */
+#page_recherche #block_recherche_2 #liste_resultat_vehicule p a span {
+  color: white;
+  text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
+}
 
 /* line 2, scss/_page_projet.scss */
 #page_projet #description_projets {
   float: left;
   position: relative;
   height: 290px;
-  width: 350px;
-  margin: 65px 20px 0px 50px;
+  width: 340px;
+  margin: 65px 20px 0px 20px;
   background: url("../images/metal-texture-151340.jpg") no-repeat center center;
   padding: 10px;
   border: 4px gray solid;
@@ -954,110 +1172,194 @@ section fieldset {
 }
 /* line 12, scss/_page_projet.scss */
 #page_projet #description_projets legend {
-  font-size: 16px;
+  font-size: 18px;
   text-shadow: 0 0 3px gray, 0 0 10px white, 0 0 15px white,0 0 20px white;
   text-decoration: bold;
   font-family: impact;
+  margin: -43px 0 0 0;
 }
-/* line 19, scss/_page_projet.scss */
+/* line 21, scss/_page_projet.scss */
 #page_projet #liste_image_projet {
   float: left;
-  height: 290px;
-  width: 230px;
-  margin: 80px 0px 0 2px;
+  max-height: 290px;
+  width: 235px;
+  margin: 70px 0 0 0;
   background: url("../images/metal-texture-151340.jpg") no-repeat center center;
-  padding: 2px;
+  padding: 20px 3px;
   border: 4px gray solid;
   border-radius: 15px;
   background: rgba(0, 0, 0, 0.2);
-  overflow-y: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
   box-shadow: inset 0 0 20px 1px rgba(0, 0, 0, 0.5);
 }
-/* line 31, scss/_page_projet.scss */
+/* line 34, scss/_page_projet.scss */
 #page_projet #liste_image_projet img {
   margin: 5px 5px 0 2px;
   border-radius: 10px;
 }
-/* line 35, scss/_page_projet.scss */
+/* line 38, scss/_page_projet.scss */
 #page_projet #liste_image_projet h2 {
   position: absolute;
-  margin: -20px 0 0 10px;
+  margin: -35px 0 0 10px;
   font-size: 16px;
   font-family: impact;
 }
-/* line 42, scss/_page_projet.scss */
+/* line 45, scss/_page_projet.scss */
 #page_projet #image_projet {
   float: left;
   height: 300px;
   width: 320px;
   background: rgba(0, 0, 0, 0.7);
-  margin: 80px 80px 0px 20px;
+  margin: 80px 0px 0px 20px;
   border-radius: 15px;
 }
-/* line 51, scss/_page_projet.scss */
+/* line 54, scss/_page_projet.scss */
 #page_projet #image_projet img {
   border-radius: 15px;
   margin: 5px 5px 5px 5px;
 }
 
 /* line 2, scss/_page_suivi_projet.scss */
+#page_suivi_projet > div:first-child {
+  width: 1004px;
+  margin: 5% auto;
+}
+/* line 6, scss/_page_suivi_projet.scss */
 #page_suivi_projet #description_suivi_projets {
   float: left;
   position: relative;
   height: 290px;
-  width: 350px;
-  margin: 65px 20px 0px 50px;
+  width: 340px;
+  margin: 65px 20px 0px 20px;
   background: url("../images/metal-texture-151340.jpg") no-repeat center center;
   padding: 10px;
   border: 4px gray solid;
   border-radius: 15px;
 }
-/* line 12, scss/_page_suivi_projet.scss */
+/* line 16, scss/_page_suivi_projet.scss */
 #page_suivi_projet #description_suivi_projets legend {
   font-size: 16px;
   text-shadow: 0 0 3px gray, 0 0 10px white, 0 0 15px white,0 0 20px white;
   text-decoration: bold;
   font-family: impact;
 }
-/* line 19, scss/_page_suivi_projet.scss */
+/* line 22, scss/_page_suivi_projet.scss */
+#page_suivi_projet #description_suivi_projets #barre_progression {
+  border: solid 3px gray;
+  height: 17px;
+  width: 250px;
+  position: relative;
+}
+/* line 27, scss/_page_suivi_projet.scss */
+#page_suivi_projet #description_suivi_projets #barre_progression div {
+  height: 17px;
+  background-color: black;
+}
+/* line 31, scss/_page_suivi_projet.scss */
+#page_suivi_projet #description_suivi_projets #barre_progression span {
+  position: absolute;
+  top: -1px;
+  text-align: center;
+  height: 17px;
+  width: 250px;
+}
+/* line 39, scss/_page_suivi_projet.scss */
+#page_suivi_projet #description_suivi_projets #menu_admin {
+  position: absolute;
+  top: 350px;
+  left: 45px;
+  border: 2px rgba(255, 255, 255, 0.2) solid;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  padding: 2px 5px;
+}
+/* line 48, scss/_page_suivi_projet.scss */
+#page_suivi_projet #description_suivi_projets #menu_admin a {
+  display: inline-block;
+  padding: 0 5px;
+  color: white;
+}
+/* line 55, scss/_page_suivi_projet.scss */
 #page_suivi_projet #liste_image_suivi_projet {
   float: left;
-  height: 290px;
-  width: 230px;
-  margin: 80px 0px 0 2px;
+  max-height: 290px;
+  width: 235px;
+  margin: 70px 0 0 0;
   background: url("../images/metal-texture-151340.jpg") no-repeat center center;
-  padding: 2px;
+  padding: 10px 3px;
   border: 4px gray solid;
   border-radius: 15px;
   background: rgba(0, 0, 0, 0.2);
-  overflow-y: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
   box-shadow: inset 0 0 20px 1px rgba(0, 0, 0, 0.5);
 }
-/* line 31, scss/_page_suivi_projet.scss */
+/* line 68, scss/_page_suivi_projet.scss */
 #page_suivi_projet #liste_image_suivi_projet img {
   margin: 5px 5px 0 2px;
   border-radius: 10px;
 }
-/* line 35, scss/_page_suivi_projet.scss */
-#page_suivi_projet #liste_image_suivi_projet h2 {
+/* line 72, scss/_page_suivi_projet.scss */
+#page_suivi_projet #liste_image_suivi_projet > h2 {
+  font-size: 16px;
+  text-shadow: 0 0 3px gray, 0 0 10px white, 0 0 15px white,0 0 20px white;
+  text-decoration: bold;
+  font-family: impact;
   position: absolute;
-  margin: -20px 0 0 10px;
+  margin: -25px 0 0 0;
   font-size: 16px;
   font-family: impact;
 }
-/* line 42, scss/_page_suivi_projet.scss */
+/* line 83, scss/_page_suivi_projet.scss */
 #page_suivi_projet #image_projet {
   float: left;
   height: 300px;
-  width: 320px;
+  width: 310px;
   background: rgba(0, 0, 0, 0.7);
-  margin: 80px 80px 0px 20px;
+  margin: 80px 0 0 20px;
   border-radius: 15px;
 }
-/* line 51, scss/_page_suivi_projet.scss */
+/* line 92, scss/_page_suivi_projet.scss */
 #page_suivi_projet #image_projet img {
   border-radius: 15px;
   margin: 5px 5px 5px 5px;
+}
+/* line 99, scss/_page_suivi_projet.scss */
+#page_suivi_projet #admin {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+/* line 104, scss/_page_suivi_projet.scss */
+#page_suivi_projet #admin > fieldset {
+  background: rgba(0, 0, 0, 0.5);
+  width: 345px;
+  padding: 10px;
+  margin: 200px auto;
+}
+/* line 109, scss/_page_suivi_projet.scss */
+#page_suivi_projet #admin > fieldset p {
+  min-height: 30px;
+  display: block;
+}
+/* line 113, scss/_page_suivi_projet.scss */
+#page_suivi_projet #admin > fieldset textarea {
+  width: 330px;
+}
+/* line 116, scss/_page_suivi_projet.scss */
+#page_suivi_projet #admin > fieldset input, #page_suivi_projet #admin > fieldset textarea, #page_suivi_projet #admin > fieldset button {
+  border-radius: 5px;
+  padding: 2px 5px;
+}
+/* line 120, scss/_page_suivi_projet.scss */
+#page_suivi_projet #admin > fieldset input[type="text"] {
+  float: right;
+}
+/* line 123, scss/_page_suivi_projet.scss */
+#page_suivi_projet #admin > fieldset button {
+  float: right;
 }
 
 /* line 2, scss/_page_admin.scss */
@@ -1073,31 +1375,45 @@ section fieldset {
   padding: 10px;
   float: left;
 }
-/* line 13, scss/_page_admin.scss */
+/* line 12, scss/_page_admin.scss */
+#page_admin fieldset legend {
+  font-size: 16px;
+  text-shadow: 0 0 3px gray, 0 0 10px white, 0 0 15px white,0 0 20px white;
+  text-decoration: bold;
+  font-family: impact;
+  position: absolute;
+  margin: -25px 0 0 0;
+}
+/* line 20, scss/_page_admin.scss */
 #page_admin fieldset ul {
   padding: 10px 25px;
   list-style-type: none;
 }
-/* line 18, scss/_page_admin.scss */
+/* line 25, scss/_page_admin.scss */
 #page_admin fieldset li a {
   color: white;
   text-decoration: none;
   text-align: center;
 }
-/* line 25, scss/_page_admin.scss */
+/* line 32, scss/_page_admin.scss */
 #page_admin fieldset:first-child {
   margin-right: 50px;
   width: 200px;
 }
-/* line 29, scss/_page_admin.scss */
+/* line 36, scss/_page_admin.scss */
 #page_admin fieldset:last-child {
   width: 700px;
 }
-/* line 32, scss/_page_admin.scss */
+/* line 39, scss/_page_admin.scss */
 #page_admin table {
   border: white;
+  		/*
+  		td{
+  
+  			background: rgba(255,255,255,0.2);
+  		}*/
 }
-/* line 34, scss/_page_admin.scss */
+/* line 41, scss/_page_admin.scss */
 #page_admin table .icon_del {
   display: block;
   background: url("http://icons.iconarchive.com/icons/deleket/sleek-xp-basic/16/Close-2-icon.png") 16px 16px;
@@ -1105,7 +1421,7 @@ section fieldset {
   width: 16px;
   float: left;
 }
-/* line 41, scss/_page_admin.scss */
+/* line 48, scss/_page_admin.scss */
 #page_admin table .icon_val {
   float: left;
   display: block;
@@ -1113,12 +1429,47 @@ section fieldset {
   height: 16px;
   width: 16px;
 }
-/* line 50, scss/_page_admin.scss */
+/* line 62, scss/_page_admin.scss */
+#page_admin fieldset div {
+  height: 400px;
+  overflow: auto;
+}
+/* line 68, scss/_page_admin.scss */
+#page_admin #table_membre td:nth-child(2n), #page_admin #table_vehicule td:nth-child(2n), #page_admin #table_projets td:nth-child(2n) {
+  background: rgba(255, 255, 255, 0.2);
+}
+/* line 71, scss/_page_admin.scss */
+#page_admin #table_membre thead td, #page_admin #table_vehicule thead td, #page_admin #table_projets thead td {
+  border-bottom: 2px white solid;
+}
+/* line 74, scss/_page_admin.scss */
+#page_admin #table_membre tr:hover td, #page_admin #table_vehicule tr:hover td, #page_admin #table_projets tr:hover td {
+  background: rgba(255, 255, 255, 0.5);
+}
+/* line 77, scss/_page_admin.scss */
+#page_admin #table_membre a, #page_admin #table_vehicule a, #page_admin #table_projets a {
+  text-decoration: none;
+  color: white;
+}
+/* line 83, scss/_page_admin.scss */
+#page_admin #table_devis tr:nth-child(2n) td {
+  border-bottom: 2px white solid;
+  background: rgba(255, 255, 255, 0.2);
+}
+/* line 88, scss/_page_admin.scss */
+#page_admin #table_devis td {
+  height: 30px;
+}
+/* line 91, scss/_page_admin.scss */
+#page_admin #table_devis thead td {
+  border-bottom: 2px white solid;
+}
+/* line 96, scss/_page_admin.scss */
 #page_admin #carrousel table {
   float: left;
   margin: 10px 0 0 20px;
 }
-/* line 54, scss/_page_admin.scss */
+/* line 100, scss/_page_admin.scss */
 #page_admin #carrousel form {
   float: right;
   width: 250px;
@@ -1127,7 +1478,7 @@ section fieldset {
   padding: 10px;
   margin: 15px 15px 15px 0;
 }
-/* line 61, scss/_page_admin.scss */
+/* line 107, scss/_page_admin.scss */
 #page_admin #carrousel form .right {
   float: right;
 }

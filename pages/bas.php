@@ -27,7 +27,7 @@ $liste_tableau = json_decode($liste, true);
 			<span></span>
 			<a href="?page=membre">Mon Compte</a>
 			<span></span>
-			<a href="?page=devis">Mon/Mes Projets</a>
+			<a href="?page=devis">Demande de Devis</a>
 			<?php if(isset($_SESSION["admin"]))
 			{
 				echo'
