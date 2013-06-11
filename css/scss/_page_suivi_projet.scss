@@ -1,7 +1,7 @@
 #page_suivi_projet {
 		>div:first-child{
 			width: 1004px;
-			margin: 5% auto;
+			margin: 40px auto;
 		}
 		#description_suivi_projets {
 			float:left;
@@ -38,8 +38,10 @@
 			}
 			#menu_admin{
 				position: absolute;
-				top: 350px;
-				left: 45px;
+				top: 330px;
+				left: -20px;
+				width: 405px;
+
 				border: 2px rgba(255,255,255,0.2) solid;
 				background: rgba(255,255,255,0.2);
 				border-radius: 5px;
@@ -52,7 +54,7 @@
 				}
 			}
 		}
-		#liste_image_suivi_projet {
+		#liste_image {
 		float:left;
 		max-height:290px;
 		width:235px;
@@ -76,8 +78,6 @@
         			font-family: impact;
 				position: absolute;
         			margin: -25px 0 0 0;
-			    font-size: 16px;
-        		font-family: impact;
 			}
 	}
 		#image_projet {
@@ -96,34 +96,40 @@
 		}
 
 
-	#admin {
-		position: fixed;
-		width: 100%;
-		height:100%;
-		background: rgba(0,0,0,0.8);
-		>fieldset{
-			background: rgba(0,0,0,0.5);
-			width: 345px;
-			padding: 10px;
-			margin: 200px auto;
-			p{
-				min-height: 30px;
-				display:block;
-			}
-			textarea{
-				width: 330px;
-			}
-			input, textarea, button{
-				border-radius: 5px;
-				padding: 2px 5px;
-			}
-			input[type="text"]{
-				float:right;
-			}
-			button{
-				float:right;
-			}
+	
+
+}
+#admin {
+	position: fixed;
+	width: 100%;
+	height:100%;
+	background: rgba(0,0,0,0.8);
+	>fieldset{
+		background: rgba(0,0,0,0.5);
+		width: 345px;
+		padding: 10px;
+		margin: 200px auto;
+		legend{
+			text-shadow: 0px 0px 3px gray, 0px 0px 10px white, 0px 0px 15px white, 0px 0px 20px white;
+			color:white;
+		}
+		p{
+			min-height: 30px;
+			color:white;
+			display:block;
+		}
+		textarea{
+			width: 330px;
+		}
+		input, textarea, button{
+			border-radius: 5px;
+			padding: 2px 5px;
+		}
+		input[type="text"]{
+			float:right;
+		}
+		button{
+			float:right;
 		}
 	}
-
 }

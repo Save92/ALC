@@ -2,54 +2,67 @@
 if(isset($_GET['projet'])){$num_projet_var =$_GET['projet'];}
 ?>
 <section id="page_projet">
+	<div>
 	<fieldset id="description_projets">
 		<?php
 
-$bdd = new PDO('mysql:host=127.0.0.1;dbname=alc', 'root', '');
-		$res3 = $bdd->prepare('SELECT marque,modele,annee,type,projet.num_projet,nom_projet,theme,date_projet,description_projet,num_image
-FROM `vehicule`,`projet`,`image` WHERE vehicule.num_vehicule=projet.num_vehicule 
-AND projet.num_projet=image.num_projet AND projet.num_projet= ? GROUP BY projet.num_projet');
-		$res3->execute(array($num_projet_var));
-				$res4 = $bdd->prepare('SELECT num_image, image.num_projet,description ,projet.num_projet
-FROM `image`,`projet` WHERE projet.num_projet=image.num_projet AND projet.num_projet= ?');
-		$res4->execute(array($num_projet_var));
-		$count =$res4->rowCount();
+	$bdd = new PDO('mysql:host=127.0.0.1;dbname=alc', 'root', '');
+	$res3 = $bdd->query('SELECT * FROM projet WHERE num_projet= "'.$num_projet_var.'" ');
+	$res4 = $bdd->query('SELECT * FROM image WHERE num_projet= "'.$num_projet_var.'"');
+	$count =$res3->rowCount();
+	$count2 =$res4->rowCount();
 	if ($count!=0){
 		while($donnees = $res3->fetch())
 			{
-						echo '
+
+			echo '
 			<legend>'.$donnees['nom_projet'].'</legend>
 			<p> Ce projet a pour thème : '.$donnees['theme']. '.</p>
 			<p> Il date de : '.$donnees['date_projet']. '.</p>
-			<p> Description du projet : <br>'.$donnees['description_projet']. '.</p>
-			<br><p> Caractéristiques du véhicule : <br></p>
-			<p> Son type : '.$donnees['type']. '.</p>
-			<p> Marque : '.$donnees['marque']. '.</p>
-			<p> Modèle : '.$donnees['modele']. '.</p>
-			<p> Année : '.$donnees['annee']. '.</p>
-			</fieldset>	
-
-			<div id="liste_image_projet">
-			<h2>Photos du projet :</h2>';
-			while ($donnees2 = $res4->fetch()) {
+			<p> Description du projet : <br>'.utf8_decode($donnees['description_projet']).'.</p>
+			<br><p> Caractéristiques du véhicule : <br></p>';
+			$res5 = $bdd->query('SELECT * FROM vehicule WHERE num_vehicule= "'.$donnees['num_vehicule'].'"');
+			while($donnees2 = $res5->fetch())
+			{
 				echo '
-				<img width="100px" height="100px" src="upload/'.$donnees2['num_image'].'.jpg">
-				';
+				<p> Son type : '.$donnees2['type']. '.</p>
+				<p> Marque : '.$donnees2['marque']. '.</p>
+				<p> Modèle : '.$donnees2['modele']. '.</p>
+				<p> Année : '.$donnees2['annee']. '.</p>
+			';}
+			echo '
+			</fieldset>
+			<div id="liste_image">
+				<h2>Photos du projet :</h2>';
+			if ($count2!=0){
+				while ($donnees2 = $res4->fetch()) {
+					echo '<a href="?page=projet&projet='.$_GET['projet'].'&image='.$donnees2['num_image'].'"><img width="100px" height="100px" src="upload/'.$donnees2['num_image'].'.jpg"></a>';
+				}
 			}
-			echo '</div>
-			<div id="image_projet">
-				<img width="310px" height="290px" src="upload/'.$donnees['num_image'].'.jpg">
-				</div>';
+			else echo '<p>Aucune Image associé au projet!';	
+			echo '
+			</div>';
+			if(isset($_GET['image'])){
+				echo'
+					<div id="image_projet">
+						<img width="300px" height="290px" src="upload/'.$_GET['image'].'.jpg">
+					</div>';
+			}
+			else{
+				echo'
+					<div id="image_projet" style="display:none;">
+						<img width="300px" height="290px" src="">
+					</div>';
+			}
 		}
 	}
 		else
 	{
 		echo '<div id="liste_vide">
-			<p>Aucun projet trouvé !</p>
-			</div>
-			</fieldset>';
+				<p>Aucun projet trouvé !</p>
+			 </div>
+		</fieldset>';
 	}
 ?>
-<!--				-->
-</section>
+</div></section>
 <?php include('pages/bas.php'); ?>

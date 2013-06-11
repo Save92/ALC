@@ -20,9 +20,20 @@
 		if(isset($_POST['max'])) {$max = $_POST['max'];} else{ $max = "";}
 		if(isset($_POST['description'])) {$description = utf8_decode($_POST['description']);}
 
-		if(isset($_FILE['file1']['name'])) {$file1 = $_FILE['file1']['name'];} else{ $file1=""; }
-		if(isset($_FILE['file2']['name'])) {$file2 = $_FILE['file2']['name'];} else{ $file2=""; }
-		if(isset($_FILE['file3']['name'])) {$file3 = $_FILE['file3']['name'];} else{ $file3=""; }
+//		if(isset($_FILE['file1']['name'])) {$file1 = $_FILE['file1']['name'];} else{ $file1=""; }
+		$i = 1;
+		foreach ($_FILES["pictures"]["error"] as $key => $error) {
+ 		   if ($error == UPLOAD_ERR_OK) {
+		   		$tmp_name = $_FILES["pictures"]["tmp_name"][$key];
+       			$name = $_FILES["pictures"]["name"][$key];
+       			$file[$i] = $_FILES["pictures"]["name"][$key];
+        		move_uploaded_file($tmp_name, "upload/devis/$name");
+		    }
+		    else{
+       			$file[$i] = "";	
+		    }
+	    	$i++;
+		}		
 
 
 
@@ -38,16 +49,17 @@
 			'var7' => $min,
 			'var8' => $max,
 			'var9' => $description,
-			'var10' => $file1,
-			'var11' => $file2,
-			'var12' => $file3,
+			'var10' => $file['1'],
+			'var11' => $file['2'],
+			'var12' => $file['3'],
 			'var13' => 0,
 			'var14' => $type
 			));
 
 ?>
 
-<h1> votre devis a été transmit.</h1>
+<div id="message"><h1>Votre devis à bien été transmis.</h1></div>
+<!--<meta http-equiv="refresh" content="2; URL=?page=accueil" ></meta>-->
 
 
 <?php
@@ -67,7 +79,7 @@
 
 ?>
 
-<form id="form_devis" method="post">
+<form enctype="multipart/form-data" id="form_devis" method="post">
 		<fieldset id="premiere_etape">
 		
 		<legend>Première étape : Vos coordonnées</legend>
@@ -86,7 +98,7 @@
 		<p><label for="min">Budget minimum : </label><input id="min" name="min" type="text"></p>
 		<p><label for="max">Budget maximum : </label><input id="max" name="max" type="text"></p>
 		<p><label for="description" id="label_description">Description de votre projet : </label><textarea id="description" name="description" type="text" required></textarea></p>
-		<p><label id="pj">Ajouter une photo (3 maximum) : </label><input id="input_image" type="file" ><input type="hidden" name="etape" value="valid"><br><input id="valider" type="submit"></p>
+		<p><label id="pj">Ajouter une photo (3 maximum) : </label><input type="file" name="pictures[]" /><input type="file" name="pictures[]" /><input type="file" name="pictures[]" /><input type="hidden" name="etape" value="valid"><br><input id="valider" type="submit"></p>
 	</a>
 	</fieldset>
 </form>

@@ -33,13 +33,13 @@ $(document).ready(function (){
 	var projet_image = $("#image_projet img").attr("src");
 	console.log(projet_image);
 
-	$("#liste_image_suivi_projet a").mouseenter(function(){
+	$("#liste_image a").mouseenter(function(){
 		var image = $(this).find("img").attr("src");
 		$("#image_projet img").hide();
 		$("#image_projet img").attr("src",image);
 		$("#image_projet img").show();
 	});
-	$("#liste_image_suivi_projet").bind({
+	$("#liste_image").bind({
 		mouseenter:function(){
 			$("#image_projet").show();
 		},
@@ -51,6 +51,27 @@ $(document).ready(function (){
 				$("#image_projet").fadeOut(500);	
 			}
 		}});
+	$("#icones_projets").bind({
+		mouseenter:function(){
+			$("#image_projet").show();
+		},
+		mouseleave: function(){
+			$("#image_projet").fadeOut(500);	
+	}});
+	$("#icones_projets a").mouseenter(function(){
+		var image = $(this).find("img").attr("src");
+		if($(this).find("img").attr("status")){
+			console.log("hello");
+			$("#image_projet img").hide();
+			$("#image_projet").fadeOut(500);
+		}
+		else{	
+			$("#image_projet img").hide();
+			$("#image_projet").show();
+			$("#image_projet img").attr("src",image);
+			$("#image_projet img").show();
+		}
+	});
 	$('#menu_admin a').click(function(){
 		var windows = $(this).attr("id");
 		console.log(windows);

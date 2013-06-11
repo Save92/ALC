@@ -8,7 +8,7 @@ if(!empty($_GET['page'])){
 		?>
 			<section id="page_deconnexion">
 				<meta http-equiv="refresh" content="2; URL=?page=accueil" ></meta>
-				<div><div><h1>Deconnecté</h1></div></div>
+				<div id="message"><h1>Déconnecté</h1></div>
 			</section>
 			</body>
 			</html>

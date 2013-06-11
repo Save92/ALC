@@ -22,6 +22,7 @@ if(!isset($_SESSION['admin'])){
 			<li><a href="?page=admin&choix=projets">Liste des projets</a></li>
 			<li><a href="?page=admin&choix=vehicule">Liste des véhicules</a></li>
 			<li><a href="?page=admin&choix=carrousel">Config du Carrousel</a></li>
+			<li><a href="?page=admin&choix=menu">Config du Menu</a></li>
 		</ul>
 	</fieldset>
 <?php
@@ -230,21 +231,23 @@ if(!isset($_SESSION['admin'])){
 					$req = $bdd->query('DELETE FROM carrousel WHERE url_images =\''.$_GET['id'].'\'');
 				}
 				elseif($_GET['fonction'] == "create"){
-					if ($_FILES['image']['error'] > 0) {echo "ERROR";} 
+					if ($_FILES['file']['error'] > 0) {echo "ERROR";} 
 					else
 					{
-					$req = $bdd->prepare('INSERT INTO carrousel( url_images, nom_images, desc_images) VALUES(:url, :nom, :desc_img)');
+
+					$nom_img="upload/carrousel/".$_FILES['file']['name'];
+					$result = move_uploaded_file($_FILES['file']['tmp_name'],$nom_img);
+					if($result){$req = $bdd->prepare('INSERT INTO carrousel( url_images, nom_images, desc_images) VALUES(:url, :nom, :desc_img)');
 					$req->execute(array(
 					    'url' => $_POST['url'],
-					    'nom' => $_FILES['image']['name'],
+					    'nom' => $_FILES['file']['name'],
 					    "desc_img" => $_POST['nom']
 					    ));
-					$resultat = move_uploaded_file($_FILES['image']['tmp_name'], "upload/carrousel/".$_FILES['image']['name']);
-				}}};		
-			$req = $bdd->query('SELECT * FROM carrousel');
+			}}}};		
+					$req = $bdd->query('SELECT * FROM carrousel');
 			echo' 
 				<fieldset id="carrousel">
-					<legend>Liste des Projets</legend>
+					<legend>Configuration du Carrousel</legend>
 					<table>
 						<thead><td width="100px">Nom</td><td width="140px">Url</td><td width="120px">Description</td></thead>';
 			while($donnes = $req->fetch()){
@@ -252,17 +255,73 @@ if(!isset($_SESSION['admin'])){
 			}
 			echo'
 					</table>
-					<form action="?page=admin&choix=carrousel&fonction=create" method="post">
+					<form enctype="multipart/form-data" action="?page=admin&choix=carrousel&fonction=create" method="post">
 						<p>Nom de l\'image :</p>
 						<p><input name="nom"></p><br>
 						<p>Lien :</p>
 						<p><input name="url"></p><br>
 						<p>Saisi du fichier images: 672px*300px</p>
-						<p><input name="image" type="file"></p><br>
+						<p><input name="file" type="file"></p><br>
 						<p class="right"><input type="submit"></p>
 					</form>
 				</fieldset>';
 
+
+		break;
+		case "menu": 
+
+			if(isset($_GET['fonction'])){
+				if($_GET['fonction'] == "delete"){
+
+					if(!empty($_GET['Date'])) {
+					}
+					elseif(!empty($_GET['Theme'])) {
+					}
+
+				}
+				elseif($_GET['fonction'] == "create"){
+					$filer = fopen("cache/menu.json", "r");
+					$fread = fread($filer, 8192);
+					$json_decode = json_decode($fread, true);
+					fclose($filer);
+					$filew = fopen("cache/menu.json", "w");
+
+					if(!empty($_POST['Date'])) {
+						$json_encode = $json_decode;
+						array_push($json_encode[0]["sous_liste"], array('nom' => $_POST['Date']));
+						$fwrite = fwrite($filew, json_encode($json_encode, FALSE));
+					}
+					elseif(!empty($_POST['Theme'])) {
+						$json_encode = $json_decode;
+						array_push($json_encode[1]["sous_liste"], array('nom' => $_POST['Theme']));
+						$fwrite = fwrite($filew, json_encode($json_encode, FALSE));
+					}
+
+					fclose($filew);
+					}};
+
+			echo' 
+				<fieldset id="menu">
+					<legend>Configuration du Menu</legend>';
+					$file = fopen("cache/menu.json", "r");
+					$liste = fread($file, 8192);
+					$liste_tableau = json_decode($liste, true); 
+					foreach ($liste_tableau as $categorie) {
+						echo'
+						<form action="?page=admin&choix=menu&fonction=create" method="POST">
+						<table>
+						<thead><td width="50px">'.$categorie['nom'].'</td></thead>';
+						foreach ($categorie["sous_liste"] as $objet) {
+							echo'<tr><td>'.$objet['nom'].'</td><td><!--<a class="icon_del" href="?page=admin&choix=menu&fonction=delete&'.$categorie['nom'].'='.$objet['nom'].'"></a>--></td></tr>';
+						};
+						echo'
+						<tr><td><input name="'.$categorie['nom'].'" type="text"></td><td><input type="submit"></td></tr>
+						</table>
+						</form>
+						';
+					};
+					echo '
+					</fieldset>';
 
 		break;
 	}}

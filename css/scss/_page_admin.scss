@@ -29,6 +29,12 @@
 			}
 		}
     }
+    nav{
+
+    	height:25px;
+    	a{
+    	color:white;
+    }}
 	fieldset:first-child{ 
 	    margin-right:50px;
     	width:200px;
@@ -109,5 +115,10 @@
 			}
 
 		}
+	}
+	#menu table{
+		margin:20px;
+		float:left;
+		display: block;
 	}
 }

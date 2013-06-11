@@ -9,17 +9,19 @@
 			height:168px;
 			width: 358px;
 		}
+
+    }
 			input[type="submit"]{
-		background:url("http://reseaupro.univ-paris-diderot.fr/userfiles/image/bouton-connexion.png") ;
-		background-size: 120px 40px;
+		background:url("../images/connection2.jpg") no-repeat ;
+		background-size: 100% 100%;
 		text-indent: -8000px;
 		border:none;
-		height: 40px;
-		width: 120px;
+		height: 25px;
+		width: 90px;
 		display: block;
 		margin: 0 auto;
-	}
-
+		border-radius: 15px;
+		border:2px gray solid;
 	}
 		span{
 			position:absolute;
@@ -33,10 +35,8 @@
 				display: block;
 				text-decoration: none;
 				color: white;
-
-			}
 		}
-
+	}
 	#background {
 		background: url("../images/rmap.jpg") top left;
 		-webkit-animation-name: BGconnect;
@@ -56,7 +56,6 @@
 		display: block;
 		width: 318px;
 		margin-bottom: 9px;
-
 	}
 	label{
 		color: #8C8C8C;
@@ -99,16 +98,28 @@
 			}
 	input[type="submit"]{
 				margin: 20px 45px;
-
-			}
+		}
 
 	}
 }
-#page_deconnexion h1{
+#page_deconnexion {
+	#message{
+	    position:relative;
+		height: 120px;
+	    width:250px;
+	    margin: 50px auto;
+	    background: rgba(0,0,0,0.5);
+	    border:4px gray solid;
+	    border-radius:15px;
+       	h1{
+       		vertical-align: middle;
+		    margin:35px auto;
 	text-align: center;
 	color: white;
-	width: 100%;
-	line-height:168px;
+			//width: 100%;
+			//line-height:168px;
+		}
+	}
 }
 #page_membres{
 	>div{
@@ -159,6 +170,7 @@
     	
     	    #modif_mdp{
 	    			float:right;
+	    			width:110px;
 	    	   		margin-right: 0px;
     			    box-shadow: 0px 0px 4px 2px gray;
 					border: 0px none;
@@ -180,8 +192,8 @@
 					border-radius: 5px 5px 5px 5px;
 			} 
 			#sup_compte{
-				margin-left: 40px;
-    				width:110px;
+					margin-left: 20px;
+    				width:90px;
     			    box-shadow: 0px 0px 4px 2px gray;
 					border: 0px none;
 					border-radius: 5px 5px 5px 5px;

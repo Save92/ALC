@@ -1,13 +1,11 @@
 
 #page_galerie_choix{
-	 #page_galerie_global{
-		margin: 10px 2% 0;
-		width : 95%;
-		height: 400px;
-		position:relative;
+	>div{
+		width: 1004px;
+		margin:20px auto;
 	}
 
-	#page_galerie_global #presentation_projets{
+		#presentation_projets{
 		float:left;
 		position:relative;
 		height:250px;
@@ -17,9 +15,7 @@
 		padding:10px;
 		border:4px gray solid;
 		border-radius:15px;
-
-	}
-	#page_galerie_global #presentation_projets>a{
+			a{
 		position:absolute;
 		font-weight:800;
 		text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
@@ -28,7 +24,8 @@
 		font-family: 'Advent Pro', sans-serif ;
 		font-weight: 700;
 	}
-
+		}
+		/*
 	#page_galerie_global #presentation_projets #p_footer{
 		position:absolute;
 		bottom:0px;
@@ -39,21 +36,35 @@
 		font-family: 'Advent Pro', sans-serif ;
 		font-weight: 700;
 
+		}*/
+	}
+}
+
+
+
+
+#page_galerie_choix {
+	>div{
+		position: relative;
+		display:block;
+		margin: 30px auto;
+		width: 1024px;
+		height: 500px;
 	}
 	#liste_projets_Date{
 	float:left;
     height:200px;
     width:225px;
     min-width: 40px;
-    margin: 30px 50px 0 120px;
-    background: rgba(0,0,0,0.5);padding:30px;
+		    margin: 50px 50px 0 120px;
+		    background: rgba(0,0,0,0.5);
+		    padding:30px;
     border:4px gray solid;
     border-radius:15px;
     font-weight:800;
     text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
     display: inline-block;
     vertical-align:top;
-    display: inline-block;
     	>legend {
 		font-size: 18px;
         margin: -50px 0 0 0;
@@ -73,7 +84,7 @@
     height:200px;
     width:225px;
     min-width: 40px;
-    margin: 30px 50px 0 120px;
+		    margin: 50px 50px 0 50px;
     background: rgba(0,0,0,0.5);
     padding:30px;
     border:4px gray solid;
@@ -82,7 +93,6 @@
     text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
     display: inline-block;
     vertical-align:top;
-    display: inline-block;
    	    	>legend {
 		font-size: 18px;
         margin: -50px 0 0 0;
@@ -96,12 +106,7 @@
     		font-family: 'Advent Pro', sans-serif ;
     	}
 	}
-}
 
-
-
-
-#page_galerie_choix {
 	>div{
 		position: relative;
 		margin: 80px auto 0 auto;

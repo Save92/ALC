@@ -1,5 +1,17 @@
 #page_devis{
-
+        #message{
+        position:relative;
+        height: 150px;
+        width:300px;
+        margin: 50px auto;
+        background: rgba(0,0,0,0.5);
+        border:4px gray solid;
+        border-radius:15px;
+        text-align: center;
+        h1{
+            margin:45px auto;
+        }
+    }
     >div{
         position: relative;
         margin: 5% auto;
@@ -50,17 +62,17 @@
             width: 100px;
             margin:10px 3px 0px 5px;
             display: inline-block;
-                        font-weight:800;
+            font-weight:800;
             vertical-align:center;
             //vertical-align:center;
             text-align: left;
-                font-family: 'Advent Pro', sans-serif ;
+            font-family: 'Advent Pro', sans-serif ;
         }
     }
     #deuxieme_etape{
 
             float:right;
-            height:350px;
+            height:375px;
             width:450px;
             background:url('../images/metal-texture-151340.jpg') no-repeat center center;
             padding:10px;
@@ -121,7 +133,7 @@
             width: 200px;
             vertical-align:top;
         }
-                #pj{
+        #pj{
             font-weight:800;
             text-shadow: 0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray,0 0 4px gray;
             width: 245px;

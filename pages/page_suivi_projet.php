@@ -15,7 +15,7 @@ switch($_POST['requete']){
 			'desc' => $_POST['description'],
 			'mc' => $_POST['motscles'],
 			'status' => $_POST['status'],
-			'en_ligne' => $_POST['en_ligne'],
+			'en_ligne' => $_POST['enligne'],
 			'progression' => $_POST['progression'],
 			'num' => $num_projet_var
 			));
@@ -57,13 +57,7 @@ switch($_POST['requete']){
 	<fieldset id="description_suivi_projets">
 	<?php
 
-/*		$resultat = $bdd->prepare('SELECT vehicule.num_vehicule, marque,modele,annee,type,projet.num_projet,projet.num_membre
-	,nom_projet,theme,date_projet,description_projet,motscles_projet,status
-	FROM `vehicule`,`projet`,`image` WHERE vehicule.num_vehicule=projet.num_vehicule 
-	AND projet.num_projet= ? AND projet.num_membre= ? GROUP BY projet.num_projet');
-	$resultat->execute(array($num_projet_var , $id_membre));*/
-	$resultat = $bdd->query('SELECT vehicule.num_vehicule, marque, modele, annee, type, projet.num_projet, num_membre, nom_projet, theme, date_projet, description_projet, motscles_projet, status, progression
-	FROM vehicule,projet WHERE vehicule.num_vehicule=projet.num_vehicule AND projet.num_projet='.$num_projet_var.' ');
+	$resultat = $bdd->query('SELECT vehicule.num_vehicule, marque, modele, annee, type, projet.num_projet, num_membre, nom_projet, theme, date_projet, description_projet, motscles_projet, status, progression, en_ligne FROM vehicule,projet WHERE vehicule.num_vehicule=projet.num_vehicule AND projet.num_projet='.$num_projet_var.' ');
 	$resultat1 = $bdd->prepare('SELECT num_image, num_projet, description FROM image WHERE num_projet= ?');
 	$resultat1->execute(array($num_projet_var));
 	$count =$resultat->rowCount();
@@ -95,6 +89,8 @@ switch($_POST['requete']){
 				<p> Il date de : '.$donnees['date_projet']. '.</p>
 				<p> Description du projet : <br>'.$donnees['description_projet']. '.</p>
 				<p> Status : '.$status. '.</p>
+				<p><div id="barre_progression"><div style="width:'.$donnees["progression"].'%"></div><span>'.$donnees["progression"].'%</span></div></p>
+
 				<br><p> Caractéristiques du véhicule : <br></p>
 				<p> Son type : '.$donnees['type']. '.</p>
 				<p> Marque : '.$donnees['marque']. '.</p>
@@ -103,8 +99,7 @@ switch($_POST['requete']){
 
 				<form>
 				<!--<p><label for="message">Envoyer un message à l\'admin : </label><textarea id="message" name="message" type="text">Votre message...</textarea></p>-->
-				</form>
-				<p><div id="barre_progression"><div style="width:'.$donnees["progression"].'%"></div><span>'.$donnees["progression"].'%</span></div></p>';
+				</form>';
 				if($admin==true)
 				{
 					echo'
@@ -120,7 +115,7 @@ switch($_POST['requete']){
 
 			
 				echo'
-				<div id="liste_image_suivi_projet">
+				<div id="liste_image">
 				<h2>Photos du projet :</h2>';
 				while ($donnees2 = $resultat1->fetch()) {
 					echo '
@@ -139,7 +134,6 @@ switch($_POST['requete']){
 						<div id="image_projet" style="display:none;">
 							<img width="300px" height="290px" src="">
 						</div>';
-
 				}
 				$var_tab=$donnees;
 			}
@@ -150,10 +144,21 @@ switch($_POST['requete']){
 			</fieldset>';
 			}
 		}
-		if($admin==true)
+
+	}
+	else
+	{
+		echo '<div id="liste_vide">
+			<p>Aucun projet trouvé !</p>
+			</div>
+			</fieldset>';
+
+	}
+	echo "</section>";
+	if($admin==true)
 		{
 			echo '
-			<div id="admin" style="display:none;">
+			<div><div id="admin" style="display:none;">
 				<fieldset class="modif_projet suivi_projet" style="display:none;">
 					<legend> Modification du projet :</legend> 
 					<form method="post">
@@ -180,7 +185,7 @@ switch($_POST['requete']){
 							<option value="90">90%</option>
 							<option value="100">100%</option>
 						</select></p>
-						<p><label><input type="checkbox" name="en_ligne"> En ligne</label></p>
+						<p><label><input type="checkbox" name="enligne"> En ligne</label></p>
 						<br>
 						<input type="text" name="requete" value="projet" style="display:none;">
 						<p><input type="submit"><button>Annuler</button></p>
@@ -212,20 +217,8 @@ switch($_POST['requete']){
 						<p><input type="submit"><button>Annuler</button></p>
 					</form>
 				</fieldset>
-			</div>
+			</div></div>
 			';
 
 		}
-	}
-	else
-	{
-		echo '<div id="liste_vide">
-			<p>Aucun projet trouvé !</p>
-			</div>
-			</fieldset>';
-
-	}
-?>
-<!--				-->
-</section>
-<?php include('pages/bas.php'); ?>
+include('pages/bas.php'); ?>
