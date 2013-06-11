@@ -103,7 +103,7 @@ switch ($variable){
 					echo'
 					<td>
 						<a href="?page=projet&projet='.$donnees['num_projet'].'">
-							<img width="90px" height="90px" src="http://softdownload.ro/uploads/posts/2012-10/1349527217_folder-icon.png" status="none">
+							<img width="90px" height="90px" src="images/1349527217_folder-icon.png" status="none">
 							<span>'.$donnees['nom_projet'].'</span>
 						</a>
 					</td>';
